@@ -16,12 +16,24 @@ const Theme = createMuiTheme({
     fontFamily: ['"Helvetica Neue"', 'Arial', 'sans-serif'].join(','),
     h2: {
       fontWeight: 700,
+      letterSpacing: '-3px',
       textTransform: 'uppercase',
     },
     h5: {
       fontWeight: 700,
     },
-    body1: {},
+    body1: {
+      fontSize: 12,
+      '@media (min-width:600px)': {
+        fontSize: 14,
+      },
+      '@media (min-width:960px)': {
+        fontSize: 16,
+      },
+      '@media (min-width:1400px)': {
+        fontSize: 18,
+      },
+    },
   },
 
   overrides: {

@@ -46,3 +46,19 @@ export const gridStyle = makeStyles({
     transitionTimingFunction: 'ease',
   },
 });
+
+export const linkStyle = makeStyles({
+  link: {
+    color: '#fff',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+  },
+  wrapper: {
+    backgroundColor: '#000',
+    width: 'max-content',
+    padding: '0px 2px',
+    cursor: 'pointer',
+  },
+});

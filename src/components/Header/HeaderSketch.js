@@ -25,6 +25,7 @@ export default function sketch(p) {
     hmid = p.height * 0.77 - (0.56 * p.width - p.height * 0.15) * 0.5625;
     htop = hmid;
     hlow = p.height * 0.8;
+    if (window.innerWidth > 1400) paddingLeft = 120;
     p.textSize(12);
   };
 
@@ -36,6 +37,8 @@ export default function sketch(p) {
 
   p.windowResized = function () {
     p.resizeCanvas(window.innerWidth, window.innerHeight);
+    if (window.innerWidth > 1400) paddingLeft = 120;
+    else paddingLeft = 80;
     w025 = 0.56 * p.width - p.height * 0.05;
     w05 = p.width * 0.5;
     w075 = p.width * 0.74;

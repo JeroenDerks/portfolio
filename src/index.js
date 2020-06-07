@@ -1,18 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import App from './App';
 import { ThemeProvider } from '@material-ui/core';
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { responsiveFontSizes } from '@material-ui/core/styles';
 import Theme from 'styles/theme';
 import * as serviceWorker from './serviceWorker';
+import history from 'utils/history';
+import IEnotification from './containers/IEnotification.js';
 
 const theme = responsiveFontSizes(Theme);
+const isIE = /*@cc_on!@*/ false || !!document.documentMode;
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    {isIE ? (
+      <IEnotification />
+    ) : (
+      <Router history={history}>
+        <ThemeProvider theme={theme}>
+          <Switch>
+            <Route exact path="/others">
+              <div>others</div>
+            </Route>
+            <Route path="/">
+              <App />
+            </Route>
+          </Switch>
+        </ThemeProvider>
+      </Router>
+    )}
   </React.StrictMode>,
   document.getElementById('root')
 );
