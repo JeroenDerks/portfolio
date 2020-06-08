@@ -60,5 +60,6 @@ export const linkStyle = makeStyles({
     width: 'max-content',
     padding: '0px 2px',
     cursor: 'pointer',
+    pointerEvents: 'all',
   },
 });

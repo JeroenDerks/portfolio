@@ -1,42 +1,17 @@
 import React from 'react';
+import About from 'components/About';
 import Header from 'components/Header';
-import Installations from 'components/Installations';
+import Projects from 'components/Projects';
 
-import { Box } from '@material-ui/core';
 export const AppContext = React.createContext();
-
-const defaultColumn = {
-  left: '60%',
-  center: '30%',
-  right: '10%',
-  title: '90%',
-};
 
 function App() {
   const calcPadding = () => {
-    if (window.innerWidth < 600) return 5;
-    else if (window.innerWidth < 1400) return 10;
-    else return 15;
+    if (window.innerWidth < 600) return { y: 5, x: 5 };
+    else if (window.innerWidth < 1400) return { y: 10, x: 10 };
+    else return { y: 10, x: 17 };
   };
 
-  const calcColumn = () => {
-    if (window.innerWidth < 600)
-      return {
-        left: '60%',
-        center: '30%',
-        right: '10%',
-        title: '90%',
-      };
-    else
-      return {
-        left: '100%',
-        center: '100%',
-        right: '100%',
-        title: '100%',
-      };
-  };
-
-  const [column, setColumn] = React.useState(calcColumn);
   const [padding, setPadding] = React.useState(calcPadding);
   const [mobile, setMobile] = React.useState(window.innerWidth < 960);
 
@@ -47,16 +22,28 @@ function App() {
     });
   });
 
+  const installationRef = React.createRef();
+  const aboutRef = React.createRef();
+
+  const scrollTo = (ref) => {
+    console.log('scroll');
+    window.scrollTo({
+      top: ref.current.offsetTop,
+      left: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <AppContext.Provider
       value={{
-        state: { column, mobile, padding },
-        actions: {},
+        state: { aboutRef, installationRef, mobile, padding },
+        actions: { scrollTo },
       }}
     >
       <Header />
-
-      <Installations />
+      <Projects />
+      <About />
     </AppContext.Provider>
   );
 }

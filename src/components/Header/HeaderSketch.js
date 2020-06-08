@@ -12,7 +12,7 @@ export default function sketch(p) {
   let totalcount = 0;
   let avgmovement = 0;
   let click = 0;
-  let w025, w05, w075;
+  let w025, w075;
   let htop, hmid, hlow;
   let fadeIn = true;
   let paddingLeft = 80;
@@ -20,7 +20,6 @@ export default function sketch(p) {
   p.setup = function () {
     p.createCanvas(window.innerWidth, window.innerHeight);
     w025 = 0.56 * p.width - p.height * 0.05;
-    w05 = p.width * 0.5;
     w075 = p.width * 0.74;
     hmid = p.height * 0.77 - (0.56 * p.width - p.height * 0.15) * 0.5625;
     htop = hmid;
@@ -28,6 +27,8 @@ export default function sketch(p) {
     if (window.innerWidth > 1400) paddingLeft = 120;
     p.textSize(12);
   };
+
+  console.log('headersketchg');
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
     if (props.paddingLeft !== null) {
@@ -40,7 +41,6 @@ export default function sketch(p) {
     if (window.innerWidth > 1400) paddingLeft = 120;
     else paddingLeft = 80;
     w025 = 0.56 * p.width - p.height * 0.05;
-    w05 = p.width * 0.5;
     w075 = p.width * 0.74;
     hmid = p.height * 0.77 - (0.56 * p.width - p.height * 0.15) * 0.5625;
     htop = hmid;
@@ -109,7 +109,7 @@ export default function sketch(p) {
     p.noStroke();
 
     p.text(distance[0], w025, hmid);
-    // text(a + "\u00B0", w05, hmid);
+    // text(a + "\u00B0", w050, hmid);
     p.text(p.int(p.mouseX), paddingLeft, hmid);
     p.text(p.int(p.mouseY), paddingLeft, hmid + 20);
     p.text(click, w075, htop);

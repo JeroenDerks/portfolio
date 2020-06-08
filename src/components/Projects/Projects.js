@@ -1,17 +1,14 @@
 import React from 'react';
 import Product from 'components/Product';
 import ProductMobile from 'components/ProductMobile';
-import Sticky from 'react-sticky-el';
 
-import { Box, Link, Typography } from '@material-ui/core';
 import { AppContext } from 'App';
 
 import P5Wrapper from 'react-p5-wrapper';
 import darkwebSketch from './partials/DarkwebSketch';
 import dw1 from 'assets/images/dw1.jpg';
 import dw2 from 'assets/images/dw2.jpg';
-import dw3 from 'assets/images/dw3.jpg';
-import nobel3 from 'assets/images/nobel3.jpg';
+
 import nobel4 from 'assets/images/nobel4.jpg';
 import konstruktur from 'assets/images/konstruktur.jpg';
 import dhi1 from 'assets/images/dhi1.jpg';
@@ -19,6 +16,8 @@ import dhi2 from 'assets/images/dhi2.jpg';
 
 import rb1 from 'assets/images/rb1.jpg';
 import rb2 from 'assets/images/rb2.jpg';
+
+import ds1 from 'assets/images/ds1.jpg';
 
 const imageStyle = {
   width: '100%',
@@ -41,6 +40,7 @@ const getVideo = (src) => {
           width: '100%',
           height: '100%',
         }}
+        title={src}
         frameBorder="0"
         allow="autoplay; fullscreen"
         allowFullScreen
@@ -71,7 +71,12 @@ const installations = [
       <img src={dw2} style={imageStyle} alt={'dw2'} />,
     ],
     link: (
-      <a href="http://www.darkweb.dk" target="_blank" style={linkStyle}>
+      <a
+        href="http://www.darkweb.dk"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={linkStyle}
+      >
         direct darkweb access
       </a>
     ),
@@ -87,11 +92,14 @@ const installations = [
       'An interface designed to teach people about chemical reactions.',
       'The visitor is offered physical blocks that represent chemical elements. By combining the right elements they can trigger information and video material of their specific chemical reaction.',
     ],
-    content: [getVideo('254181584'), <img src={nobel4} style={imageStyle} />],
+    content: [
+      getVideo('254181584'),
+      <img src={nobel4} style={imageStyle} alt={'chemicalReactions1'} />,
+    ],
 
     contentMobile: [
       getVideo('254181584'),
-      <img src={nobel4} style={imageStyle} />,
+      <img src={nobel4} style={imageStyle} alt={'chemicalReactions2'} />,
     ],
   },
   {
@@ -108,12 +116,12 @@ const installations = [
     ],
     content: [
       getVideo('241518803'),
-      <img src={konstruktur} style={imageStyle} />,
+      <img src={konstruktur} style={imageStyle} alt="Konstruktur1" />,
     ],
 
     contentMobile: [
       getVideo('241518803'),
-      <img src={konstruktur} style={imageStyle} />,
+      <img src={konstruktur} style={imageStyle} alt="Konstruktur1" />,
     ],
   },
   {
@@ -127,18 +135,19 @@ const installations = [
       'In almost 2 years we launched over 30 data viewers and web portals, made over 15 videos and gave the website a complete overhaul.',
     ],
     content: [
-      <img src={dhi1} style={imageStyle} />,
-      <img src={dhi2} style={imageStyle} />,
+      <img src={dhi1} style={imageStyle} alt="dhi1" />,
+      <img src={dhi2} style={imageStyle} alt="dhi2" />,
     ],
 
     contentMobile: [
-      <img src={dhi1} style={imageStyle} />,
-      <img src={dhi2} style={imageStyle} />,
+      <img src={dhi1} style={imageStyle} alt="dhi1" />,
+      <img src={dhi2} style={imageStyle} alt="dhi2" />,
     ],
     link: (
       <a
         href="http://www.derks.dk/others/dhi"
         target="_blank"
+        rel="noopener noreferrer"
         style={linkStyle}
       >
         more details
@@ -156,84 +165,105 @@ const installations = [
       'In addition her fans have the possibility to digitally reconstruct her artworks in the opening graphic on the landing page',
     ],
     content: [
-      <img src={rb1} style={imageStyle} />,
-      <img src={rb2} style={imageStyle} />,
+      <img src={rb1} style={imageStyle} alt="rebekka1" />,
+      <img src={rb2} style={imageStyle} alt="rebekka2" />,
     ],
 
     contentMobile: [
-      <img src={rb1} style={imageStyle} />,
-      <img src={rb2} style={imageStyle} />,
+      <img src={rb1} style={imageStyle} alt="rebekka1" />,
+      <img src={rb2} style={imageStyle} alt="rebekka2" />,
     ],
     link: (
-      <a href="http://www.rebekka-borum.com" target="_blank" style={linkStyle}>
+      <a
+        href="http://www.rebekka-borum.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={linkStyle}
+      >
         take me there
       </a>
     ),
   },
+
+  // {
+  //   title: 'Ludic Code',
+  //   technologies: {
+  //     mainTitle: 'Processing & Kinect',
+  //     location: 'Nordkraft, Aalborg',
+  //     subTitle: 'programmer, designer, researcher',
+  //   },
+  //   description: [
+  //     'Ludic Code is a BA research project on designing for interactive playgrounds.',
+  //     'For 10 days, hundreds of children and adults played in what is commonly a transit area. It taught us (Daniel Hristov and Jeroen Derks) that these technologies should be immediate, understandable, and most importantly: supporting the desire to explore and play.',
+  //   ],
+  //   content: [getVideo('180657153'), getVideo('211682937')],
+  //   contentMobile: [getVideo('180657153'), getVideo('211682937')],
+  // },
+  // {
+  //   title: 'Snake Skin',
+  //   technologies: {
+  //     mainTitle: 'Processing & Kinect',
+  //     location: 'Kunsten Museum for Modern Art',
+  //     subTitle: 'programmer, designer',
+  //   },
+  //   description: [
+  //     'SnakeSkin is an interactive installation presented in correspondence to Ernesto Neto’s exhibition ‘Rui Ni / Voices of the Forrest’.',
+  //     'eto’s work focuses on relations and balance between nature and culture.',
+  //     'This inspired us to develop an installation in which visitors experience the biological differences between snakes and human beings.',
+  //     'The experience was designed to supporte discussions on physical and social adaptation.',
+  //   ],
+  //   content: [getVideo('212966526'), getVideo('212969684')],
+  //   contentMobile: [getVideo('212966526'), getVideo('212969684')],
+  // },
+
   {
-    title: 'Ludic Code',
+    title: 'Dynamic Still',
     technologies: {
-      mainTitle: 'Processing & Kinect',
-      location: 'Nordkraft, Aalborg',
-      subTitle: 'programmer, designer, researcher',
+      mainTitle: 'HTC Vive, Python, Processing',
+      location: 'Improv Festival, Aalborg Theatre',
+      subTitle: 'robot programmer',
     },
     description: [
-      'Ludic Code is a BA research project on designing for interactive playgrounds.',
-      'For 10 days, hundreds of children and adults played in what is commonly a transit area. It taught us (Daniel Hristov and Jeroen Derks) that these technologies should be immediate, understandable, and most importantly: supporting the desire to explore and play.',
+      'This improvisational piece investigates creative performances between living and non-living actors— a human being and an intelligent mobile robot. None of the programmed elements are pre-scripted or tele-operated; audiences watch the actors communicate and improvise to develop an original performance. ',
+      'The project is developed by RELATE - Research Laboratory for Art and Technology at AAU.',
     ],
-    content: [getVideo('180657153'), getVideo('211682937')],
-    contentMobile: [getVideo('180657153'), getVideo('211682937')],
-  },
-  {
-    title: 'Snake Skin',
-    technologies: {
-      mainTitle: 'Processing & Kinect',
-      location: 'Kunsten Museum for Modern Art',
-      subTitle: 'programmer, designer',
-    },
-    description: [
-      'SnakeSkin is an interactive installation presented in correspondence to Ernesto Neto’s exhibition ‘Rui Ni / Voices of the Forrest’.',
-      'eto’s work focuses on relations and balance between nature and culture.',
-      'This inspired us to develop an installation in which visitors experience the biological differences between snakes and human beings.',
-      'The experience was designed to supporte discussions on physical and social adaptation.',
+    content: [
+      getVideo('211666686'),
+      <img src={ds1} style={imageStyle} alt={'dynamic_still'} />,
     ],
-    content: [getVideo('212966526'), getVideo('212969684')],
-    contentMobile: [getVideo('212966526'), getVideo('212969684')],
+
+    contentMobile: [
+      getVideo('211666686'),
+      <img src={ds1} style={imageStyle} alt={'dynamic_still'} />,
+    ],
+    link: (
+      <a
+        href="https://vbn.aau.dk/en/publications/tonight-we-improvise-real-time-tracking-for-human-robot-improvisa"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={linkStyle}
+      >
+        Read the paper
+      </a>
+    ),
   },
 ];
 
-function Installations() {
+function Projects() {
   const {
-    state: { mobile, padding },
+    state: { installationRef, mobile, padding },
   } = React.useContext(AppContext);
 
-  return (
-    <div
-      // id="installations"
-      style={{ padding: padding * 8 }}
-      // position="relative"
-    >
-      {/* <Sticky
-        // boundaryElement={'#installations'}
-        // style={{
-        //   position: 'relative',
-        //   paddingTop: 'calc(100vh - 80px)',
-        // }}
-        stickyStyle={{
-          pointerEvents: 'none',
-          zIndex: '1000',
-          top: 'calc(100vh - 80px)',
-        }}
-        topOffset={-window.innerHeight}
-        // hideOnBoundaryHit={false}
-      >
-        <Typography variant={'h5'}>
-          <Link href="#installations" style={{ textDecoration: 'none' }}>
-            Installations
-          </Link>
-        </Typography>
-      </Sticky> */}
+  const paddingStyle = {
+    paddingTop: 8,
+    paddingBottom: 8,
+    paddingLeft: padding.x * 8,
+    paddingRight: padding.x * 8,
+    boxSizing: 'border-box',
+  };
 
+  return (
+    <div ref={installationRef} style={paddingStyle}>
       {installations &&
         installations.map((installation, i) => (
           <React.Fragment key={i}>
@@ -248,4 +278,4 @@ function Installations() {
   );
 }
 
-export default Installations;
+export default Projects;

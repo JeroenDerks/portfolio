@@ -4,6 +4,10 @@ import { Box, Grid, Typography } from '@material-ui/core';
 import { AppContext } from 'App';
 import { linkStyle } from 'styles/global';
 
+const ASPECT_RATIO = 0.5625;
+const MAX_COLUMNS = 12;
+const USED_COLUMNS = 7;
+
 function Product({ props }) {
   const {
     state: { padding },
@@ -14,17 +18,20 @@ function Product({ props }) {
   const { title, technologies, description, content, link } = props;
   const id = title.replace(/\s/g, '');
 
-  const totalPadding = padding * 8 * 2;
-  const elementHeight = ((window.innerWidth - 160) / 12) * 7 * 0.544;
-  const paddingFirstElement = window.innerHeight - totalPadding - elementHeight;
+  const paddingX = padding.x * 8 * 2;
+  const paddingY = padding.y * 8;
+
+  const widthUsedColumns =
+    ((window.innerWidth - paddingX) / MAX_COLUMNS) * USED_COLUMNS;
+  const elementHeight = widthUsedColumns * ASPECT_RATIO;
+
+  const paddingFirstElement = window.innerHeight - paddingY - elementHeight;
 
   return (
     <div id={id} style={{ position: 'relative' }}>
       <Sticky
         boundaryElement={'#' + id}
-        style={{
-          position: 'relative',
-        }}
+        style={{ position: 'relative' }}
         stickyStyle={{ pointerEvents: 'none', zIndex: '1000' }}
         hideOnBoundaryHit={false}
       >
@@ -32,15 +39,15 @@ function Product({ props }) {
           boxSizing={'border-box'}
           display={'flex'}
           flexWrap="wrap"
-          pt={padding > 10 ? 10 : padding}
+          pt={padding.y}
           height={'100vh'}
           width={1}
         >
           <Grid container spacing={2} style={{ height: 'max-content' }}>
-            <Grid item sm={12} md={10} lg={10}>
+            <Grid item sm={12} md={10} lg={11}>
               <Typography variant="h2">{title}</Typography>
             </Grid>
-            <Grid item sm={12} md={2} lg={2}>
+            <Grid item sm={12} md={2} lg={1}>
               <Box px={1}>
                 <Typography variant="body1">
                   <span style={{ fontWeight: 700 }}>
@@ -48,14 +55,14 @@ function Product({ props }) {
                   </span>
                 </Typography>
                 {technologies.location && (
-                  <Box pt={2}>
+                  <Box pt={1}>
                     <Typography variant="body1">
                       {technologies.location}
                     </Typography>
                   </Box>
                 )}
 
-                <Box pt={2}>
+                <Box pt={1}>
                   <Typography variant="body1">
                     {technologies.subTitle}
                   </Typography>
@@ -64,21 +71,23 @@ function Product({ props }) {
             </Grid>
           </Grid>
 
-          <Box width={1} pb={padding} alignSelf={'flex-end'}>
-            <Grid container spacing={2}>
+          <Box width={1} pb={padding.y} alignSelf={'flex-end'}>
+            <Grid container spacing={0}>
               <Grid item md={7} lg={7}></Grid>
-              <Grid item md={3} lg={3}>
-                <Box px={1}>
+              <Grid item md={3} lg={4}>
+                <Box px={8}>
                   {description &&
                     description.map((paragraph, i) => (
-                      <Box pb={1} key={i}>
+                      <Box pt={1} key={i}>
                         <Typography variant={'body1'}>{paragraph}</Typography>
                       </Box>
                     ))}
                   {link && (
-                    <Typography variant="body1" className={classes.wrapper}>
-                      {link}
-                    </Typography>
+                    <Box pt={1}>
+                      <Typography variant="body1" className={classes.wrapper}>
+                        {link}
+                      </Typography>
+                    </Box>
                   )}
                 </Box>
               </Grid>
@@ -94,7 +103,7 @@ function Product({ props }) {
               <Grid item md={7} key={i}>
                 <Box
                   width={1}
-                  pb={padding}
+                  pb={padding.y}
                   style={{ paddingTop: i === 0 ? paddingFirstElement : 0 }}
                 >
                   {element}

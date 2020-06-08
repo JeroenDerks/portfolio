@@ -5,60 +5,39 @@ import sketch from './HeaderSketch';
 import { Box, Link, Typography } from '@material-ui/core';
 import { AppContext } from 'App';
 
+const linkStyle = {
+  cursor: 'pointer',
+  textDecoration: 'none',
+};
+
 function Header() {
   const {
-    state: { column, padding },
+    actions: { scrollTo },
+    state: { aboutRef, installationRef, padding },
   } = React.useContext(AppContext);
-
-  const scrollTo = (id) => {
-    console.log(id);
-    const el = document.getElementById(id);
-    console.log(el);
-    window.scrollTo({
-      top: 2000,
-      left: 0,
-      behavior: 'smooth',
-    });
-  };
 
   return (
     <Box style={{ height: '100vh' }}>
-      <Box style={{ position: 'absolute' }}>
-        <P5Wrapper sketch={sketch} paddingLeft={padding * 8} />
+      <Box position="absolute">
+        <P5Wrapper sketch={sketch} paddingLeft={padding.x * 8} />
       </Box>
-      <Box
-        position={'absolute'}
-        left={padding * 8}
-        top={padding > 10 ? 80 : padding * 8}
-      >
+      <Box position="absolute" pl={padding.x} pt={padding.y}>
         <Typography variant="h2">Digital Playgrounds</Typography>
         <Typography variant="subtitle1">
-          See how <span style={{ fontWeight: 700 }}>Jeroen</span> is exploring
-          technologies and digital-physical experiences
+          I love exploring technologies and digital-physical experiences
         </Typography>
       </Box>
-      <Box
-        position={'absolute'}
-        left={padding * 8}
-        bottom={padding > 10 ? 80 : padding * 8}
-      >
+      <Box position={'absolute'} pl={padding.x} bottom={padding.y * 8}>
         <Typography variant={'h5'}>
-          <Link
-            style={{ textDecoration: 'none' }}
-            onClick={() => scrollTo('installations')}
-          >
-            Installations
+          <Link style={linkStyle} onClick={() => scrollTo(installationRef)}>
+            Projects
           </Link>
         </Typography>
       </Box>
-      <Box
-        position={'absolute'}
-        right={padding * 8}
-        bottom={padding > 10 ? 80 : padding * 8}
-      >
+      <Box position={'absolute'} right={padding.x * 8} bottom={padding.y * 8}>
         <Typography variant={'h5'}>
-          <Link href="#performances" style={{ textDecoration: 'none' }}>
-            Performances
+          <Link style={linkStyle} onClick={() => scrollTo(aboutRef)}>
+            About
           </Link>
         </Typography>
       </Box>

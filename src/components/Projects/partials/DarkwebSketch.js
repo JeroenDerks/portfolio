@@ -3,13 +3,13 @@ var VLines = [];
 var HLines = [];
 var rm = false;
 var timer, newLineTimer;
+var SCx, SCy, SCw, SCh, h, w;
 
 export default function sketch(p) {
   p.setup = function () {
-    let xOffset = 176;
-    if (window.innerWidth > 1400) xOffset = 256;
+    let xOffset = 276;
     const _width = ((window.innerWidth - xOffset) / 12) * 7;
-    const _height = _width * 0.544;
+    const _height = _width * 0.5625;
     p.createCanvas(_width, _height);
     Mondriaan.push(new p.Square(0, 0, p.width, p.height));
     p.fill(0);
@@ -18,19 +18,12 @@ export default function sketch(p) {
     newLineTimer = 120;
   };
 
-  // p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
-  //   if (props.padding !== null) {
-  //     padding = props.padding * 8;
-  //   }
-  // };
-
   p.windowResized = function () {
     Mondriaan.splice(0, Mondriaan.length);
     VLines.splice(0, VLines.length);
     HLines.splice(0, HLines.length);
 
-    let xOffset = 176;
-    if (window.innerWidth > 1400) xOffset = 256;
+    let xOffset = 276;
     const _width = ((window.innerWidth - xOffset) / 12) * 7;
     const _height = _width * 0.544;
 
@@ -49,16 +42,16 @@ export default function sketch(p) {
     if (timer % newLineTimer === 0) {
       newLineTimer += 10;
       timer = 0;
-      var rmx = p.int(p.random(p.width));
-      var rmy = p.int(p.random(p.height));
-      for (var i = Mondriaan.length - 1; i >= 0; i--) {
+      const rmx = p.int(p.random(p.width));
+      const rmy = p.int(p.random(p.height));
+      for (let i = Mondriaan.length - 1; i >= 0; i--) {
         if (Mondriaan[i].intersects(rmx, rmy)) {
-          var SCx = Mondriaan[i].x;
-          var SCy = Mondriaan[i].y;
-          var SCw = Mondriaan[i].w;
-          var SCh = Mondriaan[i].h;
-          var h = SCy + SCh - rmy;
-          var w = SCx + SCw - rmx;
+          SCx = Mondriaan[i].x;
+          SCy = Mondriaan[i].y;
+          SCw = Mondriaan[i].w;
+          SCh = Mondriaan[i].h;
+          h = SCy + SCh - rmy;
+          w = SCx + SCw - rmx;
           rm = true;
         }
         if (rm) {
@@ -76,29 +69,29 @@ export default function sketch(p) {
         }
       }
     }
-    for (var i = 0; i < Mondriaan.length; i++) {
+    for (let i = 0; i < Mondriaan.length; i++) {
       Mondriaan[i].move();
       Mondriaan[i].display();
     }
-    for (var i = 0; i < VLines.length; i++) {
+    for (let i = 0; i < VLines.length; i++) {
       VLines[i].move();
       VLines[i].display();
     }
-    for (var i = 0; i < HLines.length; i++) {
+    for (let i = 0; i < HLines.length; i++) {
       HLines[i].move();
       HLines[i].display();
     }
   };
 
   p.mouseReleased = function () {
-    for (var i = Mondriaan.length - 1; i >= 0; i--) {
+    for (let i = Mondriaan.length - 1; i >= 0; i--) {
       if (Mondriaan[i].intersects(p.mouseX, p.mouseY)) {
-        var SCx = Mondriaan[i].x;
-        var SCy = Mondriaan[i].y;
-        var SCw = Mondriaan[i].w;
-        var SCh = Mondriaan[i].h;
-        var h = SCy + SCh - p.mouseY;
-        var w = SCx + SCw - p.mouseX;
+        SCx = Mondriaan[i].x;
+        SCy = Mondriaan[i].y;
+        SCw = Mondriaan[i].w;
+        SCh = Mondriaan[i].h;
+        h = SCy + SCh - p.mouseY;
+        w = SCx + SCw - p.mouseX;
         rm = true;
       }
       if (rm) {
