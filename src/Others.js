@@ -1,34 +1,90 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Typography, makeStyles } from '@material-ui/core';
 import { Link, Route, Switch } from 'react-router-dom';
 
 export const OthersContext = React.createContext();
 
-const projects = [
+const categoryHeader = {
+  fontWeight: 700,
+  padding: '0px 2px',
+};
+
+const projectHeader = {
+  padding: '0px 2px',
+};
+
+const linkStyle = makeStyles({
+  link: {
+    color: '#000',
+    textDecoration: 'none',
+    '&:hover': {
+      color: '#fff',
+    },
+  },
+  title: {
+    padding: '0px 2px',
+    '&:hover': {
+      backgroundColor: '#000',
+      color: '#fff',
+    },
+  },
+});
+
+const categories = [
   {
-    link: 'rebekkaborum',
-    title: 'rebekka borum',
-    comp: <>'rebekka borum' </>,
+    group: 'DHI GRAS',
+    projects: [
+      { link: 'dhi-portals', name: 'portals', comp: <></> },
+      { link: 'dhi-website', name: 'website', comp: <></> },
+      { link: 'dhi-videos', name: 'videos', comp: <></> },
+    ],
   },
   {
-    link: 'urbanplanen',
-    title: 'urbanplanen',
-    comp: <>'urbanplanen' </>,
+    group: 'INSTALLATIONS',
+    projects: [
+      { link: 'urbanplanen', name: 'urbanplanen', comp: <></> },
+      { link: 'stopmotion', name: 'stop motion machine', comp: <></> },
+      { link: 'cover', name: 'cover', comp: <></> },
+      { link: 'tingbjergceiling', name: 'tingbjerg ceiling', comp: <></> },
+      { link: 'tingbjergtrees', name: 'tingbjerg trees', comp: <></> },
+      { link: 'thefreaksregister', name: 'the freaks register', comp: <></> },
+      { link: 'theshydie', name: 'the shy die', comp: <></> },
+      { link: 'sphero', name: 'sphero', comp: <></> },
+    ],
   },
   {
-    link: 'aalborgsurreal',
-    title: 'aalborg surreal',
-    comp: <>'aalborg surreal' </>,
+    group: 'WEB',
+    projects: [
+      { link: 'rebekkaborum', name: 'rebekka borum', comp: <></> },
+      { link: 'aalborgsurreal', name: 'aalborg surreal', comp: <></> },
+      { link: 'freespeech', name: 'platform for free speech', comp: <></> },
+      { link: 'informationage', name: 'information age', comp: <></> },
+    ],
   },
   {
-    link: 'informationage',
-    title: 'information age',
-    comp: <>'information age' </>,
+    group: 'PERSONAL VIDEOS',
+    projects: [
+      { link: 'justwater', name: 'just water', comp: <></> },
+      { link: 'aman', name: 'a man and his mind', comp: <></> },
+      { link: 'fittingin', name: 'fitting in', comp: <></> },
+      { link: 'au2pilot', name: 'au2pilot', comp: <></> },
+    ],
   },
   {
-    link: 'stopmotionmachine',
-    title: 'stop motion machine',
-    comp: <>'stop motion machine'</>,
+    group: 'COMMERCIAL VIDEOS',
+    projects: [
+      { link: 'pilebyg', name: 'pilebyg', comp: <></> },
+      { link: 'sofar', name: 'sofar', comp: <></> },
+      { link: 'oersterk', name: 'oersterk', comp: <></> },
+      { link: 'densorteskole', name: 'den sorte skole', comp: <></> },
+    ],
+  },
+  {
+    group: 'DEROOTED INTERNSHIP',
+    projects: [
+      { link: 'lps', name: 'laylor performance systems', comp: <></> },
+      { link: 'aboveground', name: 'aboveground art supply', comp: <></> },
+    ],
   },
 ];
 
@@ -41,7 +97,7 @@ function Others({ match }) {
 
   const [padding, setPadding] = React.useState(calcPadding);
   const [mobile, setMobile] = React.useState(window.innerWidth < 960);
-
+  const classes = linkStyle();
   const { path } = match;
 
   React.useEffect(() => {
@@ -58,27 +114,39 @@ function Others({ match }) {
         actions: {},
       }}
     >
-      <div>hello</div>
       <Switch>
-        {projects &&
-          projects.map(({ comp, link, title }) => (
-            <Route path={`${path}/${link}`}>{comp}</Route>
-          ))}
-
-        <Route path="/test2">test2</Route>
+        {categories &&
+          categories.map(({ projects }) =>
+            projects.map(({ comp, name, link, i }) => (
+              <Route path={`${path}/${link}`} key={i}>
+                <div>{name}</div>
+              </Route>
+            ))
+          )}
       </Switch>
 
       <Box
         width={'20%'}
-        height={500}
         position="fixed"
         right={padding.y * 8}
         bottom={padding.y * 8}
         style={{ border: '1px solid red' }}
       >
-        {projects &&
-          projects.map(({ comp: Comp, link, title }) => (
-            <Link to={`/others/${link}`}>{title}</Link>
+        {categories &&
+          categories.map(({ group, projects }, i) => (
+            <Box pt={2} key={i}>
+              <Typography variant="body2" style={categoryHeader}>
+                {group}
+              </Typography>
+              {projects &&
+                projects.map(({ link, name }) => (
+                  <Typography variant="body2" className={classes.title}>
+                    <Link to={`${path}/${link}`} className={classes.link}>
+                      {name}
+                    </Link>
+                  </Typography>
+                ))}
+            </Box>
           ))}
       </Box>
     </OthersContext.Provider>
