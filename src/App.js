@@ -2,14 +2,15 @@ import React from 'react';
 import About from 'components/About';
 import Header from 'components/Header';
 import Projects from 'components/Projects';
+import { projects } from 'components/Projects/projectList';
 
 export const AppContext = React.createContext();
 
 function App() {
   const calcPadding = () => {
-    if (window.innerWidth < 600) return { y: 5, x: 5 };
-    else if (window.innerWidth < 1400) return { y: 10, x: 10 };
-    else return { y: 10, x: 17 };
+    if (window.innerWidth < 600) return { y: 5, x: 5, text: 2 };
+    else if (window.innerWidth < 1400) return { y: 10, x: 10, text: 4 };
+    else return { y: 10, x: 17, text: 8 };
   };
 
   const [padding, setPadding] = React.useState(calcPadding);
@@ -22,27 +23,25 @@ function App() {
     });
   });
 
-  const installationRef = React.createRef();
+  const projectRef = React.createRef();
   const aboutRef = React.createRef();
 
-  const scrollTo = (ref) => {
-    console.log('scroll');
+  const scrollTo = (ref) =>
     window.scrollTo({
       top: ref.current.offsetTop,
       left: 0,
       behavior: 'smooth',
     });
-  };
 
   return (
     <AppContext.Provider
       value={{
-        state: { aboutRef, installationRef, mobile, padding },
+        state: { aboutRef, mobile, padding, projectRef },
         actions: { scrollTo },
       }}
     >
       <Header />
-      <Projects />
+      <Projects projects={projects} />
       <About />
     </AppContext.Provider>
   );

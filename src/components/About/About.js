@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from 'components/Product';
-import ProductMobile from 'components/ProductMobile';
+import ProductAbout from 'components/Product/ProductAbout';
+import ProductMobileAbout from 'components/ProductMobile/ProductMobileAbout';
 
 import { AppContext } from 'App';
 
@@ -18,22 +19,24 @@ const aboutMe = {
     subTitle: 'Based in CPH, Denmark',
   },
   description: [
-    'Experience',
-    'Frontend developer and designer/ DHI GRAS/ Copenhagen, DK/ 2018 - 2020',
-    'Student Interaction Designer/ YOKE/ Copenhagen, DK/ 2017',
-    'VR Post Production Assistent/ Makropol/ Copenhagen, DK/ 2017',
-    'Graphic and interactive design intern/ Derooted Creative Agency/ Toronto, CAN/ 2011',
-    'Education',
-    'Art & Technology BA/ Aalborg University/ Aalborg, DK/ 2013 - 2016',
-    'International Communication and Media BA/ University of Applied sciences/ Utrecht, NL/ 2008 - 2013',
+    {
+      subtitle: 'Experience',
+      data: [
+        'Frontend developer and designer/ DHI GRAS/ Copenhagen, DK/ 2018 - 2020',
+        'Student Interaction Designer/ YOKE/ Copenhagen, DK/ 2017',
+        'VR Post Production Assistent/ Makropol/ Copenhagen, DK/ 2017',
+        'Graphic and interactive design intern/ Derooted Creative Agency/ Toronto, CAN/ 2011',
+      ],
+    },
+    {
+      subtitle: 'Education',
+      data: [
+        'Art & Technology BA/ Aalborg University/ Aalborg, DK/ 2013 - 2016',
+        'International Communication and Media BA/ University of Applied sciences/ Utrecht, NL/ 2008 - 2013',
+      ],
+    },
   ],
-  content: [
-    <img src={profilePhoto} style={imageStyle} alt={'dynamic_still'} />,
-  ],
-
-  contentMobile: [
-    <img src={profilePhoto} style={imageStyle} alt={'dynamic_still'} />,
-  ],
+  content: <img src={profilePhoto} style={imageStyle} alt={'dynamic_still'} />,
 };
 
 function About() {
@@ -51,7 +54,11 @@ function About() {
 
   return (
     <div ref={aboutRef} style={paddingStyle}>
-      {mobile ? <ProductMobile props={aboutMe} /> : <Product props={aboutMe} />}
+      {mobile ? (
+        <ProductMobileAbout props={aboutMe} />
+      ) : (
+        <ProductAbout props={aboutMe} />
+      )}
     </div>
   );
 }

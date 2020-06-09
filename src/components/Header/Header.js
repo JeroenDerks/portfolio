@@ -5,7 +5,7 @@ import sketch from './HeaderSketch';
 import { Box, Link, Typography } from '@material-ui/core';
 import { AppContext } from 'App';
 
-const linkStyle = {
+const buttonStyle = {
   cursor: 'pointer',
   textDecoration: 'none',
 };
@@ -13,7 +13,7 @@ const linkStyle = {
 function Header() {
   const {
     actions: { scrollTo },
-    state: { aboutRef, installationRef, padding },
+    state: { aboutRef, projectRef, padding },
   } = React.useContext(AppContext);
 
   return (
@@ -24,19 +24,20 @@ function Header() {
       <Box position="absolute" pl={padding.x} pt={padding.y}>
         <Typography variant="h2">Digital Playgrounds</Typography>
         <Typography variant="subtitle1">
-          I love exploring technologies and digital-physical experiences
+          Welcome to Jeroen's collection of tech experiments and
+          digital-physical interfaces
         </Typography>
       </Box>
       <Box position={'absolute'} pl={padding.x} bottom={padding.y * 8}>
         <Typography variant={'h5'}>
-          <Link style={linkStyle} onClick={() => scrollTo(installationRef)}>
+          <Link style={buttonStyle} onClick={() => scrollTo(projectRef)}>
             Projects
           </Link>
         </Typography>
       </Box>
       <Box position={'absolute'} right={padding.x * 8} bottom={padding.y * 8}>
         <Typography variant={'h5'}>
-          <Link style={linkStyle} onClick={() => scrollTo(aboutRef)}>
+          <Link style={buttonStyle} onClick={() => scrollTo(aboutRef)}>
             About
           </Link>
         </Typography>

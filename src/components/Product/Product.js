@@ -3,6 +3,8 @@ import Sticky from 'react-sticky-el';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { AppContext } from 'App';
 import { linkStyle } from 'styles/global';
+import ProductHeader from './ProductHeader';
+import ProductDescription from './ProductDescription';
 
 const ASPECT_RATIO = 0.5625;
 const MAX_COLUMNS = 12;
@@ -43,53 +45,13 @@ function Product({ props }) {
           height={'100vh'}
           width={1}
         >
-          <Grid container spacing={2} style={{ height: 'max-content' }}>
-            <Grid item sm={12} md={10} lg={11}>
-              <Typography variant="h2">{title}</Typography>
-            </Grid>
-            <Grid item sm={12} md={2} lg={1}>
-              <Box px={1}>
-                <Typography variant="body1">
-                  <span style={{ fontWeight: 700 }}>
-                    {technologies.mainTitle}
-                  </span>
-                </Typography>
-                {technologies.location && (
-                  <Box pt={1}>
-                    <Typography variant="body1">
-                      {technologies.location}
-                    </Typography>
-                  </Box>
-                )}
-
-                <Box pt={1}>
-                  <Typography variant="body1">
-                    {technologies.subTitle}
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-          </Grid>
+          <ProductHeader title={title} technologies={technologies} />
 
           <Box width={1} pb={padding.y} alignSelf={'flex-end'}>
             <Grid container spacing={0}>
-              <Grid item md={7} lg={7}></Grid>
-              <Grid item md={3} lg={4}>
-                <Box px={8}>
-                  {description &&
-                    description.map((paragraph, i) => (
-                      <Box pt={1} key={i}>
-                        <Typography variant={'body1'}>{paragraph}</Typography>
-                      </Box>
-                    ))}
-                  {link && (
-                    <Box pt={1}>
-                      <Typography variant="body1" className={classes.wrapper}>
-                        {link}
-                      </Typography>
-                    </Box>
-                  )}
-                </Box>
+              <Grid item md={6} lg={7}></Grid>
+              <Grid item md={4} lg={4}>
+                <ProductDescription description={description} link={link} />
               </Grid>
             </Grid>
           </Box>
@@ -100,15 +62,18 @@ function Product({ props }) {
         <Grid container spacing={0}>
           {content &&
             content.map((element, i) => (
-              <Grid item md={7} key={i}>
-                <Box
-                  width={1}
-                  pb={padding.y}
-                  style={{ paddingTop: i === 0 ? paddingFirstElement : 0 }}
-                >
-                  {element}
-                </Box>
-              </Grid>
+              <React.Fragment key={i}>
+                <Grid item md={6} lg={7}>
+                  <Box
+                    width={1}
+                    pb={padding.y}
+                    style={{ paddingTop: i === 0 ? paddingFirstElement : 0 }}
+                  >
+                    {element}
+                  </Box>
+                </Grid>
+                <Grid item md={6}></Grid>
+              </React.Fragment>
             ))}
         </Grid>
       </Box>

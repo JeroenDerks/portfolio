@@ -1,5 +1,5 @@
 import React from 'react';
-import P5Wrapper from 'react-p5-wrapper';
+// import P5Wrapper from 'react-p5-wrapper';
 import darkwebSketch from './DarkwebSketch';
 import Product from 'components/Product';
 import ProductMobile from 'components/ProductMobile';
@@ -25,9 +25,10 @@ const darkwebDetails = {
     'Audio implementation by Martin Sohn Østergaard. Visual Design and Interaction Design by Jeroen Derks.',
   ],
   content: [
-    <P5Wrapper sketch={darkwebSketch} />,
+    // <P5Wrapper sketch={darkwebSketch} />,
     <img src={dw1} style={imageStyle} alt={'dw1'} />,
     <img src={dw2} style={imageStyle} alt={'dw2'} />,
+    <img src={dw3} style={imageStyle} alt={'dw3'} />,
   ],
 
   contentMobile: [

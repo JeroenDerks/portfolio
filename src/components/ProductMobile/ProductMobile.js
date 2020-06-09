@@ -23,9 +23,11 @@ function ProductMobile({ props }) {
           {description && description.map((paragraph) => paragraph)}
         </Typography>
         {link && (
-          <Typography variant="body1" className={classes.wrapper}>
-            {link}
-          </Typography>
+          <Box pt={1} pb={2}>
+            <Typography variant="body1" className={classes.wrapper}>
+              {link}
+            </Typography>
+          </Box>
         )}
         <Box>
           {contentMobile &&
