@@ -22,17 +22,17 @@ const aboutMe = {
     {
       subtitle: 'Experience',
       data: [
-        'Frontend developer and designer/ DHI GRAS/ Copenhagen, DK/ 2018 - 2020',
-        'Student Interaction Designer/ YOKE/ Copenhagen, DK/ 2017',
-        'VR Post Production Assistent/ Makropol/ Copenhagen, DK/ 2017',
-        'Graphic and interactive design intern/ Derooted Creative Agency/ Toronto, CAN/ 2011',
+        '• Frontend developer and designer/ DHI GRAS/ Copenhagen, DK/ 2018 - 2020',
+        '• Student Interaction Designer/ YOKE/ Copenhagen, DK/ 2017',
+        '• VR Post Production Assistent/ Makropol/ Copenhagen, DK/ 2017',
+        '• Graphic and interactive design intern/ Derooted Creative Agency/ Toronto, CAN/ 2011',
       ],
     },
     {
       subtitle: 'Education',
       data: [
-        'Art & Technology BA/ Aalborg University/ Aalborg, DK/ 2013 - 2016',
-        'International Communication and Media BA/ University of Applied sciences/ Utrecht, NL/ 2008 - 2013',
+        '• Art & Technology BA/ Aalborg University/ Aalborg, DK/ 2013 - 2016',
+        '• International Communication and Media BA/ University of Applied sciences/ Utrecht, NL/ 2008 - 2013',
       ],
     },
   ],

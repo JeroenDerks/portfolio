@@ -65,7 +65,9 @@ export const projects = [
       'Audio implementation by Martin Sohn Østergaard. Visual Design and Interaction Design by Jeroen Derks.',
     ],
     content: [
-      <P5Wrapper sketch={darkwebSketch} />,
+      <div style={{ cursor: 'crosshair' }}>
+        <P5Wrapper sketch={darkwebSketch} />
+      </div>,
       <img src={dw1} style={imageStyle} alt={'dw1'} />,
     ],
 
