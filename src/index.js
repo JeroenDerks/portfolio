@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, Switch } from 'react-router-dom';
 import App from './App';
+import Others from './Others';
+import { Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core';
 import { responsiveFontSizes } from '@material-ui/core/styles';
 import Theme from 'styles/theme';
@@ -20,9 +21,7 @@ ReactDOM.render(
       <Router history={history}>
         <ThemeProvider theme={theme}>
           <Switch>
-            <Route exact path="/others">
-              <div>others</div>
-            </Route>
+            <Route path="/others" component={Others} />
             <Route path="/">
               <App />
             </Route>
