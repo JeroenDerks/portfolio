@@ -6,6 +6,5 @@
 }
 .fade-in-section.is-visible {
   opacity: 1;
-
   visibility: visible;
 }

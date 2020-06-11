@@ -63,3 +63,19 @@ export const linkStyle = makeStyles({
     pointerEvents: 'all',
   },
 });
+
+export const videoStyle = makeStyles({
+  video: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+  },
+  videoWrapper: {
+    position: 'relative',
+    width: '100%',
+    height: 0,
+    paddingBottom: '56.25%',
+  },
+});
