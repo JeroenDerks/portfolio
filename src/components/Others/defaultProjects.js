@@ -1,6 +1,6 @@
 import React from 'react';
 import Cover from 'components/Others/Installations/Cover';
-import DHIPortals from 'components/Others/DHI GRAS/Portals';
+import DHIPortals from 'components/Others/DHIGRAS/Portals';
 
 export const categories = [
   {
