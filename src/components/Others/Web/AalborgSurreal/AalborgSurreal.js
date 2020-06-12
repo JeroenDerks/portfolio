@@ -1,6 +1,5 @@
 import React from 'react';
 import P5Wrapper from 'react-p5-wrapper';
-import classnames from 'classnames';
 import { makeStyles } from '@material-ui/core';
 import AalborgSurrealSketch from './AalborgSurrealSketch';
 import { OthersContext } from 'Others';

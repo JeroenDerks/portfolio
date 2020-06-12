@@ -1,5 +1,7 @@
 import React from 'react';
 import P5Wrapper from 'react-p5-wrapper';
+
+import { Link } from 'react-router-dom';
 import darkwebSketch from './partials/DarkwebSketch';
 import dw1 from 'assets/images/dw1.jpg';
 import dw2 from 'assets/images/dw2.jpg';
@@ -149,14 +151,9 @@ export const projects = [
       <img src={dhi2} style={imageStyle} alt="dhi2" />,
     ],
     link: (
-      <a
-        href="http://www.derks.dk/others/dhi"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={linkStyle}
-      >
+      <Link to="/others/dhi-overview" style={linkStyle}>
         more details
-      </a>
+      </Link>
     ),
   },
   {

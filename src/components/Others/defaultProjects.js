@@ -13,9 +13,11 @@ import StopMotionMachine from 'components/Others/Installations/StopMotionMachine
 import Tingbjerg from 'components/Others/Installations/Tingbjerg';
 import ShyDie from 'components/Others/Installations/ShyDie';
 // import Sphero from 'components/Others/Installations/Sphero';
+import FreakRegister from 'components/Others/Installations/FreaksRegister';
 
 import AalborgSurreal from 'components/Others/Web/AalborgSurreal';
-import FreakRegister from 'components/Others/Installations/FreaksRegister';
+import InformationAge from 'components/Others/Web/InformationAge';
+import FreeSpeech from 'components/Others/Web/FreeSpeech';
 
 import Pilebyg from 'components/Others/Videos/Pilebyg';
 import Sofar from 'components/Others/Videos/Sofar';
@@ -63,10 +65,14 @@ export const categories = [
   {
     group: 'WEB',
     projects: [
-      { link: 'rebekkaborum', name: 'rebekka borum', comp: <></> },
+      { link: 'rebekkaborum', name: 'WIP_rebekka borum', comp: null },
       { link: 'aalborgsurreal', name: 'aalborg surreal', comp: AalborgSurreal },
-      { link: 'freespeech', name: 'platform for free speech', comp: <></> },
-      { link: 'informationage', name: 'information age', comp: <></> },
+      {
+        link: 'freespeech',
+        name: 'WIP_platform for free speech',
+        comp: null,
+      },
+      { link: 'informationage', name: 'information age', comp: InformationAge },
     ],
   },
   {

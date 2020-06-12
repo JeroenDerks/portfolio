@@ -74,15 +74,15 @@ function Others({ match }) {
           minHeight: !mobile && '100vh',
         }}
       >
-        <Route exact path={`${path}/dhioverview`} component={DhiOverview} />
+        <Route exact path={`${path}/dhi-overview`} component={DhiOverview} />
 
         {categories &&
           categories.map(({ projects }) =>
-            projects.map(({ comp: Component, link }, i) => (
+            projects.map(({ comp, comp: Component, link }, i) => (
               <Route
                 key={i}
                 path={`${path}/${link}`}
-                render={() => <Component />}
+                render={() => (comp !== null ? <Component /> : 'WIP')}
               ></Route>
             ))
           )}
