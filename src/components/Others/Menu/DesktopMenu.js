@@ -33,7 +33,6 @@ function DesktopMenu({ match }) {
       left={window.innerWidth * width.main - padding.x}
       bottom={padding.y}
       boxSizing="border-box"
-      style={{ border: '1px solid red' }}
     >
       {categories &&
         categories.map(({ group, projects }, i) => (

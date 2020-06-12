@@ -1,13 +1,15 @@
 import React from 'react';
 import { videoStyle } from 'styles/global';
 
-function Cover() {
+function Aman() {
   const classes = videoStyle();
 
   return (
     <div className={classes.videoWrapper}>
       <iframe
-        src={`https://player.vimeo.com/video/207443334?title=0&byline=0&portrait=0`}
+        src={
+          'https://player.vimeo.com/video/141823051?color=ffffff&title=0&byline=0&portrait=0'
+        }
         title={'cover'}
         frameBorder="0"
         allow="fullscreen"
@@ -18,4 +20,4 @@ function Cover() {
   );
 }
 
-export default Cover;
+export default Aman;

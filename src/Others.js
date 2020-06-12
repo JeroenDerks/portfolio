@@ -63,7 +63,6 @@ function Others({ match }) {
       <Route exact path={`${path}`} component={Cursors} />
       <Box
         width={width.main}
-        minHeight={!mobile && '100vh'}
         display="flex"
         alignItems="flex-end"
         style={{
@@ -72,6 +71,7 @@ function Others({ match }) {
           paddingBottom: padding.y,
           paddingLeft: padding.x,
           boxSizing: 'border-box',
+          minHeight: !mobile && '100vh',
         }}
       >
         <Route exact path={`${path}/dhioverview`} component={DhiOverview} />

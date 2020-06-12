@@ -1,0 +1,37 @@
+import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
+import { videoStyle } from 'styles/global';
+import tingbjerg1 from 'assets/others/tingbjergCeiling.jpg';
+import tingbjerg2 from 'assets/others/tingbjergTrees.jpg';
+
+const imageStyle = {
+  width: '100%',
+};
+
+function Tingbjerg() {
+  const classes = videoStyle();
+
+  const portals = [
+    {
+      title: 'Interactive ceiling light installation in Tingbjerg',
+      img: <img src={tingbjerg1} style={{ width: '100%' }} />,
+    },
+    {
+      title: 'Interactive tree light installation in Tingbjerg',
+      img: <img src={tingbjerg2} style={{ width: '100%' }} />,
+    },
+  ];
+
+  return (
+    <Grid container spacing={4} wrap="wrap-reverse">
+      {portals.map(({ img, title }, i) => (
+        <Grid item xs={12} sm={12} md={6} key={i}>
+          <Typography variant="body1">{title}</Typography>
+          {img}
+        </Grid>
+      ))}
+    </Grid>
+  );
+}
+
+export default Tingbjerg;
