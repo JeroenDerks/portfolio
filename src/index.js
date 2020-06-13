@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Others from './Others';
-import { Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/core';
 import { responsiveFontSizes } from '@material-ui/core/styles';
 import Theme from 'styles/theme';
 import * as serviceWorker from './serviceWorker';
-import history from 'utils/history';
+// import history from 'utils/history';
 import IEnotification from './containers/IEnotification.js';
 
 const theme = responsiveFontSizes(Theme);
@@ -18,7 +18,7 @@ ReactDOM.render(
     {isIE ? (
       <IEnotification />
     ) : (
-      <Router history={history}>
+      <HashRouter>
         <ThemeProvider theme={theme}>
           <Switch>
             <Route path="/others" component={Others} />
@@ -27,7 +27,7 @@ ReactDOM.render(
             </Route>
           </Switch>
         </ThemeProvider>
-      </Router>
+      </HashRouter>
     )}
   </React.StrictMode>,
   document.getElementById('root')

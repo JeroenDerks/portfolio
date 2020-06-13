@@ -1,13 +1,13 @@
 import React from 'react';
 import { Grid, Link, Typography } from '@material-ui/core';
-import imageAltimetry from 'assets/others/dhi-portal-altimetry.jpg';
-import imageSoilMoisture from 'assets/others/dhi-portal-soil-moisture.jpg';
-import imageFloodsDK from 'assets/others/dhi-portal-floods-dk.jpg';
-import imageFloodMetrics from 'assets/others/dhi-portal-flood-metrics.jpg';
-import imageWaterQuality from 'assets/others/dhi-portal-wq.jpg';
-import imageFloodsFR from 'assets/others/dhi-portal-floods-france.jpg';
-import imageSavSw from 'assets/others/dhi-portal-savsweden.jpg';
-import imageFloodMetricsDemo from 'assets/others/dhi-portals-floodmetrics-demo2.jpg';
+import imageAltimetry from 'assets/images/dhi-portal-altimetry.jpg';
+import imageSoilMoisture from 'assets/images/dhi-portal-soil-moisture.jpg';
+import imageFloodsDK from 'assets/images/dhi-portal-floods-dk.jpg';
+import imageFloodMetrics from 'assets/images/dhi-portal-flood-metrics.jpg';
+import imageWaterQuality from 'assets/images/dhi-portal-wq.jpg';
+import imageFloodsFR from 'assets/images/dhi-portal-floods-france.jpg';
+import imageSavSw from 'assets/images/dhi-portal-savsweden.jpg';
+import imageFloodMetricsDemo from 'assets/images/dhi-portals-floodmetrics-demo2.jpg';
 
 const portals = [
   {
