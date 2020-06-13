@@ -1,24 +1,17 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import { videoStyle } from 'styles/global';
 import tingbjerg1 from 'assets/others/tingbjergCeiling.jpg';
 import tingbjerg2 from 'assets/others/tingbjergTrees.jpg';
 
-const imageStyle = {
-  width: '100%',
-};
-
 function Tingbjerg() {
-  const classes = videoStyle();
-
   const portals = [
     {
       title: 'Interactive ceiling light installation in Tingbjerg',
-      img: <img src={tingbjerg1} style={{ width: '100%' }} />,
+      img: <img src={tingbjerg1} style={{ width: '100%' }} alt="tingbjerg1" />,
     },
     {
       title: 'Interactive tree light installation in Tingbjerg',
-      img: <img src={tingbjerg2} style={{ width: '100%' }} />,
+      img: <img src={tingbjerg2} style={{ width: '100%' }} alt="tingbjerg1" />,
     },
   ];
 

@@ -2,10 +2,6 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { videoStyle } from 'styles/global';
 
-const imageStyle = {
-  width: '100%',
-};
-
 function SnakeSkin() {
   const classes = videoStyle();
 
@@ -15,7 +11,7 @@ function SnakeSkin() {
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/212966526?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'snakeskin1'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen
@@ -29,7 +25,7 @@ function SnakeSkin() {
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/212969684?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'snakeskin2'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen

@@ -2,194 +2,37 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { videoStyle } from 'styles/global';
 
-const imageStyle = {
-  width: '100%',
-};
-
 function Sofar() {
   const classes = videoStyle();
 
+  const makeVideo = (src) => (
+    <div className={classes.videoWrapper}>
+      <iframe
+        src={`https://www.youtube.com/embed/${src}`}
+        frameBorder="0"
+        title={`sofar_${src}`}
+        allowFullScreen
+        className={classes.video}
+      />
+    </div>
+  );
+
   const portals = [
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/OUJ3AjhQdg4"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/v4x-7nBKvS8"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/BK7brzDjab0"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/jESiXHWAsPo"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/shUdPhXdoPQ"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/vk_q9LRYEwo"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/auQvwyLFhL4"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/2dYlu22ENXA"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/0XGyD3cEPp4"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/AoOmGZ-MoSI"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/shtpmR4yzqY"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/3r0rsk-tNV4"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/pqHy-vzKlxo"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/u9zEC7udEeM"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
-    {
-      comp: (
-        <div className={classes.videoWrapper}>
-          <iframe
-            src="https://www.youtube.com/embed/0fDMVb3lTbk"
-            frameBorder="0"
-            allowFullScreen
-            className={classes.video}
-          />
-        </div>
-      ),
-    },
+    { comp: makeVideo('OUJ3AjhQdg4') },
+    { comp: makeVideo('v4x-7nBKvS8') },
+    { comp: makeVideo('BK7brzDjab0') },
+    { comp: makeVideo('jESiXHWAsPo') },
+    { comp: makeVideo('shUdPhXdoPQ') },
+    { comp: makeVideo('vk_q9LRYEwo') },
+    { comp: makeVideo('auQvwyLFhL4') },
+    { comp: makeVideo('2dYlu22ENXA') },
+    { comp: makeVideo('0XGyD3cEPp4') },
+    { comp: makeVideo('AoOmGZ-MoSI') },
+    { comp: makeVideo('shtpmR4yzqY') },
+    { comp: makeVideo('3r0rsk-tNV4') },
+    { comp: makeVideo('pqHy-vzKlxo') },
+    { comp: makeVideo('u9zEC7udEeM') },
+    { comp: makeVideo('0fDMVb3lTbk') },
   ];
 
   return (

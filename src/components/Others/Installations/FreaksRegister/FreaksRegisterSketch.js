@@ -123,7 +123,6 @@ export default function sketch(p) {
   var padding = 80;
   var widthFactor = 0.8;
   var incr = 1;
-  var mobile = false;
 
   const ASPECT_RATIO = 0.5625;
   const TOTAL_IMG = 57;
@@ -182,7 +181,7 @@ export default function sketch(p) {
     if (x - targetx < 0) incr = 1;
     else incr = -1;
 
-    if (x != targetx) x += incr;
+    if (x !== targetx) x += incr;
 
     if (v[x]) p.image(v[x], 0, 0, p.width, p.height);
   };

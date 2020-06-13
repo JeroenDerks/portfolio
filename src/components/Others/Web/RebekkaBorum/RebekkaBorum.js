@@ -1,9 +1,9 @@
 import React from 'react';
 import P5Wrapper from 'react-p5-wrapper';
-import FreeSpeechSketch from './FreeSpeechSketch';
+import RebekkaBorumSketch from './RebekkaBorumSketch';
 import { OthersContext } from 'Others';
 
-function FreeSpeech() {
+function InformationAge() {
   const {
     state: { padding, width },
   } = React.useContext(OthersContext);
@@ -11,7 +11,7 @@ function FreeSpeech() {
   return (
     <div style={{ display: 'block' }}>
       <P5Wrapper
-        sketch={FreeSpeechSketch}
+        sketch={RebekkaBorumSketch}
         padding={padding.x}
         width={width.main}
       />
@@ -19,4 +19,4 @@ function FreeSpeech() {
   );
 }
 
-export default FreeSpeech;
+export default InformationAge;

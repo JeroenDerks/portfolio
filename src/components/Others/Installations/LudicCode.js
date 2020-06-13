@@ -2,10 +2,6 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { videoStyle } from 'styles/global';
 
-const imageStyle = {
-  width: '100%',
-};
-
 function DhiVideo() {
   const classes = videoStyle();
 
@@ -15,7 +11,7 @@ function DhiVideo() {
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/180657153?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'ludiccode1'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen
@@ -29,7 +25,7 @@ function DhiVideo() {
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/211682937?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'ludiccode2'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen

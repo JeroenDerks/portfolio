@@ -3,12 +3,6 @@ import classnames from 'classnames';
 import { Box, Typography, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { categories } from 'components/Others/defaultProjects.js';
-import { OthersContext } from 'Others';
-
-const categoryHeader = {
-  fontWeight: 700,
-  padding: '0px 2px',
-};
 
 const linkStyle = makeStyles({
   link: {
@@ -34,10 +28,6 @@ const linkStyle = makeStyles({
 });
 
 function MobileMenu({ match }) {
-  const {
-    state: { padding, width },
-  } = React.useContext(OthersContext);
-
   const [category, showCategory] = React.useState();
 
   const classes = linkStyle();

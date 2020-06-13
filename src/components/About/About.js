@@ -1,5 +1,4 @@
 import React from 'react';
-import Product from 'components/Product';
 import ProductAbout from 'components/Product/ProductAbout';
 import ProductMobileAbout from 'components/ProductMobile/ProductMobileAbout';
 

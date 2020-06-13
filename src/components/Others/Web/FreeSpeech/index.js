@@ -1,1 +1,1 @@
-export { default } from './FreeSpeechSketch';
+export { default } from './FreeSpeech';

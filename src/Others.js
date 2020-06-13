@@ -1,27 +1,13 @@
 import React from 'react';
 import Cursors from 'components/Others/Web/Cursors';
-import { Box, Typography, makeStyles } from '@material-ui/core';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Box } from '@material-ui/core';
+import { Route } from 'react-router-dom';
 import { categories } from 'components/Others/defaultProjects.js';
 import DhiOverview from 'components/Others/DHIGRAS/DhiOverview';
 import DesktopMenu from 'components/Others/Menu/DesktopMenu';
 import MobileMenu from 'components/Others/Menu/MobileMenu';
 
 export const OthersContext = React.createContext();
-
-const categoryHeader = {
-  fontWeight: 700,
-  padding: '0px 2px',
-};
-
-const linkStyle = makeStyles({
-  link: {
-    color: '#000',
-    textDecoration: 'none',
-    padding: '1px',
-    '&:hover': { backgroundColor: '#000', color: '#fff' },
-  },
-});
 
 function Others({ match }) {
   const calcPadding = () => {
@@ -40,7 +26,6 @@ function Others({ match }) {
   const [mobile, setMobile] = React.useState(window.innerWidth < 960);
   const [width, setWidth] = React.useState(calcWidth);
 
-  const classes = linkStyle();
   const { path } = match;
 
   React.useEffect(() => {
@@ -60,7 +45,6 @@ function Others({ match }) {
     >
       {mobile ? <MobileMenu match={match} /> : <DesktopMenu match={match} />}
 
-      <Route exact path={`${path}`} component={Cursors} />
       <Box
         width={width.main}
         display="flex"
@@ -74,6 +58,7 @@ function Others({ match }) {
           minHeight: !mobile && '100vh',
         }}
       >
+        <Route exact path={`${path}`} component={Cursors} />
         <Route exact path={`${path}/dhi-overview`} component={DhiOverview} />
 
         {categories &&

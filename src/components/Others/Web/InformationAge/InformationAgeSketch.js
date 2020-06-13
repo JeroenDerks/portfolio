@@ -92,7 +92,7 @@ export default function sketch(p) {
         p.fill(255);
         p.rect(this.x - 8, this.y - y, x, y);
         p.fill(0);
-        if (this.r != 1) {
+        if (this.r !== 1) {
           p.text(s.charAt(this.i), this.x, this.y);
         }
       }

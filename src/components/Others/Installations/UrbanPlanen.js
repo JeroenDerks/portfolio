@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import { videoStyle } from 'styles/global';
 import urban1 from 'assets/others/urbanplanen1.jpg';
 import urban2 from 'assets/others/urbanplanen2.jpg';
 import urban3 from 'assets/others/urbanplanen3.jpg';
@@ -8,13 +7,7 @@ import urban4 from 'assets/others/urbanplanen4.jpg';
 import urban5 from 'assets/others/urbanplanen5.jpg';
 import urban6 from 'assets/others/urbanplanen6.jpg';
 
-const imageStyle = {
-  width: '100%',
-};
-
 function UrbanPlanen() {
-  const classes = videoStyle();
-
   const portals = [
     { comp: <img src={urban1} style={{ width: '100%' }} alt={'urban1'} /> },
     { comp: <img src={urban2} style={{ width: '100%' }} alt={'urban2'} /> },

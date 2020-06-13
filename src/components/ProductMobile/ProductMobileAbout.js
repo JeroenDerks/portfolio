@@ -1,7 +1,6 @@
 import React from 'react';
 import AboutButtons from '../Product/AboutButtons';
 import { Box, Typography } from '@material-ui/core';
-import { linkStyle } from 'styles/global';
 
 function ProductMobileAbout({ props }) {
   const { title, technologies, description, content } = props;

@@ -2,10 +2,6 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import { videoStyle } from 'styles/global';
 
-const imageStyle = {
-  width: '100%',
-};
-
 function StopMotionMachine() {
   const classes = videoStyle();
 
@@ -15,7 +11,7 @@ function StopMotionMachine() {
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/163595319?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'stopmotionmachine1'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen
@@ -29,7 +25,7 @@ function StopMotionMachine() {
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/182385146?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'stopmotionmachine2'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen
@@ -43,7 +39,7 @@ function StopMotionMachine() {
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/182385144?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'stopmotionmachine3'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen

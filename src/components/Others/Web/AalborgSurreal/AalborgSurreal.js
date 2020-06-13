@@ -30,10 +30,6 @@ function Cursors() {
     left: 20 + padding.x,
   };
 
-  const mobileStyle = {
-    display: 'block',
-  };
-
   return (
     <div style={{ display: 'block' }}>
       <div style={{ display: 'block' }}>

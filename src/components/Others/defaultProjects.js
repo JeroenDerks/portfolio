@@ -1,5 +1,3 @@
-import React from 'react';
-
 import DHIPortals from 'components/Others/DHIGRAS/DhiPortals';
 import DHIWebsite from 'components/Others/DHIGRAS/DhiWebsite';
 import DHIVideo from 'components/Others/DHIGRAS/DhiVideo';
@@ -18,6 +16,7 @@ import FreakRegister from 'components/Others/Installations/FreaksRegister';
 import AalborgSurreal from 'components/Others/Web/AalborgSurreal';
 import InformationAge from 'components/Others/Web/InformationAge';
 import FreeSpeech from 'components/Others/Web/FreeSpeech';
+import RebekkaBorum from 'components/Others/Web/RebekkaBorum';
 
 import Pilebyg from 'components/Others/Videos/Pilebyg';
 import Sofar from 'components/Others/Videos/Sofar';
@@ -45,13 +44,13 @@ export const categories = [
       { link: 'ludiccode', name: 'ludic code', comp: LudicCode },
       { link: 'snakeskin', name: 'snake skin', comp: SnakeSkin },
       { link: 'nodes', name: 'nodes', comp: Nodes },
-      { link: 'urbanplanen', name: 'urbanplanen', comp: UrbanPlanen },
       {
         link: 'stopmotion',
         name: 'stop motion machine',
         comp: StopMotionMachine,
       },
       { link: 'cover', name: 'cover', comp: Cover },
+      { link: 'urbanplanen', name: 'urbanplanen', comp: UrbanPlanen },
       { link: 'tingbjerg', name: 'tingbjerg', comp: Tingbjerg },
       {
         link: 'thefreaksregister',
@@ -65,12 +64,12 @@ export const categories = [
   {
     group: 'WEB',
     projects: [
-      { link: 'rebekkaborum', name: 'WIP_rebekka borum', comp: null },
+      { link: 'rebekkaborum', name: 'rebekka borum', comp: RebekkaBorum },
       { link: 'aalborgsurreal', name: 'aalborg surreal', comp: AalborgSurreal },
       {
         link: 'freespeech',
-        name: 'WIP_platform for free speech',
-        comp: null,
+        name: 'platform for free speech',
+        comp: FreeSpeech,
       },
       { link: 'informationage', name: 'information age', comp: InformationAge },
     ],

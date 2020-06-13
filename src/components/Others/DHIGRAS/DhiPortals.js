@@ -7,7 +7,7 @@ import imageFloodMetrics from 'assets/others/dhi-portal-flood-metrics.jpg';
 import imageWaterQuality from 'assets/others/dhi-portal-wq.jpg';
 import imageFloodsFR from 'assets/others/dhi-portal-floods-france.jpg';
 import imageSavSw from 'assets/others/dhi-portal-savsweden.jpg';
-import { OthersContext } from 'Others';
+import imageFloodMetricsDemo from 'assets/others/dhi-portals-floodmetrics-demo2.jpg';
 
 const portals = [
   {
@@ -32,9 +32,9 @@ const portals = [
     link: 'https://floodmetricspro.z6.web.core.windows.net/',
   },
   {
-    title: 'French floods',
-    image: imageFloodsFR,
-    link: 'http://labs.dhi-gras.com/fr-inondations/',
+    title: 'Soil Moisture',
+    image: imageSoilMoisture,
+    link: 'https://soilmoisturedev.z6.web.core.windows.net/',
   },
   {
     title: 'Submerged Aquatic Vegetation',
@@ -42,9 +42,14 @@ const portals = [
     link: 'http://labs.dhi-gras.com/sav-sweden/',
   },
   {
-    title: 'Soil Moisture',
-    image: imageSoilMoisture,
-    link: 'https://soilmoisturedev.z6.web.core.windows.net/',
+    title: 'Flood metrics showcase',
+    image: imageFloodMetricsDemo,
+    link: 'https://floodmetrics.dhigroup.com/showcase',
+  },
+  {
+    title: 'French floods',
+    image: imageFloodsFR,
+    link: 'http://labs.dhi-gras.com/fr-inondations/',
   },
 ];
 
@@ -53,10 +58,6 @@ const imageStyle = {
 };
 
 function DhiPortals() {
-  const {
-    state: { padding, width },
-  } = React.useContext(OthersContext);
-
   return (
     <Grid container spacing={4} wrap="wrap-reverse">
       {portals.map(({ image, link, title }, i) => (

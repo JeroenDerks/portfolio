@@ -4,26 +4,22 @@ import { videoStyle } from 'styles/global';
 import nodes1 from 'assets/images/nodes1.jpg';
 import nodes2 from 'assets/images/nodes3.jpg';
 
-const imageStyle = {
-  width: '100%',
-};
-
 function Nodes() {
   const classes = videoStyle();
 
   const portals = [
     {
-      comp: <img src={nodes1} style={{ width: '100%' }} />,
+      comp: <img src={nodes1} style={{ width: '100%' }} alt={'nodes1'} />,
     },
     {
-      comp: <img src={nodes2} style={{ width: '100%' }} />,
+      comp: <img src={nodes2} style={{ width: '100%' }} alt={'nodes2'} />,
     },
     {
       comp: (
         <div className={classes.videoWrapper}>
           <iframe
             src={`https://player.vimeo.com/video/176175393?title=0&byline=0&portrait=0`}
-            title={'cover'}
+            title={'nodes'}
             frameBorder="0"
             allow="fullscreen"
             allowFullScreen

@@ -2,7 +2,6 @@ import React from 'react';
 import AboutButtons from './AboutButtons';
 import FadeInSection from './FadeInSection';
 import ProductHeader from './ProductHeader';
-import ProductDescription from './ProductDescription';
 
 import { Box, Grid, Typography } from '@material-ui/core';
 import { AppContext } from 'App';
@@ -12,7 +11,7 @@ function Product({ props }) {
     state: { padding },
   } = React.useContext(AppContext);
 
-  const { title, technologies, description, content, link } = props;
+  const { title, technologies, description, content } = props;
 
   return (
     <div style={{ position: 'relative' }}>

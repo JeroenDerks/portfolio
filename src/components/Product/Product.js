@@ -1,8 +1,7 @@
 import React from 'react';
 import Sticky from 'react-sticky-el';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import { AppContext } from 'App';
-import { linkStyle } from 'styles/global';
 import ProductHeader from './ProductHeader';
 import ProductDescription from './ProductDescription';
 
@@ -14,8 +13,6 @@ function Product({ props }) {
   const {
     state: { padding },
   } = React.useContext(AppContext);
-
-  const classes = linkStyle();
 
   const { title, technologies, description, content, link } = props;
   const id = title.replace(/\s/g, '');

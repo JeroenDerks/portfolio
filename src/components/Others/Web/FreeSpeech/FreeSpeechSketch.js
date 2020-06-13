@@ -1,35 +1,39 @@
-export default function sketch(p) {
-  var letters = [];
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import 'firebase/database';
 
-  var x = 16;
-  var y = 30;
-  var c = 0;
-  var mx = 0;
-  var my = 0;
-  var easing = 0.05;
-  var s = 'INFORMATION AGE ';
+export default function sketch(p) {
+  const config = {
+    apiKey: 'AIzaSyB5PFdZgVzRS08x2o1CMyIkm-Pqokcqv-g',
+    authDomain: 'platform-for-democracy.firebaseapp.com',
+    databaseURL: 'https://platform-for-democracy.firebaseio.com',
+    projectId: 'platform-for-democracy',
+    storageBucket: 'platform-for-democracy.appspot.com',
+    messagingSenderId: '841639763431',
+  };
+
+  var typed = '';
+  const TYPE_YOUR_MIND = 'TYPE YOUR MIND!';
+  const TITLE = 'PLATFORM FOR FREE SPEECH';
+  var f = 255;
+  var count = 0;
+  var database;
+  var ref;
 
   var padding = 80;
   var widthFactor = 0.8;
-  const ASPECT_RATIO = 0.5625;
 
   p.setup = function () {
     let width = parseInt(window.innerWidth * widthFactor) - padding * 3;
     let height = window.innerHeight - padding * 2;
-
     p.createCanvas(width, height);
-
+    p.frameRate(10);
     p.textSize(20);
-    p.background(255);
-    p.fill(0);
-    p.textAlign(p.CENTER);
-    p.stroke(255);
-    for (let j = 0; j <= height; j += y) {
-      for (let i = 0; i <= width; i += x) {
-        letters.push(new Letter(i, j, c % s.length));
-        c++;
-      }
-    }
+
+    firebase.initializeApp(config);
+    database = firebase.database();
+    ref = database.ref('savedtext');
+    ref.on('value', p.gotData, p.errData);
   };
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
@@ -43,59 +47,64 @@ export default function sketch(p) {
   };
 
   p.windowResized = function () {
-    c = 0;
-    letters.splice(1, letters.length);
-
     let width = parseInt(window.innerWidth * widthFactor) - padding * 3;
     let height = window.innerHeight - padding * 2;
 
-    if (window.innerWidth < 900) {
-      width = window.innerWidth - padding * 2;
-      height = width * ASPECT_RATIO;
-    }
-
     p.resizeCanvas(width, height);
+    p.drawText();
+  };
 
-    p.background(255);
-    for (let j = 0; j <= height; j += y) {
-      for (let i = 0; i <= width; i += x) {
-        letters.push(new Letter(i, j, c % s.length));
-        c++;
-      }
+  p.gotData = function (data) {
+    const scores = data.val();
+    const keys = Object.keys(scores);
+    const key = keys[keys.length - 1];
+    typed = scores[key].content;
+    p.drawText();
+  };
+
+  p.drawText = function () {
+    p.fill(f);
+    p.noStroke();
+    p.rect(0, 0, p.width, p.height);
+    p.fill(255 - f);
+
+    p.textAlign(p.RIGHT);
+    p.text(TYPE_YOUR_MIND, 0, 20, p.width - 20, 20);
+
+    p.textAlign(p.LEFT);
+    p.text(TITLE, 20, 20, p.width - 20, 20);
+    p.text(typed, 20, 50, p.width - 40, p.height - 250);
+
+    if (count > (p.width * p.height) / 20) {
+      typed = ' ';
+      f *= -1;
+      count = 0;
     }
   };
 
   p.draw = function () {
-    if (p.mouseX !== 0 && p.mouseY !== 0) {
-      const dx = p.mouseX - mx;
-      mx += dx * easing;
-      const dy = p.mouseY - my;
-      my += dy * easing;
-      for (var i = 0; i < letters.length; i++) {
-        letters[i].hovered();
-        if (letters[i].r === 1) letters.splice(i, 1);
-      }
-    }
+    p.drawText();
   };
-  function Letter(_x, _y, _i) {
-    this.x = _x - 20;
-    this.y = _y - 5;
-    this.i = _i;
-    this.r = 0;
-    p.text(s.charAt(this.i), this.x, this.y);
-    this.hovered = function () {
-      var dx = p.abs(mx - this.x);
-      var dy = p.abs(my - this.y);
-      if (dx < p.random(120) && dy < p.random(120)) {
-        this.i = p.round(p.random(16));
-        this.r = p.round(p.random(50));
-        p.fill(255);
-        p.rect(this.x - 8, this.y - y, x, y);
-        p.fill(0);
-        if (this.r != 1) {
-          p.text(s.charAt(this.i), this.x, this.y);
-        }
-      }
+
+  p.keyPressed = function () {
+    if (p.keyCode === p.BACKSPACE) f *= -1;
+    else if (p.keyCode === p.RETURN) {
+      typed += ' ';
+      const list = p.split(typed, ' ');
+      p.saveStrings(list, 'my_contribution.txt');
+    }
+    p.drawText();
+  };
+
+  p.keyTyped = function () {
+    typed += p.key;
+    var data = {
+      name: 'text',
+      content: '' + typed,
     };
-  }
+    ref = database.ref('savedtext');
+    ref.push(data);
+    count += 40;
+    p.drawText();
+  };
 }
