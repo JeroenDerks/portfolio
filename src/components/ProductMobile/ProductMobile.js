@@ -9,8 +9,9 @@ function ProductMobile({ props }) {
 
   return (
     <Box>
-      <Box boxSizing={'border-box'} pt={10} width={1}>
+      <Box boxSizing={'border-box'} pt={5} width={1}>
         <Typography variant="h2">{title}</Typography>
+        <Box pt={1} />
 
         <Typography variant="body1">
           <span style={{ fontWeight: 700 }}>{technologies.mainTitle} </span>
@@ -18,12 +19,12 @@ function ProductMobile({ props }) {
           {' - '} {technologies.subTitle}
         </Typography>
 
-        <Box pt={2}></Box>
+        <Box pt={1} />
         <Typography variant={'body1'}>
           {description && description.map((paragraph) => paragraph)}
         </Typography>
         {link && (
-          <Box pt={1} pb={2}>
+          <Box py={1}>
             <Typography variant="body1" className={classes.wrapper}>
               {link}
             </Typography>
@@ -32,7 +33,7 @@ function ProductMobile({ props }) {
         <Box>
           {contentMobile &&
             contentMobile.map((content, i) => (
-              <Box width={1} pb={10} key={i}>
+              <Box width={1} py={2} key={i}>
                 {content}
               </Box>
             ))}

@@ -24,6 +24,7 @@ export default function sketch(p) {
     p.fill(0);
     p.textAlign(p.CENTER);
     p.stroke(255);
+
     for (let j = 0; j <= height; j += y) {
       for (let i = 0; i <= width; i += x) {
         letters.push(new Letter(i, j, c % s.length));

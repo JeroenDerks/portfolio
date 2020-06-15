@@ -1,5 +1,5 @@
 import React from 'react';
-import FadeInSection from 'components/Product/FadeInSection';
+// import FadeInSection from 'components/Product/FadeInSection';
 import Product from 'components/Product';
 import ProductMobile from 'components/ProductMobile';
 
@@ -23,13 +23,13 @@ function Projects({ projects }) {
     <div ref={projectRef} style={paddingStyle}>
       {projects &&
         projects.map((project, i) => (
-          <FadeInSection key={i}>
+          <div key={i}>
             {mobile ? (
               <ProductMobile props={project} />
             ) : (
               <Product props={project} />
             )}
-          </FadeInSection>
+          </div>
         ))}
     </div>
   );

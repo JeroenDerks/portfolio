@@ -1,31 +1,44 @@
 import React from 'react';
 import AboutButtons from '../Product/AboutButtons';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 
 function ProductMobileAbout({ props }) {
-  const { title, technologies, description, content } = props;
+  const { content, description, technologies, title } = props;
+  const logos = technologies.logos;
 
   return (
     <Box>
       <Box boxSizing={'border-box'} pt={10} width={1}>
         <Typography variant="h2">{title}</Typography>
-
+        <Box pt={1} />
         <Typography variant="body1">
-          <span style={{ fontWeight: 700 }}>{technologies.mainTitle} </span>
-          {technologies.location && ' - ' + technologies.location}
+          {technologies.location && technologies.location}
           {' - '} {technologies.subTitle}
         </Typography>
 
-        <Box pt={2}>
+        <Box pt={1} />
+        <Grid container spacing={1}>
+          {logos.map(({ logo, link, title }, i) => (
+            <Grid item xs={2} sm={1} md={3} key={i}>
+              <a href={link}>
+                <img src={logo} alt={title} style={{ width: 16 }} />
+              </a>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Box>
           {description &&
             description.map((section, i) => (
               <Box pt={1} key={i}>
-                <Typography variant={'body1'} style={{ fontWeight: 700 }}>
-                  {section.subtitle}
-                </Typography>
+                <Box pt={2}>
+                  <Typography variant={'body1'} style={{ fontWeight: 700 }}>
+                    {section.subtitle}
+                  </Typography>
+                </Box>
                 {section.data &&
                   section.data.map((expercience, j) => (
-                    <Box pt={1} key={j}>
+                    <Box py={1} key={j}>
                       <Typography variant={'body1'}>{expercience}</Typography>
                     </Box>
                   ))}
@@ -33,8 +46,10 @@ function ProductMobileAbout({ props }) {
             ))}
         </Box>
 
-        <Box>{content}</Box>
-        <AboutButtons />
+        <Box pt={2}>{content}</Box>
+        <Box py={4}>
+          <AboutButtons />
+        </Box>
       </Box>
     </Box>
   );

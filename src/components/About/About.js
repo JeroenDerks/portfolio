@@ -1,7 +1,8 @@
 import React from 'react';
 import ProductAbout from 'components/Product/ProductAbout';
 import ProductMobileAbout from 'components/ProductMobile/ProductMobileAbout';
-
+import githubLogo from 'assets/images/github-logo.png';
+import linkedInLogo from 'assets/images/linkedin-logo.png';
 import { AppContext } from 'App';
 
 import profilePhoto from 'assets/images/jeroenderks.jpg';
@@ -13,17 +14,24 @@ const imageStyle = {
 const aboutMe = {
   title: 'Jeroen Derks',
   technologies: {
-    mainTitle: '+45 5281 6166',
+    logos: [
+      {
+        logo: githubLogo,
+        link: 'https://github.com/JeroenDerks',
+      },
+      { logo: linkedInLogo, link: 'https://www.linkedin.com/in/derksdk/' },
+    ],
     location: 'From the Netherlands',
-    subTitle: 'Based in CPH, Denmark',
+    subTitle: 'Living in Copenhagen and relocating to Berlin',
   },
   description: [
     {
-      subtitle: 'Experience',
+      subtitle: 'Favorite experiences',
       data: [
         '• Frontend developer and designer/ DHI GRAS/ Copenhagen, DK/ 2018 - 2020',
-        '• Student Interaction Designer/ YOKE/ Copenhagen, DK/ 2017',
-        '• VR Post Production Assistent/ Makropol/ Copenhagen, DK/ 2017',
+        '• Developer and interaction designer/ YOKE/ Copenhagen, DK/ 2017',
+        '• VR post production assistent/ Makropol/ Copenhagen, DK/ 2017',
+        '• Research assistant and co-author/ RELATE AAU/ Aalborg DK/ 2017',
         '• Graphic and interactive design intern/ Derooted Creative Agency/ Toronto, CAN/ 2011',
       ],
     },

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Grid, Typography, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import cv from 'assets/pdf/cv_jeroenderks.pdf';
 
 const buttonStyle = makeStyles({
   button: {
@@ -14,25 +15,33 @@ const buttonStyle = makeStyles({
       color: '#fff',
     },
   },
+  font: {
+    '@media (max-width:900px)': {
+      fontSize: 14,
+    },
+    '@media (min-width:900px)': {
+      fontSize: 20,
+    },
+  },
 });
 
 function OtherButtons() {
   const classes = buttonStyle();
 
   return (
-    <Box pt={5}>
+    <Box>
       <Grid container justify="space-between">
         <Grid item md={2} lg={1}>
-          <Typography variant={'h5'}>
-            <Link to="/others" className={classes.button}>
-              Other works
-            </Link>
+          <Typography variant={'h5'} className={classes.font}>
+            <a href={cv} download className={classes.button}>
+              Curriculum Vitae
+            </a>
           </Typography>
         </Grid>
         <Grid item md={2} lg={1}>
-          <Typography variant={'h5'}>
+          <Typography variant={'h5'} className={classes.font}>
             <Link to="/others" className={classes.button}>
-              Other works
+              More works
             </Link>
           </Typography>
         </Grid>

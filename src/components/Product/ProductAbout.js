@@ -1,7 +1,6 @@
 import React from 'react';
 import AboutButtons from './AboutButtons';
 import FadeInSection from './FadeInSection';
-import ProductHeader from './ProductHeader';
 
 import { Box, Grid, Typography } from '@material-ui/core';
 import { AppContext } from 'App';
@@ -11,7 +10,8 @@ function Product({ props }) {
     state: { padding },
   } = React.useContext(AppContext);
 
-  const { title, technologies, description, content } = props;
+  const { content, description, technologies, title } = props;
+  const logos = technologies.logos;
 
   return (
     <div style={{ position: 'relative' }}>
@@ -24,9 +24,39 @@ function Product({ props }) {
           height={'100vh'}
           width={1}
         >
-          <ProductHeader title={title} technologies={technologies} />
+          <Grid
+            container
+            direction="row"
+            justify="space-between"
+            alignItems="flex-start"
+          >
+            <Grid item sm={12} md={10} lg={11}>
+              <Typography variant="h2">{title}</Typography>
+            </Grid>
+            <Grid item sm={12} md={2} lg={1}>
+              <Grid container>
+                {logos.map(({ logo, link }, i) => (
+                  <Grid item xs={1} sm={1} md={3} key={i}>
+                    <a href={link}>
+                      <img
+                        src={logo}
+                        alt={title}
+                        target="_blank"
+                        style={{ width: 20 }}
+                      />
+                    </a>
+                  </Grid>
+                ))}
+              </Grid>
+              {technologies.location && (
+                <Typography variant="body1">{technologies.location}</Typography>
+              )}
 
-          <Box width={1} pb={padding.y} alignSelf={'flex-end'}>
+              <Typography variant="body1">{technologies.subTitle}</Typography>
+            </Grid>
+          </Grid>
+
+          <Box width={1} pb={padding.y / 2} alignSelf={'flex-end'}>
             <Grid container direction="row" alignItems="flex-end">
               <Grid item md={6} lg={7}>
                 <Box width={1}>{content}</Box>
@@ -55,7 +85,9 @@ function Product({ props }) {
                 </Box>
               </Grid>
               <Grid item md={12}>
-                <AboutButtons />
+                <Box pt={padding.y / 2}>
+                  <AboutButtons />
+                </Box>
               </Grid>
             </Grid>
           </Box>
