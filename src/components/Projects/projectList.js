@@ -218,34 +218,34 @@ export const projects = [
       </a>
     ),
   },
-  {
-    title: 'Ludic Code',
-    technologies: {
-      mainTitle: 'Processing & Kinect',
-      location: 'Nordkraft, Aalborg',
-      subTitle: 'programmer, designer, researcher',
-    },
-    description: [
-      'Ludic Code is a BA research project on designing for interactive playgrounds.',
-      'For 10 days, hundreds of children and adults played in what is commonly a transit area. It taught us (Daniel Hristov and Jeroen Derks) that these technologies should be immediate, understandable, and most importantly: supporting the desire to explore and play.',
-    ],
-    content: [getVideo('180657153'), getVideo('211682937')],
-    contentMobile: [getVideo('180657153'), getVideo('211682937')],
-  },
-  {
-    title: 'Snake Skin',
-    technologies: {
-      mainTitle: 'Processing & Kinect',
-      location: 'Kunsten Museum for Modern Art',
-      subTitle: 'programmer, designer',
-    },
-    description: [
-      'SnakeSkin is an interactive installation presented in correspondence to Ernesto Neto’s exhibition ‘Rui Ni / Voices of the Forrest’.',
-      'Neto’s work focuses on relations and balance between nature and culture.',
-      'This inspired us to develop an installation in which visitors experience the biological differences between snakes and human beings.',
-      'The experience was designed to supporte discussions on physical and social adaptation.',
-    ],
-    content: [getVideo('212966526'), getVideo('212969684')],
-    contentMobile: [getVideo('212966526'), getVideo('212969684')],
-  },
+  // {
+  //   title: 'Ludic Code',
+  //   technologies: {
+  //     mainTitle: 'Processing & Kinect',
+  //     location: 'Nordkraft, Aalborg',
+  //     subTitle: 'programmer, designer, researcher',
+  //   },
+  //   description: [
+  //     'Ludic Code is a BA research project on designing for interactive playgrounds.',
+  //     'For 10 days, hundreds of children and adults played in what is commonly a transit area. It taught us (Daniel Hristov and Jeroen Derks) that these technologies should be immediate, understandable, and most importantly: supporting the desire to explore and play.',
+  //   ],
+  //   content: [getVideo('180657153'), getVideo('211682937')],
+  //   contentMobile: [getVideo('180657153'), getVideo('211682937')],
+  // },
+  // {
+  //   title: 'Snake Skin',
+  //   technologies: {
+  //     mainTitle: 'Processing & Kinect',
+  //     location: 'Kunsten Museum for Modern Art',
+  //     subTitle: 'programmer, designer',
+  //   },
+  //   description: [
+  //     'SnakeSkin is an interactive installation presented in correspondence to Ernesto Neto’s exhibition ‘Rui Ni / Voices of the Forrest’.',
+  //     'Neto’s work focuses on relations and balance between nature and culture.',
+  //     'This inspired us to develop an installation in which visitors experience the biological differences between snakes and human beings.',
+  //     'The experience was designed to supporte discussions on physical and social adaptation.',
+  //   ],
+  //   content: [getVideo('212966526'), getVideo('212969684')],
+  //   contentMobile: [getVideo('212966526'), getVideo('212969684')],
+  // },
 ];
