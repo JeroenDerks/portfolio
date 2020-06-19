@@ -67,10 +67,18 @@ function MobileMenu({ match }) {
           <Typography variant="body2" className={classes.title}>
             {categories[category].projects.map(({ link, name }, j) => (
               <React.Fragment key={j}>
-                <Link to={`${path}/${link}`} className={classes.link} key={j}>
-                  {name}
-                </Link>
-                {j < categories[category].projects.length - 1 && ' | '}
+                {link !== 'freespeech' && (
+                  <>
+                    <Link
+                      to={`${path}/${link}`}
+                      className={classes.link}
+                      key={j}
+                    >
+                      {name}
+                    </Link>
+                    {j < categories[category].projects.length - 1 && ' | '}
+                  </>
+                )}
               </React.Fragment>
             ))}
           </Typography>

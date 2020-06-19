@@ -11,11 +11,17 @@ export default function sketch(p) {
 
   var padding = 80;
   var widthFactor = 0.8;
+  var initiated = false;
   const ASPECT_RATIO = 0.5625;
 
   p.setup = function () {
     let width = parseInt(window.innerWidth * widthFactor) - padding * 3;
     let height = window.innerHeight - padding * 2;
+
+    if (window.innerWidth < 900) {
+      width = window.innerWidth - padding * 2;
+      height = window.innerHeight - padding * 2;
+    }
 
     p.createCanvas(width, height);
 
@@ -25,8 +31,8 @@ export default function sketch(p) {
     p.textAlign(p.CENTER);
     p.stroke(255);
 
-    for (let j = 0; j <= height; j += y) {
-      for (let i = 0; i <= width; i += x) {
+    for (let j = 0; j <= p.height; j += y) {
+      for (let i = 0; i <= p.width; i += x) {
         letters.push(new Letter(i, j, c % s.length));
         c++;
       }
@@ -39,6 +45,11 @@ export default function sketch(p) {
 
     let width = parseInt(window.innerWidth * widthFactor) - padding * 3;
     let height = window.innerHeight - padding * 2;
+
+    if (window.innerWidth < 900) {
+      width = window.innerWidth - padding * 2;
+      height = window.innerHeight - padding * 2;
+    }
 
     p.resizeCanvas(width, height);
   };
@@ -58,32 +69,38 @@ export default function sketch(p) {
     p.resizeCanvas(width, height);
 
     p.background(255);
-    for (let j = 0; j <= height; j += y) {
-      for (let i = 0; i <= width; i += x) {
+    for (let j = 0; j <= p.height; j += y) {
+      for (let i = 0; i <= p.width; i += x) {
         letters.push(new Letter(i, j, c % s.length));
         c++;
       }
     }
+    initiated = false;
   };
 
   p.draw = function () {
-    if (p.mouseX !== 0 && p.mouseY !== 0) {
+    if ((p.mouseX !== 0 && p.mouseY !== 0) || !initiated) {
       const dx = p.mouseX - mx;
       mx += dx * easing;
       const dy = p.mouseY - my;
       my += dy * easing;
+
+      initiated = true;
+
       for (var i = 0; i < letters.length; i++) {
         letters[i].hovered();
         if (letters[i].r === 1) letters.splice(i, 1);
       }
     }
   };
+
   function Letter(_x, _y, _i) {
     this.x = _x - 20;
     this.y = _y - 5;
     this.i = _i;
     this.r = 0;
     p.text(s.charAt(this.i), this.x, this.y);
+
     this.hovered = function () {
       var dx = p.abs(mx - this.x);
       var dy = p.abs(my - this.y);

@@ -67,7 +67,7 @@ function Others({ match }) {
               <Route
                 key={i}
                 path={`${path}/${link}`}
-                render={() => (comp !== null ? <Component /> : 'WIP')}
+                render={() => comp !== null && <Component />}
               ></Route>
             ))
           )}
