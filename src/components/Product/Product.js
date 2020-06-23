@@ -59,8 +59,8 @@ function Product({ props }) {
         <Grid container spacing={0}>
           {content &&
             content.map((element, i) => (
-              <>
-                <Grid item md={6} lg={7} key={i}>
+              <React.Fragment key={i}>
+                <Grid item md={6} lg={7}>
                   <Box
                     width={1}
                     pb={padding.y}
@@ -70,7 +70,7 @@ function Product({ props }) {
                   </Box>
                 </Grid>
                 <Grid item md={6}></Grid>
-              </>
+              </React.Fragment>
             ))}
         </Grid>
       </Box>

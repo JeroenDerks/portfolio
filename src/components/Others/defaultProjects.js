@@ -3,8 +3,8 @@ import DHIWebsite from 'components/Others/DHIGRAS/DhiWebsite';
 import DHIVideo from 'components/Others/DHIGRAS/DhiVideo';
 
 import Cover from 'components/Others/Installations/Cover';
-import LudicCode from 'components/Others/Installations/LudicCode';
-import SnakeSkin from 'components/Others/Installations/SnakeSkin';
+// import LudicCode from 'components/Others/Installations/LudicCode';
+// import SnakeSkin from 'components/Others/Installations/SnakeSkin';
 import Nodes from 'components/Others/Installations/Nodes';
 import UrbanPlanen from 'components/Others/Installations/UrbanPlanen';
 import StopMotionMachine from 'components/Others/Installations/StopMotionMachine';
@@ -18,6 +18,8 @@ import InformationAge from 'components/Others/Web/InformationAge';
 import FreeSpeech from 'components/Others/Web/FreeSpeech';
 import RebekkaBorum from 'components/Others/Web/RebekkaBorum';
 
+import Anthropia from 'components/Others/Videos/Anthropia';
+import DoomRoom from 'components/Others/Videos/DoomRoom';
 import Pilebyg from 'components/Others/Videos/Pilebyg';
 import Sofar from 'components/Others/Videos/Sofar';
 import Oersterk from 'components/Others/Videos/Oersterk';
@@ -41,8 +43,8 @@ export const categories = [
   {
     group: 'INSTALLATIONS',
     projects: [
-      { link: 'ludiccode', name: 'ludic code', comp: LudicCode },
-      { link: 'snakeskin', name: 'snake skin', comp: SnakeSkin },
+      // { link: 'ludiccode', name: 'ludic code', comp: LudicCode },
+      // { link: 'snakeskin', name: 'snake skin', comp: SnakeSkin },
       { link: 'nodes', name: 'nodes', comp: Nodes },
       {
         link: 'stopmotion',
@@ -77,6 +79,8 @@ export const categories = [
   {
     group: 'VIDEOS',
     projects: [
+      { link: 'doomroom', name: 'vr doomroom', comp: DoomRoom },
+      { link: 'anthropia', name: 'vr anthropia', comp: Anthropia },
       { link: 'pilebyg', name: 'pilebyg', comp: Pilebyg },
       { link: 'sofar', name: 'sofar', comp: Sofar },
       { link: 'oersterk', name: 'oersterk', comp: Oersterk },

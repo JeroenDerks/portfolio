@@ -34,7 +34,7 @@ function OtherButtons() {
         <Grid item md={2} lg={1}>
           <Typography variant={'h5'} className={classes.font}>
             <a href={cv} download className={classes.button}>
-              Curriculum Vitae
+              CV
             </a>
           </Typography>
         </Grid>

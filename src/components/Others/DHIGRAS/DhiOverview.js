@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Link, Typography } from '@material-ui/core';
+
 import imagePortals from 'assets/others/dhi-portal-collection.jpg';
 import imageWebsite from 'assets/others/dhi-website-collection.jpg';
 import imageVideos from 'assets/others/dhi-video-collection.jpg';
@@ -8,7 +9,7 @@ const portals = [
   {
     title: 'portals',
     image: imagePortals,
-    link: 'http://www.derks.dk/others/dhi-portals',
+    link: 'https://www.derks.dk/#/others/dhi-portals',
   },
   {
     title: 'website',
@@ -18,7 +19,7 @@ const portals = [
   {
     title: 'videos',
     image: imageVideos,
-    link: 'http://www.derks.dk/others/dhi-videos',
+    link: 'https://www.derks.dk/#/others/dhi-videos',
   },
 ];
 

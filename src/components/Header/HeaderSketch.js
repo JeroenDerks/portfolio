@@ -28,8 +28,6 @@ export default function sketch(p) {
     p.textSize(12);
   };
 
-  console.log('headersketchg');
-
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
     if (props.paddingLeft !== null) {
       paddingLeft = props.paddingLeft;

@@ -39,7 +39,7 @@ function Header() {
     <Box
       style={{ height: '100vh' }}
       width={1}
-      className={mobile && classes.background}
+      className={mobile === true ? classes.background : null}
     >
       {mobile === false && (
         <Box position="absolute">
