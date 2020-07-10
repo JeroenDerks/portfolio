@@ -26,7 +26,7 @@ function Cursors() {
           Hi!
         </Typography>
         <Typography variant="body1" paragraph style={textStyle}>
-          Exciting to see that you made it all the way here!
+          Exciting to see you here!
         </Typography>
         <Typography variant="body1" paragraph style={textStyle}>
           Thank you for the interest :)

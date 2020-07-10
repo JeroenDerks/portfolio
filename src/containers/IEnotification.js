@@ -5,10 +5,10 @@ const IEnotification = () => {
   return (
     <Box width={'100%'} style={{ paddingTop: '33%' }}>
       <Typography align={'center'}>
-        This site is not optimized for Internet Explorer.
+        Friends dont let friends use Internet Explorer.
       </Typography>
       <Typography align={'center'}>
-        For the best experience, use Chrome, Firefox or Edge.
+        For the best experience use Chrome, Safari, Firefox or Edge.
       </Typography>
     </Box>
   );
