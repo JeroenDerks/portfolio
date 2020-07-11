@@ -9,7 +9,7 @@ import dw3 from 'assets/images/dw3.jpg';
 import nobel4 from 'assets/images/nobel4.jpg';
 import konstruktur from 'assets/images/konstruktur.jpg';
 import dhi1 from 'assets/images/dhi1.jpg';
-import dhi4 from 'assets/images/dhi4.jpg';
+import dhi3 from 'assets/images/dhi3.jpg';
 import dhivideo from 'assets/images/dhi-video-collection.jpg';
 import dhiwebsite from 'assets/images/dhi-website-collection.jpg';
 
@@ -146,12 +146,12 @@ export const projects = [
     ],
     content: [
       <img src={dhi1} style={imageStyle} alt="dhi1" />,
-      <img src={dhi4} style={imageStyle} alt="dhi4" />,
+      <img src={dhi3} style={imageStyle} alt="dhi4" />,
     ],
 
     contentMobile: [
       <img src={dhi1} style={imageStyle} alt="dhi1" />,
-      <img src={dhi4} style={imageStyle} alt="dhi4" />,
+      <img src={dhi3} style={imageStyle} alt="dhi4" />,
     ],
     link: (
       <Link to="/others/dhi-portals" style={linkStyle}>
