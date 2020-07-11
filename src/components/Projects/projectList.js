@@ -9,7 +9,9 @@ import dw3 from 'assets/images/dw3.jpg';
 import nobel4 from 'assets/images/nobel4.jpg';
 import konstruktur from 'assets/images/konstruktur.jpg';
 import dhi1 from 'assets/images/dhi1.jpg';
-import dhi2 from 'assets/images/dhi2.jpg';
+import dhi4 from 'assets/images/dhi4.jpg';
+import dhivideo from 'assets/images/dhi-video-collection.jpg';
+import dhiwebsite from 'assets/images/dhi-website-collection.jpg';
 
 import rb1 from 'assets/images/rb1.jpg';
 import rb2 from 'assets/images/rb2.jpg';
@@ -132,7 +134,7 @@ export const projects = [
     ],
   },
   {
-    title: 'DHI GRAS',
+    title: 'DHI GRAS - Dvelopment',
     technologies: {
       mainTitle: 'React, JS, Wordpress',
       subTitle: 'design, web development',
@@ -143,12 +145,37 @@ export const projects = [
     ],
     content: [
       <img src={dhi1} style={imageStyle} alt="dhi1" />,
-      <img src={dhi2} style={imageStyle} alt="dhi2" />,
+      <img src={dhi4} style={imageStyle} alt="dhi4" />,
     ],
 
     contentMobile: [
       <img src={dhi1} style={imageStyle} alt="dhi1" />,
-      <img src={dhi2} style={imageStyle} alt="dhi2" />,
+      <img src={dhi4} style={imageStyle} alt="dhi4" />,
+    ],
+    link: (
+      <Link to="/others/dhi-portals" style={linkStyle}>
+        more details
+      </Link>
+    ),
+  },
+  {
+    title: 'DHI GRAS',
+    technologies: {
+      mainTitle: 'React, JS, Wordpress',
+      subTitle: 'design, web development',
+    },
+    description: [
+      'Since I was DHI GRAS’ first person with design skills and an interest in frontend development, I was responsible for defining a graphic style and increasing the organisation’s online presence.',
+      'In almost 2 years we launched over 30 data viewers and web portals, made over 15 videos and gave the website a complete overhaul.',
+    ],
+    content: [
+      <img src={dhiwebsite} style={imageStyle} alt="dhi website" />,
+      <img src={dhivideo} style={imageStyle} alt="dhi video" />,
+    ],
+
+    contentMobile: [
+      <img src={dhiwebsite} style={imageStyle} alt="dhi website" />,
+      <img src={dhivideo} style={imageStyle} alt="dhi video" />,
     ],
     link: (
       <Link to="/others/dhi-overview" style={linkStyle}>
