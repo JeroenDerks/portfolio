@@ -134,14 +134,15 @@ export const projects = [
     ],
   },
   {
-    title: 'DHI GRAS - Dvelopment',
+    title: 'DHI GRAS - Development',
     technologies: {
-      mainTitle: 'React, JS, Wordpress',
+      mainTitle: 'ReactJS',
       subTitle: 'design, web development',
     },
     description: [
-      'Since I was DHI GRAS’ first person with design skills and an interest in frontend development, I was responsible for defining a graphic style and increasing the organisation’s online presence.',
-      'In almost 2 years we launched over 30 data viewers and web portals, made over 15 videos and gave the website a complete overhaul.',
+      'For the past 2 years I have been working at dhi where I was responsible for almost all digital output.',
+      'The web development focussed on online data viewers and portals through which we raised awareness for our products and projects. I streamlined the design, implemented a mobile-friendliness focus and improved the techstack to include the most modern frontend frameworks.',
+      'It resulted in over 2 dozen viewers and new ways of sharing and promoting our work.',
     ],
     content: [
       <img src={dhi1} style={imageStyle} alt="dhi1" />,
@@ -154,19 +155,19 @@ export const projects = [
     ],
     link: (
       <Link to="/others/dhi-portals" style={linkStyle}>
-        more details
+        see the portals
       </Link>
     ),
   },
   {
-    title: 'DHI GRAS',
+    title: 'DHI GRAS - design',
     technologies: {
-      mainTitle: 'React, JS, Wordpress',
-      subTitle: 'design, web development',
+      mainTitle: 'Wordpress, Elementor, After Effects',
+      subTitle: 'design, motion animation',
     },
     description: [
-      'Since I was DHI GRAS’ first person with design skills and an interest in frontend development, I was responsible for defining a graphic style and increasing the organisation’s online presence.',
-      'In almost 2 years we launched over 30 data viewers and web portals, made over 15 videos and gave the website a complete overhaul.',
+      'During my time at DHI GRAS, I was responsible for defining a graphic style and increasing the organisation’s online presence.',
+      'This required us to esteblish a online brand identity and a streamlined tone for communication. It resulted in a new DHI GRAS website developed in Wordpress with Elementor, and dozens of SoMe videos that have gained significant online attention.',
     ],
     content: [
       <img src={dhiwebsite} style={imageStyle} alt="dhi website" />,
