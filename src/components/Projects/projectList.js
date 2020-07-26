@@ -51,6 +51,7 @@ const getVideo = (src) => {
         allow="fullscreen"
         allowFullScreen
         style={video}
+        samesite="None"
       />
     </div>
   );
