@@ -1,8 +1,8 @@
 import React from 'react';
 import { Grid, Link, Typography } from '@material-ui/core';
-import dhiWebsite0 from 'assets/others/dhi-website-0.jpg';
-import dhiWebsite1 from 'assets/others/dhi-website-1.jpg';
-import dhiWebsite2 from 'assets/others/dhi-website-2.jpg';
+import dhiWebsite0 from 'assets/images/dhi-website-0.jpg';
+import dhiWebsite1 from 'assets/images/dhi-website-1.jpg';
+import dhiWebsite2 from 'assets/images/dhi-website-2.jpg';
 
 const portals = [
   {

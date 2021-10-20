@@ -15,7 +15,7 @@ import FreakRegister from 'components/Others/Installations/FreaksRegister';
 
 import AalborgSurreal from 'components/Others/Web/AalborgSurreal';
 import InformationAge from 'components/Others/Web/InformationAge';
-import FreeSpeech from 'components/Others/Web/FreeSpeech';
+// import FreeSpeech from 'components/Others/Web/FreeSpeech';
 import RebekkaBorum from 'components/Others/Web/RebekkaBorum';
 
 import Anthropia from 'components/Others/Videos/Anthropia';
@@ -68,11 +68,11 @@ export const categories = [
     projects: [
       { link: 'rebekkaborum', name: 'rebekka borum', comp: RebekkaBorum },
       { link: 'aalborgsurreal', name: 'aalborg surreal', comp: AalborgSurreal },
-      {
-        link: 'freespeech',
-        name: 'platform for free speech',
-        comp: FreeSpeech,
-      },
+      // {
+      //   link: 'freespeech',
+      //   name: 'platform for free speech',
+      //   comp: FreeSpeech,
+      // },
       { link: 'informationage', name: 'information age', comp: InformationAge },
     ],
   },

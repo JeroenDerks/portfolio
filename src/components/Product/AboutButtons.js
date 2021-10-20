@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Grid, Typography, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-import cv from 'assets/pdf/cv_jeroenderks.pdf';
+import cv from 'assets/images/cv_jeroenderks.pdf';
 
 const buttonStyle = makeStyles({
   button: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
-import tingbjerg1 from 'assets/others/tingbjergCeiling.jpg';
-import tingbjerg2 from 'assets/others/tingbjergTrees.jpg';
+import tingbjerg1 from 'assets/images/tingbjergCeiling.jpg';
+import tingbjerg2 from 'assets/images/tingbjergTrees.jpg';
 
 function Tingbjerg() {
   const portals = [
