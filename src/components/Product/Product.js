@@ -35,11 +35,11 @@ function Product({ props }) {
         hideOnBoundaryHit={false}
       >
         <Box
-          boxSizing={'border-box'}
-          display={'flex'}
+          boxSizing="border-box"
+          display="flex"
           flexWrap="wrap"
           pt={padding.y}
-          height={'100vh'}
+          height="100vh"
           width={1}
         >
           <ProductHeader title={title} technologies={technologies} />
