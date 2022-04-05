@@ -73,12 +73,12 @@ const About = () => {
               <Box px={{ xs: 0, sm: 0, md: 5 }} height={1} display="flex">
                 <Box alignSelf="flex-end">
                   {experienceData.map(({ title, location }) => (
-                    <>
+                    <React.Fragment key={title}>
                       <Typography variant="body1">{title}</Typography>
                       <Typography variant="body2" gutterBottom>
                         {location}
                       </Typography>
-                    </>
+                    </React.Fragment>
                   ))}
                 </Box>
               </Box>
