@@ -38,12 +38,7 @@ const RebekkaBorum = () => {
             her artworks in the opening graphic on the landing page.
           </Typography>
 
-          <Link
-            href="http://www.rebekka-borum.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="small"
-          >
+          <Link href="http://www.rebekka-borum.com" variant="small">
             more details
           </Link>
         </TextSection>

@@ -23,18 +23,14 @@ export const StyledLink = styled('a')(
 const LinkComponent = ({
   children,
   href,
-  rel,
-  target,
   variant,
 }: {
   children: string;
   href: string;
-  rel?: string;
-  target?: string;
   variant?: 'small' | 'large';
 }) => {
   return (
-    <Link href={href} target={target}>
+    <Link href={href}>
       <StyledLink variant={variant}>{children}</StyledLink>
     </Link>
   );
