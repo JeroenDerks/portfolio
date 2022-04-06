@@ -16,10 +16,10 @@ export const theme = createTheme({
     h1: {
       textTransform: 'uppercase',
       fontWeight: 'bold',
-      letterSpacing: '-3px',
+      letterSpacing: '-0.06em',
       fontSize: 52,
       '@media (max-width:900px)': {
-        fontSize: '32px',
+        fontSize: '42px',
       },
     },
     h2: {
@@ -28,9 +28,10 @@ export const theme = createTheme({
     },
     h3: {
       textTransform: 'uppercase',
-      letterSpacing: '-3px',
+      letterSpacing: '-0.06em',
       '@media (max-width:900px)': {
         fontSize: '32px',
+        paddingTop: 80,
       },
     },
   },

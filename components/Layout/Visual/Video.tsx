@@ -28,7 +28,7 @@ const Video = ({ vimeoVideoId }: { vimeoVideoId: string }) => {
         title={vimeoVideoId}
         frameBorder="0"
         allow="fullscreen"
-        // samesite="None"
+        loading="lazy"
       />
     </VideoWrapper>
   );

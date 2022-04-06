@@ -10,6 +10,7 @@ import profilePhoto from 'public/images/jeroenderks.jpg';
 import Link from 'components/Link';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { StyledLink } from 'components/Link/Link';
 
 const experienceData = [
   {
@@ -18,25 +19,37 @@ const experienceData = [
   },
   {
     title: 'Frontend developer and designer/ DHI GRAS',
-    location: ' Copenhagen, DK/ 2018 - 2020',
+    location: 'Copenhagen, DK/ 2018 - 2020',
   },
   {
     title: 'Developer and interaction designer/ YOKE',
-    location: ' Copenhagen, DK/ 2017',
+    location: 'Copenhagen, DK/ 2017',
   },
   {
     title: 'VR post production assistent/ Makropol',
-    location: ' Copenhagen, DK/ 2017',
+    location: 'Copenhagen, DK/ 2017',
   },
   {
     title: 'Research assistant and co-author/ RELATE AAU',
-    location: ' Aalborg DK/ 2017',
+    location: 'Aalborg DK/ 2017',
+  },
+];
+
+const educationData = [
+  {
+    title: 'Art & Technology BA/ Aalborg University',
+    location: 'Aalborg, DK/ 2013 - 2016',
+  },
+  {
+    title: 'International Communication and Media BA/ Utrecht UoAS',
+    location: 'Utrecht, NL/ 2008 - 2013',
   },
 ];
 
 const About = () => {
   return (
     <HomeSection>
+      <span id="about" />
       <StaticSection>
         <GeneralSection>
           <Grid container>
@@ -44,7 +57,7 @@ const About = () => {
               <Typography variant="h3" fontWeight="bold">
                 Jeroen Derks
               </Typography>
-              <Typography variant="h2">
+              <Typography variant="subtitle1" fontWeight={400}>
                 React developer with a love for design and heaps of experience
                 with Maps, Design systems and Localization.
               </Typography>
@@ -72,7 +85,27 @@ const About = () => {
             <Grid item xs={12} sm={12} md={6} lg={5}>
               <Box px={{ xs: 0, sm: 0, md: 5 }} height={1} display="flex">
                 <Box alignSelf="flex-end">
+                  <Typography variant="body1" fontWeight="bold" paragraph>
+                    Favorite experiences:
+                  </Typography>
                   {experienceData.map(({ title, location }) => (
+                    <React.Fragment key={title}>
+                      <Typography variant="body1">{title}</Typography>
+                      <Typography variant="body2" gutterBottom>
+                        {location}
+                      </Typography>
+                    </React.Fragment>
+                  ))}
+
+                  <Typography
+                    variant="body1"
+                    fontWeight="bold"
+                    paragraph
+                    mt={2}
+                  >
+                    Education:
+                  </Typography>
+                  {educationData.map(({ title, location }) => (
                     <React.Fragment key={title}>
                       <Typography variant="body1">{title}</Typography>
                       <Typography variant="body2" gutterBottom>
@@ -83,15 +116,13 @@ const About = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={6} sm={6} md={10} lg={11}>
-              <Typography variant="body1">
-                <Link href="cv">CV</Link>
-              </Typography>
+            <Grid item xs={6} sm={6} md={10} lg={11} mt={2}>
+              <StyledLink href="public/images/cv_jeroenderks.pdf" download>
+                CV
+              </StyledLink>
             </Grid>
-            <Grid item xs={6} sm={6} md={2} lg={1} alignItems="flex-end">
-              <Typography variant="body1">
-                <Link href="others">Other projects</Link>
-              </Typography>
+            <Grid item xs={6} sm={6} md={2} lg={1} mt={2} alignItems="flex-end">
+              <Link href="others">More</Link>
             </Grid>
           </Grid>
         </GeneralSection>

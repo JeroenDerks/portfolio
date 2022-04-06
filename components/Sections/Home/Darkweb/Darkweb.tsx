@@ -10,10 +10,12 @@ import {
 import { Image, VisualSection } from 'components/Layout/Visual';
 import dw1 from 'public/images/dw1.jpg';
 import dw3 from 'public/images/dw3.jpg';
+import Link from 'components/Link';
 
 const Darkweb = () => {
   return (
     <HomeSection>
+      <span id="projects" />
       <StaticSection>
         <HeadingSection>
           <Typography variant="h3" fontWeight="bold">
@@ -39,10 +41,13 @@ const Darkweb = () => {
             Through a combination of composed music and interactive visuals,
             Dark Web creates space and time for Deep Listening.
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" paragraph>
             Audio implementation by Martin Sohn Østergaard. Visual Design and
             Interaction Design by Jeroen Derks.
           </Typography>
+          <Link href="https://www.darkweb.dk/" variant="small">
+            direct darkweb access
+          </Link>
         </TextSection>
       </StaticSection>
 

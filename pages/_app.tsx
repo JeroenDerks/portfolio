@@ -10,6 +10,10 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Jeroen Derks - portfolio</title>
         <meta
+          name="description"
+          content="Welcome to Jeroen's collection of web development, tech experiments and digital-physical interfaces"
+        />
+        <meta
           property="og:title"
           content="Jeroen Derks - portfolio"
           key="title"
@@ -17,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:image" content="/public/thumbnail192.png" />
         <meta
           property="og:description"
-          content=" Welcome to Jeroen's collection of tech experiments and digital-physical interfaces"
+          content="Jeroen's collection of web development, tech experiments and digital-physical interfaces"
         />
       </Head>
       <Component pageProps={pageProps} />

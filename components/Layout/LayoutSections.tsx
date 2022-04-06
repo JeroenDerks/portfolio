@@ -9,6 +9,7 @@ const ContentContainer = styled(Box)({
 
 const StaticContainer = styled(Box)({
   // border: '1px solid coral',
+  pointerEvents: 'none',
 });
 
 export const HeadingSection = ({ children }) => (
@@ -21,10 +22,11 @@ export const HeadingSection = ({ children }) => (
 
 export const TextSection = ({ children }) => (
   <Grid item xs={12} sm={12} md={4} lg={4} order={{ sm: 3, md: 2 }}>
-    <Box height={1} display="flex">
+    <Box height={1} display="flex" width={1}>
       <ContentContainer
         py={{ xs: 1, sm: 1, md: 10 }}
         px={{ xs: 0, sm: 0, md: 5 }}
+        pb={{ xs: 3, sm: 3 }}
         alignSelf="flex-end"
       >
         {children}
@@ -35,7 +37,7 @@ export const TextSection = ({ children }) => (
 
 export const InfoSection = ({ children }) => (
   <Grid item xs={12} sm={12} md={2} lg={1} order={{ sm: 2, md: 3 }}>
-    <ContentContainer py={{ xs: 1, sm: 1, md: 10 }}>
+    <ContentContainer py={{ xs: 1, sm: 1, md: 10 }} pb={{ xs: 2, sm: 2 }}>
       {children}
     </ContentContainer>
   </Grid>
@@ -46,6 +48,7 @@ export const StaticSection = ({ children }) => (
     position={{ sm: 'static', md: 'sticky' }}
     minHeight={{ sm: 'auto', md: '100vh' }}
     maxHeight={{ sm: 'auto', md: '100vh' }}
+    zIndex={1}
     top={0}
   >
     <Grid container height={{ sm: 'auto', md: '100vh' }}>
