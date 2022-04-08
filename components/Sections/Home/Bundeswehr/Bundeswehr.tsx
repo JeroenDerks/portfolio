@@ -8,9 +8,7 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, VisualSection } from 'components/Layout/Visual';
-import dhi1 from 'public/images/dhi1.jpg';
-import dhi3 from 'public/images/dhi3.jpg';
+import { VisualSection } from 'components/Layout/Visual';
 import UnlockUi from './UnlockUi';
 // import Link from 'components/Link';
 
@@ -19,7 +17,6 @@ const PlaceholderText = styled(Typography)({
 });
 const Bundeswehr = () => {
   const [locked, setLocked] = React.useState(true);
-  console.log(locked);
 
   return (
     <HomeSection>
@@ -34,7 +31,17 @@ const Bundeswehr = () => {
           <Typography variant="subtitle1" gutterBottom fontWeight="bold">
             React, Mapbox, Wordpress CMS
           </Typography>
-          <Typography variant="body1">frontend development</Typography>
+          {locked ? (
+            <PlaceholderText variant="body2">
+              ██ █████ <br />
+              ███ ███████
+            </PlaceholderText>
+          ) : (
+            <Typography variant="body1">
+              At Laudo <br />
+              For 3yourmind
+            </Typography>
+          )}
         </InfoSection>
 
         <TextSection>
@@ -74,8 +81,16 @@ const Bundeswehr = () => {
       </StaticSection>
 
       <VisualSection>
-        <UnlockUi handleUnlock={() => setLocked(false)} locked={locked} />
-        <UnlockUi handleUnlock={() => setLocked(false)} locked={locked} />
+        <UnlockUi
+          handleUnlock={() => setLocked(false)}
+          locked={locked}
+          id={1}
+        />
+        <UnlockUi
+          handleUnlock={() => setLocked(false)}
+          locked={locked}
+          id={2}
+        />
       </VisualSection>
     </HomeSection>
   );

@@ -20,7 +20,7 @@ const VisualSection = ({ children }) => {
   const ptLg = `calc(100vh - 40px - ${elHeightLg}px)`;
 
   return (
-    <Grid container position="static" zIndex={0}>
+    <Grid container zIndex={0}>
       <Grid item xs={12} sm={12} md={6} lg={7}>
         <ImageWrapper
           mt={{ sm: 0, md: '-100vh', lg: '-100vh' }}

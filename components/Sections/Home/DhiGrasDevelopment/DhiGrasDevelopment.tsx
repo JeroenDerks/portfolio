@@ -26,7 +26,7 @@ const DhiGrasDevelopment = () => {
           <Typography variant="subtitle1" gutterBottom fontWeight="bold">
             React, Mapbox
           </Typography>
-          <Typography variant="body1">design, web development</Typography>
+          <Typography variant="body1">Design, web development</Typography>
         </InfoSection>
 
         <TextSection>
@@ -41,7 +41,7 @@ const DhiGrasDevelopment = () => {
             improved the techstack to include the most modern frontend
             frameworks.
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             It resulted in over 2 dozen viewers and new ways of sharing and
             promoting our work.
           </Typography>

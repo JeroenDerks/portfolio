@@ -26,9 +26,8 @@ const DhiGrasDevelopment = () => {
           <Typography variant="subtitle1" gutterBottom fontWeight="bold">
             Wordpress, Elementor, After Effects
           </Typography>
-          <Typography variant="body1">
-            design, web development, motion animation
-          </Typography>
+
+          <Typography variant="body1">Design, motion animation</Typography>
         </InfoSection>
 
         <TextSection>
@@ -36,7 +35,7 @@ const DhiGrasDevelopment = () => {
             During my time at DHI GRAS, I was responsible for defining a graphic
             style and increasing the organisation’s online presence.{' '}
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant="body1">
             This required us to esteblish a online brand identity and a
             streamlined tone for communication. It resulted in a new DHI GRAS
             website developed in Wordpress with Elementor, and dozens of SoMe

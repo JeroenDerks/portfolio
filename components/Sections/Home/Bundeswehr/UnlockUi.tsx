@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from '@mui/system/styled';
 import { Image } from 'components/Layout/Visual';
-import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import bwi from 'public/images/bwi_bg.jpeg';
-// import Link from 'components/Link';
 
 const Wrapper = styled('div')({
   display: 'flex',
@@ -16,9 +14,11 @@ const Wrapper = styled('div')({
 
 const UnlockUi = ({
   handleUnlock,
+  id,
   locked,
 }: {
   handleUnlock: () => void;
+  id: number;
   locked: boolean;
 }) => {
   const handleChange = ({ target }) => {
@@ -32,7 +32,7 @@ const UnlockUi = ({
       {locked && (
         <Wrapper>
           <TextField
-            id="outlined-basic"
+            id={`password-input-${id}`}
             label="Password"
             variant="outlined"
             onChange={handleChange}

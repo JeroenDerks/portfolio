@@ -9,12 +9,11 @@ const ContentContainer = styled(Box)({
 
 const StaticContainer = styled(Box)({
   // border: '1px solid coral',
-  pointerEvents: 'none',
 });
 
 export const HeadingSection = ({ children }) => (
   <Grid item xs={12} sm={12} md={6} lg={7} order={{ sm: 1, md: 1 }}>
-    <ContentContainer py={{ xs: 1, sm: 1, md: 10 }} zIndex="1000">
+    <ContentContainer py={{ xs: 1, sm: 1, md: 10 }}>
       {children}
     </ContentContainer>
   </Grid>

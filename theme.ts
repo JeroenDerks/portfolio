@@ -6,6 +6,7 @@ export const theme = createTheme({
     subtitle1: {
       fontSize: 13,
       fontWeight: 'bold',
+      lineHeight: 1.4,
     },
     body1: {
       fontSize: 13,

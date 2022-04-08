@@ -165,7 +165,7 @@ export const projects = [
     title: 'DHI GRAS - design',
     technologies: {
       mainTitle: 'Wordpress, Elementor, After Effects',
-      subTitle: 'design, motion animation',
+      subTitle: 'c',
     },
     description: [
       'During my time at DHI GRAS, I was responsible for defining a graphic style and increasing the organisation’s online presence.',
