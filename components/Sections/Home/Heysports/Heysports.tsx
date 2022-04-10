@@ -41,7 +41,7 @@ const Heysports = () => {
             improved search engine optimisation.
           </Typography>
 
-          <Link href="https://heysports.io/" variant="small">
+          <Link href="https://heysports.io/" variant="small" target="_blank">
             heysports.io
           </Link>
         </TextSection>

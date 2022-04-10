@@ -44,7 +44,7 @@ const Darkweb = () => {
             Audio implementation by Martin Sohn Østergaard. Visual Design and
             Interaction Design by Jeroen Derks.
           </Typography>
-          <Link href="https://www.darkweb.dk/" variant="small">
+          <Link href="https://www.darkweb.dk/" variant="small" target="_blank">
             direct darkweb access
           </Link>
         </TextSection>

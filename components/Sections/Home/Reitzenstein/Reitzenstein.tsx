@@ -8,7 +8,7 @@ import {
   TextSection,
 } from 'components/Layout/LayoutSections';
 import { Image, VisualSection } from 'components/Layout/Visual';
-import { StyledLink } from 'components/Link/Link';
+import Link from 'components/Link';
 import rr1 from 'public/images/rr_1.png';
 import rr2 from 'public/images/rr_2.png';
 
@@ -42,13 +42,13 @@ const RebekkaBorum = () => {
             inversed?
           </Typography>
 
-          <StyledLink
+          <Link
             href="https://www.reitzenstein.art/"
             target="_blank"
             variant="small"
           >
             www.reitzenstein.art
-          </StyledLink>
+          </Link>
         </TextSection>
       </StaticSection>
 
