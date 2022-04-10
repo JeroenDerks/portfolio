@@ -35,7 +35,7 @@ const Heysports = () => {
             site offers users an overview of the studio details and interesting
             articles for improving your lifestyle
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" paragraph>
             For this site I developed the frontend, created the component
             library, integrated the filtering functionality with map and
             improved search engine optimisation.
