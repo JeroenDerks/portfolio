@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import About from 'components/Sections/Home/About';
 import Bundeswehr from 'components/Sections/Home/Bundeswehr';
 import ChemicalReactions from 'components/Sections/Home/ChemicalReactions';
@@ -10,19 +10,35 @@ import DhiGrasDesign from 'components/Sections/Home/DhiGrasDesign';
 import RebekkaBorum from 'components/Sections/Home/RebekkaBorum';
 import Reitzenstein from 'components/Sections/Home/Reitzenstein';
 
-const Home = () => (
-  <>
-    <Hero />
-    <Darkweb />
-    <Heysports />
-    <Bundeswehr />
-    <DhiGrasDevelopment />
-    <DhiGrasDesign />
-    <ChemicalReactions />
-    <RebekkaBorum />
-    <Reitzenstein />
-    <About />
-  </>
-);
+const Home = () => {
+  const scrollTo = (v: string) => {
+    if (v === 'projects') {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }
+    if (v === 'about') {
+      const body = document.body;
+      const html = document.documentElement;
+      const height = Math.max(
+        body.getBoundingClientRect().height,
+        html.getBoundingClientRect().height
+      );
+      window.scrollTo({ top: height, behavior: 'smooth' });
+    }
+  };
+  return (
+    <>
+      <Hero scrollTo={scrollTo} />
+      <Darkweb />
+      <Heysports />
+      <Bundeswehr />
+      <DhiGrasDevelopment />
+      <DhiGrasDesign />
+      <ChemicalReactions />
+      <RebekkaBorum />
+      <Reitzenstein />
+      <About />
+    </>
+  );
+};
 
 export default Home;

@@ -15,7 +15,6 @@ import Link from 'components/Link';
 const Darkweb = () => {
   return (
     <HomeSection>
-      <span id="projects" />
       <StaticSection>
         <HeadingSection>
           <Typography variant="h3" fontWeight="bold">
@@ -24,7 +23,7 @@ const Darkweb = () => {
         </HeadingSection>
 
         <InfoSection>
-          <Typography variant="subtitle1" gutterBottom fontWeight="bold">
+          <Typography variant="body1" gutterBottom fontWeight="bold">
             P5.js HTML CSS
           </Typography>
           <Typography variant="body1">

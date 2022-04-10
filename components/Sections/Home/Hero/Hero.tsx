@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import HeroSketch from './HeroSketch';
 import Grid from '@mui/material/Grid';
-import Link from 'components/Link/Link';
 import { useWindowSize } from 'utils';
 import { defaultPaddingX } from 'utils/constants';
 import Image from 'next/image';
@@ -13,11 +12,24 @@ import mobileBg from 'public/images/mobile-bg.png';
 const Background = styled(Box)({
   height: '100vh',
   overflow: 'hidden',
-  // '@media (max-width:900px)': {
-  //   background: `url(/images/mobile-bg.png)`,
-  //   backgroundSize: 'cover',
-  //   backgroundPosition: 'center center',
-  // },
+});
+
+const StyledButton = styled('button')({
+  color: '#000',
+  border: 'none',
+  width: 'auto',
+  cursor: 'pointer',
+  transition: 'all .2s',
+  background: 'transparent',
+  textDecoration: 'none',
+  fontWeight: 'bold',
+  fontSize: 20,
+  padding: '0px 4px',
+
+  '&:hover': {
+    backgroundColor: '#000',
+    color: '#fff',
+  },
 });
 
 const TextWrapper = styled(Box)({
@@ -25,13 +37,18 @@ const TextWrapper = styled(Box)({
   top: 0,
 });
 
-const Hero = () => {
+const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
   const { width, height } = useWindowSize();
 
   return (
     <Background>
       <Box width={1} display={{ sm: 'inline-block', md: 'none' }}>
-        <Image src={mobileBg} layout="fill" objectFit="cover" />
+        <Image
+          src={mobileBg}
+          layout="fill"
+          objectFit="cover"
+          alt="background graphic"
+        />
       </Box>
       <Box display={{ xs: 'none', sm: 'none', md: 'inline-block' }}>
         <HeroSketch width={width} height={height} key={width + '' + height} />
@@ -49,16 +66,23 @@ const Hero = () => {
 
       <Grid
         container
-        position={{ xs: 'absolute', sm: 'absolute', md: 'absolute' }}
         bottom="0"
+        position={{ xs: 'absolute', sm: 'absolute', md: 'absolute' }}
+        justifyContent={{ xs: 'space-between', sm: 'space-between' }}
         py={{ xs: 1, sm: 1, md: 10 }}
         px={defaultPaddingX}
       >
-        <Grid item xs={6} sm={6} md={10} lg={11} mt={2}>
-          <Link href="#projects">Projects</Link>
+        <Grid item md={10} lg={11} mt={2}>
+          <Box width="fit-content">
+            <StyledButton onClick={() => scrollTo('projects')}>
+              Projects
+            </StyledButton>
+          </Box>
         </Grid>
-        <Grid item xs={6} sm={6} md={2} lg={1} mt={2} alignItems="flex-end">
-          <Link href="#about">About</Link>
+        <Grid item sm="auto" md={2} lg={1} mt={2} alignItems="flex-end">
+          <Box width="fit-content">
+            <StyledButton onClick={() => scrollTo('about')}>About</StyledButton>
+          </Box>
         </Grid>
       </Grid>
     </Background>

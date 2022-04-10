@@ -20,7 +20,7 @@ const ChemicalReactions = () => {
           </Typography>
         </HeadingSection>
         <InfoSection>
-          <Typography variant="subtitle1" gutterBottom fontWeight="bold">
+          <Typography variant="body1" gutterBottom fontWeight="bold">
             Unity, Contentful CMS
           </Typography>
           <Typography variant="body1">development</Typography>

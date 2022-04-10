@@ -57,14 +57,14 @@ const About = () => {
               <Typography variant="h3" fontWeight="bold">
                 Jeroen Derks
               </Typography>
-              <Typography variant="subtitle1" fontWeight={400}>
+              <Typography variant="body1" fontWeight={400}>
                 React developer with a love for design and heaps of experience
                 with Maps, Design systems and Localization.
               </Typography>
             </Grid>
 
             <Grid item xs={12} sm={12} md={2} lg={1}>
-              <Typography variant="subtitle1" gutterBottom fontWeight="bold">
+              <Typography variant="body1" gutterBottom fontWeight="bold">
                 Born in the Netherlands
               </Typography>
               <Typography variant="body1">

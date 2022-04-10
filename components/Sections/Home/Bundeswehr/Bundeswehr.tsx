@@ -28,7 +28,7 @@ const Bundeswehr = () => {
         </HeadingSection>
 
         <InfoSection>
-          <Typography variant="subtitle1" gutterBottom fontWeight="bold">
+          <Typography variant="body1" gutterBottom fontWeight="bold">
             React, Mapbox, Wordpress CMS
           </Typography>
           {locked ? (

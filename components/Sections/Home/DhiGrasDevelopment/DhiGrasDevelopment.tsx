@@ -23,7 +23,7 @@ const DhiGrasDevelopment = () => {
         </HeadingSection>
 
         <InfoSection>
-          <Typography variant="subtitle1" gutterBottom fontWeight="bold">
+          <Typography variant="body1" gutterBottom fontWeight="bold">
             React, Mapbox
           </Typography>
           <Typography variant="body1">Design, web development</Typography>
