@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST={"../components/Sections/Home/Hero/HeroSketch.js -> react-p5":{"id":"../components/Sections/Home/Hero/HeroSketch.js -> react-p5","files":["static/chunks/node_modules_react-p5_build_index_js.js"]}}
