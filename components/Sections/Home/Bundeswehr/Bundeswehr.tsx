@@ -13,11 +13,10 @@ import UnlockUi from './UnlockUi';
 import bwi1 from 'public/images/bw_0.png';
 import bwi2 from 'public/images/bw_1.png';
 
-// import Link from 'components/Link';
-
 const PlaceholderText = styled(Typography)({
   color: 'lightgray',
 });
+
 const Bundeswehr = () => {
   const [locked, setLocked] = React.useState(true);
 
@@ -87,13 +86,11 @@ const Bundeswehr = () => {
         <UnlockUi
           handleUnlock={() => setLocked(false)}
           locked={locked}
-          imageSrc={bwi1}
           id={1}
         />
         <UnlockUi
           handleUnlock={() => setLocked(false)}
           locked={locked}
-          imageSrc={bwi2}
           id={2}
         />
       </VisualSection>
