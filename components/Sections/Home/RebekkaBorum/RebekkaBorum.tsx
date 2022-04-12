@@ -45,7 +45,7 @@ const RebekkaBorum = () => {
             target="_blank"
             variant="small"
           >
-            more details
+            www.rebekka-borum.com
           </Link>
         </TextSection>
       </StaticSection>

@@ -30,15 +30,15 @@ const Heysports = () => {
 
         <TextSection>
           <Typography variant="body1" paragraph>
-            Heysports.io is the number 1 application for finding fitness and
-            yoga studios in the Basel, Bern, Luzern, St Gallen and Zurich. The
-            site offers users an overview of the studio details and interesting
-            articles for improving your lifestyle
+            Heysports.io is the place for finding fitness and yoga studios in
+            the Basel, Bern, Luzern, St Gallen and Zurich. The site offers users
+            an overview of the studio details and interesting articles for
+            improving your lifestyle
           </Typography>
           <Typography variant="body1" paragraph>
             For this site I developed the frontend, created the component
             library, integrated the filtering functionality with map and
-            improved search engine optimisation.
+            appealed to the search engine gods.
           </Typography>
 
           <Link href="https://heysports.io/" variant="small" target="_blank">

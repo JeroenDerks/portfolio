@@ -9,6 +9,7 @@ import {
 } from 'components/Layout/LayoutSections';
 import { Image, Video, VisualSection } from 'components/Layout/Visual';
 import nobel4 from 'public/images/nobel4.jpg';
+import nobel5 from 'public/images/nobel5.jpeg';
 
 const ChemicalReactions = () => {
   return (
@@ -42,7 +43,7 @@ const ChemicalReactions = () => {
 
       <VisualSection>
         <Video vimeoVideoId="254181584" />
-        <Image src={nobel4} alt="chemicalReactions1" />
+        <Image src={nobel5} alt="chemicalReactions1" />
       </VisualSection>
     </HomeSection>
   );

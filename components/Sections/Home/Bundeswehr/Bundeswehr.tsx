@@ -10,6 +10,9 @@ import {
 } from 'components/Layout/LayoutSections';
 import { VisualSection } from 'components/Layout/Visual';
 import UnlockUi from './UnlockUi';
+import bwi1 from 'public/images/bw_0.png';
+import bwi2 from 'public/images/bw_1.png';
+
 // import Link from 'components/Link';
 
 const PlaceholderText = styled(Typography)({
@@ -73,7 +76,7 @@ const Bundeswehr = () => {
                 For this project I was responsible for the frontend development,
                 including a map and blog powered by a Wordpress headless CSM as
                 well as the integration with the 3d printing backend which was
-                developed by 3yourmind.'
+                developed by 3yourmind.
               </Typography>
             </>
           )}
@@ -84,11 +87,13 @@ const Bundeswehr = () => {
         <UnlockUi
           handleUnlock={() => setLocked(false)}
           locked={locked}
+          imageSrc={bwi1}
           id={1}
         />
         <UnlockUi
           handleUnlock={() => setLocked(false)}
           locked={locked}
+          imageSrc={bwi2}
           id={2}
         />
       </VisualSection>

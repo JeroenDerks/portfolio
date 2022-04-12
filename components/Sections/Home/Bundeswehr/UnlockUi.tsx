@@ -2,7 +2,8 @@ import React from 'react';
 import styled from '@mui/system/styled';
 import { Image } from 'components/Layout/Visual';
 import TextField from '@mui/material/TextField';
-import bwi from 'public/images/bwi_bg.jpeg';
+import bwi1 from 'public/images/bw_0.png';
+import bwi2 from 'public/images/bw_1.png';
 
 const Wrapper = styled('div')({
   display: 'flex',
@@ -39,7 +40,7 @@ const UnlockUi = ({
           />
         </Wrapper>
       )}
-      {!locked && <Image src={bwi} alt="bundeswehr" />}
+      {!locked && <Image src={id === 1 ? bwi1 : bwi2} alt="bundeswehr" />}
     </>
   );
 };

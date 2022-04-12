@@ -58,8 +58,10 @@ const About = () => {
                 Jeroen Derks
               </Typography>
               <Typography variant="body1" fontWeight={400}>
-                React developer with a love for design and heaps of experience
-                with Maps, Design systems and Localization.
+                Seniored React developer with a love for design and heaps of
+                experience with Maps, Design systems and Localization. <br />
+                Enjoy working with Typescript, NextJs, MUI, and love learning
+                more
               </Typography>
             </Grid>
 
@@ -117,12 +119,17 @@ const About = () => {
               </Box>
             </Grid>
             <Grid item xs={6} sm={6} md={10} lg={11} mt={2}>
-              <StyledLink href="public/images/cv_jeroenderks.pdf" download>
+              <StyledLink
+                href="/files/cv_jeroenderks.pdf"
+                download
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 CV
               </StyledLink>
             </Grid>
             <Grid item xs={6} sm={6} md={2} lg={1} mt={2} alignItems="flex-end">
-              <Link href="others">More</Link>
+              <Link href="/others">More</Link>
             </Grid>
           </Grid>
         </GeneralSection>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import About from 'components/Sections/Home/About';
 import Bundeswehr from 'components/Sections/Home/Bundeswehr';
 import ChemicalReactions from 'components/Sections/Home/ChemicalReactions';
@@ -9,6 +9,7 @@ import Heysports from 'components/Sections/Home/Heysports';
 import DhiGrasDesign from 'components/Sections/Home/DhiGrasDesign';
 import RebekkaBorum from 'components/Sections/Home/RebekkaBorum';
 import Reitzenstein from 'components/Sections/Home/Reitzenstein';
+import Talentefinder from 'components/Sections/Home/Talentefinder';
 
 const Home = () => {
   const scrollTo = (v: string) => {
@@ -28,14 +29,15 @@ const Home = () => {
   return (
     <>
       <Hero scrollTo={scrollTo} />
-      <Darkweb />
+      <Talentefinder />
       <Heysports />
       <Bundeswehr />
       <DhiGrasDevelopment />
       <DhiGrasDesign />
+      <Darkweb />
+      <Reitzenstein />
       <ChemicalReactions />
       <RebekkaBorum />
-      <Reitzenstein />
       <About />
     </>
   );

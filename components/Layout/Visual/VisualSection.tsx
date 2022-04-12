@@ -7,7 +7,7 @@ import { useWindowSize } from 'utils';
 const ASPECT_RATIO = 0.5625;
 
 const ImageWrapper = styled(Box)({
-  '& > *': { marginBottom: '40px !important' },
+  '& > *': { marginBottom: '80px !important' },
   '& > *:last-child': { marginBottom: '0px !important' },
 });
 
