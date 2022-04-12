@@ -32,7 +32,7 @@ const LinkComponent = ({
   variant?: 'small' | 'large';
 }) => {
   return (
-    <Link href={href} passHref={target && true}>
+    <Link href={href} passHref>
       <StyledLink variant={variant} target={target}>
         {children}
       </StyledLink>
