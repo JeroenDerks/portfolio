@@ -93,7 +93,7 @@ const About = () => {
                   {experienceData.map(({ title, location }) => (
                     <React.Fragment key={title}>
                       <Typography variant="body1">{title}</Typography>
-                      <Typography variant="body2" gutterBottom>
+                      <Typography variant="body1" fontWeight={300} gutterBottom>
                         {location}
                       </Typography>
                     </React.Fragment>
@@ -110,7 +110,7 @@ const About = () => {
                   {educationData.map(({ title, location }) => (
                     <React.Fragment key={title}>
                       <Typography variant="body1">{title}</Typography>
-                      <Typography variant="body2" gutterBottom>
+                      <Typography variant="body1" fontWeight={300} gutterBottom>
                         {location}
                       </Typography>
                     </React.Fragment>
