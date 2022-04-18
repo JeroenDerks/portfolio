@@ -51,7 +51,7 @@ const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
         />
       </Box>
       <Box display={{ xs: 'none', sm: 'none', md: 'inline-block' }}>
-        <HeroSketch width={width} height={height} key={width + '' + height} />
+        <HeroSketch width={width} height={height} key={width + ':' + height} />
       </Box>
       <TextWrapper
         py={{ xs: 5, sm: 5, md: 10 }}
