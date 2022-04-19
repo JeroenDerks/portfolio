@@ -3,13 +3,7 @@ import styled from '@mui/system/styled';
 import Link from 'next/link';
 
 export const StyledLink = styled('a')(
-  ({
-    noHoverEffect,
-    variant,
-  }: {
-    noHoverEffect: true | undefined;
-    variant?: 'small' | 'large';
-  }) => ({
+  ({ variant }: { variant?: 'small' | 'large' }) => ({
     color: variant === 'small' ? '#fff' : '#000',
     backgroundColor: variant === 'small' ? '#000' : 'transparent',
     cursor: 'pointer',
@@ -17,11 +11,11 @@ export const StyledLink = styled('a')(
     textDecoration: 'none',
     fontWeight: variant === 'small' ? '500' : 'bold',
     fontSize: variant === 'small' ? 13 : 20,
-    padding: noHoverEffect === undefined && '0px 4px',
+    padding: '0px 4px',
 
     '&:hover': {
-      backgroundColor: noHoverEffect === undefined && '#000',
-      color: noHoverEffect === undefined && '#fff',
+      backgroundColor: '#000',
+      color: '#fff',
     },
   })
 );
@@ -29,23 +23,17 @@ export const StyledLink = styled('a')(
 const LinkComponent = ({
   children,
   href,
-  noHoverEffect,
   target,
   variant,
 }: {
   children: string | React.ReactNode;
   href: string;
-  noHoverEffect?: true;
   target?: string;
   variant?: 'small' | 'large';
 }) => {
   return (
     <Link href={href} passHref>
-      <StyledLink
-        noHoverEffect={noHoverEffect}
-        target={target}
-        variant={variant}
-      >
+      <StyledLink target={target} variant={variant}>
         {children}
       </StyledLink>
     </Link>
