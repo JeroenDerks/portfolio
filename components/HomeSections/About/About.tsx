@@ -129,7 +129,7 @@ const About = () => {
               </StyledLink>
             </Grid>
             <Grid item xs={6} sm={6} md={2} lg={1} mt={2} alignItems="flex-end">
-              <Link href="/others">More projects</Link>
+              <Link href="/others">Archive</Link>
             </Grid>
           </Grid>
         </GeneralSection>

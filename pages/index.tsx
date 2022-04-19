@@ -1,15 +1,15 @@
 import React from 'react';
-import About from 'components/Sections/Home/About';
-import Bundeswehr from 'components/Sections/Home/Bundeswehr';
-import ChemicalReactions from 'components/Sections/Home/ChemicalReactions';
-import Darkweb from 'components/Sections/Home/Darkweb';
-import DhiGrasDevelopment from 'components/Sections/Home/DhiGrasDevelopment/DhiGrasDevelopment';
-import Hero from 'components/Sections/Home/Hero';
-import Heysports from 'components/Sections/Home/Heysports';
-import DhiGrasDesign from 'components/Sections/Home/DhiGrasDesign';
-import RebekkaBorum from 'components/Sections/Home/RebekkaBorum';
-import Reitzenstein from 'components/Sections/Home/Reitzenstein';
-import Talentefinder from 'components/Sections/Home/Talentefinder';
+import About from 'components/HomeSections/About';
+import Bundeswehr from 'components/HomeSections/Bundeswehr';
+import ChemicalReactions from 'components/HomeSections/ChemicalReactions';
+import Darkweb from 'components/HomeSections/Darkweb';
+import DhiGrasDevelopment from 'components/HomeSections/DhiGrasDevelopment/DhiGrasDevelopment';
+import Hero from 'components/HomeSections/Hero';
+import Heysports from 'components/HomeSections/Heysports';
+import DhiGrasDesign from 'components/HomeSections/DhiGrasDesign';
+import RebekkaBorum from 'components/HomeSections/RebekkaBorum';
+import Reitzenstein from 'components/HomeSections/Reitzenstein';
+import Talentefinder from 'components/HomeSections/Talentefinder';
 
 const Home = () => {
   const scrollTo = (v: string) => {

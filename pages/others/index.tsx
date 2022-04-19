@@ -9,7 +9,11 @@ const OtherHome = () => {
     <HomeSection>
       <Grid container py={{ xs: 1, sm: 1, md: 10 }} height="100vh">
         <Grid item xs={12} sm={12} md={9} lg={10}>
-          <Typography variant="h5">Under construction</Typography>
+          <Typography variant="h5">Thanks for reaching the archive</Typography>
+          <Typography variant="body1">
+            This place is under construction, but feel free to check out with is
+            already available
+          </Typography>
           <Typography variant="body1">
             Please check again in a few days
           </Typography>

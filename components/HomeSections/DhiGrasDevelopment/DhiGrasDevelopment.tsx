@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'components/Link';
 import Typography from '@mui/material/Typography';
 import HomeSection from 'components/Layout/LayoutSections';
 import {
@@ -10,7 +11,6 @@ import {
 import { Image, VisualSection } from 'components/Layout/Visual';
 import dhi1 from 'public/images/dhi1.jpg';
 import dhi3 from 'public/images/dhi3.jpg';
-// import Link from 'components/Link';
 
 const DhiGrasDevelopment = () => {
   return (
@@ -45,9 +45,9 @@ const DhiGrasDevelopment = () => {
             It resulted in over 2 dozen viewers and new ways of sharing and
             promoting our work.
           </Typography>
-          {/* <Link href="/others/dhi-portals" variant="small">
-          see the portals
-          </Link> */}
+          <Link href="/others/dhi-portals" variant="small">
+            see the portals
+          </Link>
         </TextSection>
       </StaticSection>
 
