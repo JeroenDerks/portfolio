@@ -38,6 +38,15 @@ const projects = [
       { name: 'the shy die', slug: 'the-shy-die' },
     ],
   },
+  {
+    title: 'Videos',
+    data: [
+      { name: 'pilebyg', slug: 'pilebyg' },
+      { name: 'sofar sounds', slug: 'sofar-sounds' },
+      { name: 'oersterk', slug: 'oersterk' },
+      { name: 'den sorte skole', slug: 'den-sorte-skole' },
+    ],
+  },
 ];
 const OtherMenu = () => {
   const router = useRouter();

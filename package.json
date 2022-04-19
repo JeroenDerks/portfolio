@@ -13,6 +13,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-lite-youtube-embed": "^2.2.1-a",
     "react-p5": "^1.3.27",
     "react-sticky-el": "^2.0.5"
   },

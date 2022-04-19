@@ -6,19 +6,24 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 
 const videoIds = [
-  '7SWHQRxW8-g',
-  '7DKz5lCiG3U',
-  'r3Nlq_ur7e0',
-  'sriM98k958o',
-  'UebTQanM4gc',
-  'FmLog63z1sk',
-  '6dPjEc4aLaE',
-  'GpabIh-vGVA',
-  'j0WJVquog9Q',
-  'Qf9TQyBs3oA',
+  'OUJ3AjhQdg4',
+  'v4x-7nBKvS8',
+  'BK7brzDjab0',
+  'jESiXHWAsPo',
+  'shUdPhXdoPQ',
+  'vk_q9LRYEwo',
+  'auQvwyLFhL4',
+  '2dYlu22ENXA',
+  '0XGyD3cEPp4',
+  'AoOmGZ-MoSI',
+  'shtpmR4yzqY',
+  '3r0rsk-tNV4',
+  'pqHy-vzKlxo',
+  'u9zEC7udEeM',
+  '0fDMVb3lTbk',
 ];
 
-const DhiPortals = () => (
+const SofarSounds = () => (
   <OtherLayout>
     <Grid container spacing={4} wrap="wrap-reverse">
       {videoIds.map((videoId, i) => (
@@ -36,4 +41,4 @@ const DhiPortals = () => (
   </OtherLayout>
 );
 
-export default DhiPortals;
+export default SofarSounds;
