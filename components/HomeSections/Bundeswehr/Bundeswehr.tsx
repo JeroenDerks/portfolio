@@ -8,10 +8,8 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { VisualSection } from 'components/Layout/Visual';
+import { VisualSection } from 'components/Layout';
 import UnlockUi from './UnlockUi';
-import bwi1 from 'public/images/bw_0.png';
-import bwi2 from 'public/images/bw_1.png';
 
 const PlaceholderText = styled(Typography)({
   color: 'lightgray',
