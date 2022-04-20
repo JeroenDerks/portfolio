@@ -1,4 +1,5 @@
-import React, { lazy } from 'react';
+import React from 'react';
+import dynamic from 'next/dynamic';
 import Typography from '@mui/material/Typography';
 import HomeSection from 'components/Layout/LayoutSections';
 import {
@@ -13,7 +14,7 @@ import Image from 'components/Image';
 import Link from 'components/Link';
 import tf4 from 'public/images/tf4.png';
 
-const TalentefinderVideo = lazy(() => import('./TalentefinderVideo'));
+const TalentefinderVideo = dynamic(() => import('./TalentefinderVideo'));
 
 const Talentefinder = () => {
   return (
