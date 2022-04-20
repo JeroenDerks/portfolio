@@ -1,5 +1,4 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
+import React, { lazy } from 'react';
 import Typography from '@mui/material/Typography';
 import HomeSection from 'components/Layout/LayoutSections';
 import {
@@ -9,12 +8,10 @@ import {
   TextSection,
 } from 'components/Layout/LayoutSections';
 import { VisualSection } from 'components/Layout';
-import { VideoWrapper } from 'components/Video';
+import { VideoWrapper, Iframe } from 'components/Video';
 import Image from 'components/Image';
 import Link from 'components/Link';
 import tf4 from 'public/images/tf4.png';
-
-const TalentefinderVideo = dynamic(() => import('./TalentefinderVideo'));
 
 const Talentefinder = () => {
   return (
@@ -61,7 +58,12 @@ const Talentefinder = () => {
         <Image src={tf4} alt="Talentefinder main" />
 
         <VideoWrapper>
-          <TalentefinderVideo />
+          <Iframe
+            loading="lazy"
+            src="https://www.youtube.com/embed/KvfaUJcAx-Q?controls=1&autoplay=1&mute=1&loop=1&playlist=KvfaUJcAx-Q"
+            title="talentefinder promo"
+            frameBorder="0"
+          />
         </VideoWrapper>
       </VisualSection>
     </HomeSection>
