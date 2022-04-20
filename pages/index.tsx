@@ -1,15 +1,28 @@
 import React from 'react';
-import About from 'components/HomeSections/About';
-import Bundeswehr from 'components/HomeSections/Bundeswehr';
-import ChemicalReactions from 'components/HomeSections/ChemicalReactions';
-import Darkweb from 'components/HomeSections/Darkweb';
-import DhiGrasDevelopment from 'components/HomeSections/DhiGrasDevelopment/DhiGrasDevelopment';
+import dynamic from 'next/dynamic';
+
 import Hero from 'components/HomeSections/Hero';
-import Heysports from 'components/HomeSections/Heysports';
-import DhiGrasDesign from 'components/HomeSections/DhiGrasDesign';
-import RebekkaBorum from 'components/HomeSections/RebekkaBorum';
-import Reitzenstein from 'components/HomeSections/Reitzenstein';
 import Talentefinder from 'components/HomeSections/Talentefinder';
+
+const About = dynamic(() => import('components/HomeSections/About'));
+const Bundeswehr = dynamic(() => import('components/HomeSections/Bundeswehr'));
+const ChemicalReactions = dynamic(
+  () => import('components/HomeSections/ChemicalReactions')
+);
+const Darkweb = dynamic(() => import('components/HomeSections/Darkweb'));
+const DhiGrasDevelopment = dynamic(
+  () => import('components/HomeSections/DhiGrasDevelopment')
+);
+const DhiGrasDesign = dynamic(
+  () => import('components/HomeSections/DhiGrasDesign')
+);
+const Heysports = dynamic(() => import('components/HomeSections/Heysports'));
+const RebekkaBorum = dynamic(
+  () => import('components/HomeSections/RebekkaBorum')
+);
+const Reitzenstein = dynamic(
+  () => import('components/HomeSections/Reitzenstein')
+);
 
 const Home = () => {
   const scrollTo = (v: string) => {
