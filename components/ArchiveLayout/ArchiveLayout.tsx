@@ -9,6 +9,7 @@ const ArchiveLayout = ({ children }) => (
     <Grid container minHeight="100vh" alignItems="flex-end">
       <Grid
         item
+        xs={12}
         sm={12}
         md={10}
         py={{ xs: 1, sm: 1, md: 10 }}
