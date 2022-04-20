@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import ArchiveLayout from 'components/ArchiveLayout';
-import { VideoWrapper, Iframe } from 'components/Layout/Visual/Video';
+import { VideoWrapper, Iframe } from 'components/Video';
 
 const Oersterk = () => (
   <ArchiveLayout>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@mui/system/styled';
-import { Image } from 'components/Layout/Visual';
+import Image from 'components/Image';
 import TextField from '@mui/material/TextField';
 import bwi1 from 'public/images/bw_0.png';
 import bwi2 from 'public/images/bw_1.png';

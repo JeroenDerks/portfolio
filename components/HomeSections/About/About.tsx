@@ -5,12 +5,12 @@ import {
   StaticSection,
   GeneralSection,
 } from 'components/Layout/LayoutSections';
-import { Image } from 'components/Layout/Visual';
 import profilePhoto from 'public/images/jeroenderks.jpg';
 import Link from 'components/Link';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { StyledLink } from 'components/Link/Link';
+import Image from 'components/Image';
 
 const experienceData = [
   {

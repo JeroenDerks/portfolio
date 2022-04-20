@@ -8,7 +8,8 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, VisualSection } from 'components/Layout/Visual';
+import Image from 'components/Image';
+import { VisualSection } from 'components/Layout';
 import dhi1 from 'public/images/dhi1.jpg';
 import dhi3 from 'public/images/dhi3.jpg';
 
@@ -45,7 +46,7 @@ const DhiGrasDevelopment = () => {
             It resulted in over 2 dozen viewers and new ways of sharing and
             promoting our work.
           </Typography>
-          <Link href="/others/dhi-portals" variant="small">
+          <Link href="/archive/dhi-portals" variant="small">
             see the portals
           </Link>
         </TextSection>

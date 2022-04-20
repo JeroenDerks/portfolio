@@ -7,7 +7,8 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, VisualSection } from 'components/Layout/Visual';
+import { VisualSection } from 'components/Layout';
+import Image from 'components/Image';
 import dw1 from 'public/images/dw1.jpg';
 import dw3 from 'public/images/dw3.jpg';
 import Link from 'components/Link';

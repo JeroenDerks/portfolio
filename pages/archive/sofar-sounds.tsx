@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import ArchiveLayout from 'components/ArchiveLayout';
-import { VideoWrapper } from 'components/Layout/Visual/Video';
+import { VideoWrapper } from 'components/Video';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import { Image } from 'components/Layout/Visual';
+import Image from 'components/Image';
 import ArchiveLayout from 'components/ArchiveLayout';
 
 import urban1 from 'public/images/urbanplanen1.jpg';

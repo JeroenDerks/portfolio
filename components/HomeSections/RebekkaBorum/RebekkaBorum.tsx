@@ -7,7 +7,8 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, VisualSection } from 'components/Layout/Visual';
+import { VisualSection } from 'components/Layout';
+import Image from 'components/Image';
 import Link from 'components/Link';
 import rb1 from 'public/images/rb1.jpg';
 import rb2 from 'public/images/rb2.jpg';

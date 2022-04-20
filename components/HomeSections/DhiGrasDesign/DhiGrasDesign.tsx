@@ -7,10 +7,11 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, VisualSection } from 'components/Layout/Visual';
+import { VisualSection } from 'components/Layout';
 import dhivideo from 'public/images/dhi-video-collection.jpg';
 import dhiwebsite from 'public/images/dhi-website-collection.jpg';
-// import Link from 'components/Link';
+import Link from 'components/Link';
+import Image from 'components/Image';
 
 const DhiGrasDevelopment = () => {
   return (
@@ -42,9 +43,9 @@ const DhiGrasDevelopment = () => {
             videos that have gained significant online attention.
           </Typography>
 
-          {/* <Link href="/others/dhi-overview" variant="small">
-         more details
-          </Link> */}
+          <Link href="/archive/dhi-overview" variant="small">
+            more details
+          </Link>
         </TextSection>
       </StaticSection>
 

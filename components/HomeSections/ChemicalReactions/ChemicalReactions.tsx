@@ -7,7 +7,10 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, Video, VisualSection } from 'components/Layout/Visual';
+import { VisualSection } from 'components/Layout';
+import VimeoVideo from 'components/Video';
+import Image from 'components/Image';
+
 import nobel4 from 'public/images/nobel4.jpg';
 import nobel5 from 'public/images/nobel5.jpeg';
 
@@ -42,7 +45,7 @@ const ChemicalReactions = () => {
       </StaticSection>
 
       <VisualSection>
-        <Video vimeoVideoId="254181584" />
+        <VimeoVideo vimeoVideoId="254181584" />
         <Image src={nobel5} alt="chemicalReactions1" />
       </VisualSection>
     </HomeSection>

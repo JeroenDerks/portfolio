@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { Image } from 'components/Layout/Visual';
+import Image from 'components/Image';
 import ArchiveLayout from 'components/ArchiveLayout';
 
 import dhiWebsite0 from 'public/images/dhi-website-0.jpg';

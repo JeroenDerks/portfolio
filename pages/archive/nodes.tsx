@@ -1,7 +1,8 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import { Image, Video } from 'components/Layout/Visual';
+import Image from 'components/Image';
 import ArchiveLayout from 'components/ArchiveLayout';
+import VimeoVideo from 'components/Video';
 
 import nodes1 from 'public/images/nodes1.jpg';
 import nodes2 from 'public/images/nodes3.jpg';
@@ -18,7 +19,7 @@ const Nodes = () => (
       </Grid>
 
       <Grid item xs={12} sm={12} md={6}>
-        <Video vimeoVideoId="176175393" />
+        <VimeoVideo vimeoVideoId="176175393" />
       </Grid>
     </Grid>
   </ArchiveLayout>

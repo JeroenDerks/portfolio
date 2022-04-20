@@ -7,7 +7,8 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, VisualSection } from 'components/Layout/Visual';
+import { VisualSection } from 'components/Layout';
+import Image from 'components/Image';
 import heysports1 from 'public/images/heysports_4.0.png';
 import heysports2 from 'public/images/heysports_4.1.png';
 import Link from 'components/Link';

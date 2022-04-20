@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import ArchiveLayout from 'components/ArchiveLayout';
-import { Iframe, VideoWrapper } from 'components/Layout/Visual/Video';
+import { Iframe, VideoWrapper } from 'components/Video';
 
 const AboveGround = () => (
   <ArchiveLayout>

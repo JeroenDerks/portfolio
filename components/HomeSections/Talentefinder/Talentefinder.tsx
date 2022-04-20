@@ -7,10 +7,11 @@ import {
   StaticSection,
   TextSection,
 } from 'components/Layout/LayoutSections';
-import { Image, VisualSection } from 'components/Layout/Visual';
+import { VisualSection } from 'components/Layout';
+import { VideoWrapper, Iframe } from 'components/Video';
+import Image from 'components/Image';
 import Link from 'components/Link';
 import tf4 from 'public/images/tf4.png';
-import { VideoWrapper, Iframe } from 'components/Layout/Visual/Video';
 
 const Talentefinder = () => {
   return (
