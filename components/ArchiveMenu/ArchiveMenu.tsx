@@ -38,6 +38,13 @@ const projects = [
     ],
   },
   {
+    title: 'Web',
+    data: [
+      { name: 'information age', slug: 'information-age' },
+      { name: 'aalborg surreal', slug: 'aalborg-surreal' },
+    ],
+  },
+  {
     title: 'Videos',
     data: [
       { name: 'pilebyg', slug: 'pilebyg' },
