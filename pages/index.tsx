@@ -1,28 +1,23 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
-
+import React, { Suspense, lazy } from 'react';
 import Hero from 'components/HomeSections/Hero';
 
-const About = dynamic(() => import('components/HomeSections/About'));
-const Bundeswehr = dynamic(() => import('components/HomeSections/Bundeswehr'));
-const ChemicalReactions = dynamic(
+const About = lazy(() => import('components/HomeSections/About'));
+const Bundeswehr = lazy(() => import('components/HomeSections/Bundeswehr'));
+const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
+const Heysports = lazy(() => import('components/HomeSections/Heysports'));
+const RebekkaBorum = lazy(() => import('components/HomeSections/RebekkaBorum'));
+const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
+
+const ChemicalReactions = lazy(
   () => import('components/HomeSections/ChemicalReactions')
 );
-const Darkweb = dynamic(() => import('components/HomeSections/Darkweb'));
-const DhiGrasDevelopment = dynamic(
+const DhiGrasDevelopment = lazy(
   () => import('components/HomeSections/DhiGrasDevelopment')
 );
-const DhiGrasDesign = dynamic(
+const DhiGrasDesign = lazy(
   () => import('components/HomeSections/DhiGrasDesign')
 );
-const Heysports = dynamic(() => import('components/HomeSections/Heysports'));
-const RebekkaBorum = dynamic(
-  () => import('components/HomeSections/RebekkaBorum')
-);
-const Reitzenstein = dynamic(
-  () => import('components/HomeSections/Reitzenstein')
-);
-const Talentefinder = dynamic(
+const Talentefinder = lazy(
   () => import('components/HomeSections/Talentefinder')
 );
 
@@ -44,16 +39,20 @@ const Home = () => {
   return (
     <>
       <Hero scrollTo={scrollTo} />
-      <Talentefinder />
-      <Heysports />
-      <Bundeswehr />
-      <DhiGrasDevelopment />
-      <DhiGrasDesign />
-      <Darkweb />
-      <Reitzenstein />
-      <ChemicalReactions />
-      <RebekkaBorum />
-      <About />
+      <Suspense fallback={<div>Loading...</div>}>
+        <section>
+          <Talentefinder />
+          <Heysports />
+          <Bundeswehr />
+          <DhiGrasDevelopment />
+          <DhiGrasDesign />
+          <Darkweb />
+          <Reitzenstein />
+          <ChemicalReactions />
+          <RebekkaBorum />
+          <About />
+        </section>
+      </Suspense>
     </>
   );
 };
