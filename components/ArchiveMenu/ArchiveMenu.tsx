@@ -33,7 +33,7 @@ const projects = [
       { name: 'stop motion machine', slug: 'stop-motion-machine' },
       { name: 'cover', slug: 'cover' },
       { name: 'urbanplanen', slug: 'urbanplanen' },
-      // { name: 'the freaks register', slug: 'the-freaks-register' },
+      { name: 'the freaks register', slug: 'the-freaks-register' },
       { name: 'the shy die', slug: 'the-shy-die' },
     ],
   },
