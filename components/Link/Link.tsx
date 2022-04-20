@@ -26,14 +26,14 @@ const LinkComponent = ({
   target,
   variant,
 }: {
-  children: string;
+  children: string | React.ReactNode;
   href: string;
   target?: string;
   variant?: 'small' | 'large';
 }) => {
   return (
     <Link href={href} passHref>
-      <StyledLink variant={variant} target={target}>
+      <StyledLink target={target} variant={variant}>
         {children}
       </StyledLink>
     </Link>

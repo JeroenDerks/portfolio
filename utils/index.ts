@@ -15,7 +15,7 @@ export const useWindowSize = () => {
         });
       };
 
-      window.addEventListener('resize', handleResize, { passive: true });
+      window.addEventListener('resize', handleResize);
 
       handleResize();
 

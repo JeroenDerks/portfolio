@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
 const ContentContainer = styled(Box)({
-  // border: '1px dashed yellow',
   pointerEvents: 'all',
 });
 
