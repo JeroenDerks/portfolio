@@ -12,8 +12,8 @@ const ArchiveLayout = ({ children }) => (
         xs={12}
         sm={12}
         md={10}
-        py={{ xs: 1, sm: 1, md: 10 }}
-        pt={{ xs: 8, sm: 8, md: 10 }}
+        py={{ xs: 4, sm: 4, md: 10 }}
+        pt={{ xs: 10, sm: 10, md: 10 }}
         pr={{ xs: 0, sm: 0, md: 8 }}
       >
         {children}

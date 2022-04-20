@@ -7,6 +7,8 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Typography from '@mui/material/Typography';
 import { projects } from './menuData';
 import { useRouter } from 'next/router';
+import IconButton from '@mui/material/IconButton';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const MenuContainer = styled(Box)({
   background: '#fff',
@@ -41,9 +43,16 @@ const ArchiveMenuMobile = () => {
   return (
     <Box position="fixed" top={0} left={0} width={1}>
       <MenuContainer px={2} py={1}>
-        <Box display="flex" justifyContent="space-between" pt={2}>
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          pt={1}
+          alignItems="center"
+        >
           <Typography>{reducedRoute}</Typography>
-          <button onClick={() => toggleDrawer(!state)}>toggle</button>
+          <IconButton onClick={() => toggleDrawer(!state)} size="small">
+            <MoreVertIcon />
+          </IconButton>
         </Box>
       </MenuContainer>
 
