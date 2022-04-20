@@ -6,14 +6,18 @@ import ArchiveMenuMobile from 'components/ArchiveMenu/ArchiveMenuMobile';
 
 const ArchiveLayout = ({ children }) => (
   <HomeSection>
-    <Grid container minHeight="100vh" alignItems="flex-end">
+    <Grid
+      container
+      minHeight={{ xs: 'none', sm: 'none', md: '100vh' }}
+      alignItems="flex-end"
+    >
       <Grid
         item
         xs={12}
         sm={12}
         md={10}
         py={{ xs: 4, sm: 4, md: 10 }}
-        pt={{ xs: 10, sm: 10, md: 10 }}
+        pt={{ xs: 12, sm: 12, md: 10 }}
         pr={{ xs: 0, sm: 0, md: 8 }}
       >
         {children}

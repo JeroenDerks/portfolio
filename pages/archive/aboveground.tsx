@@ -5,7 +5,7 @@ import { Iframe, VideoWrapper } from 'components/Video';
 
 const AboveGround = () => (
   <ArchiveLayout>
-    <Grid container spacing={4} wrap="wrap-reverse">
+    <Grid container spacing={4}>
       <Grid item xs={12} sm={12} md={12}>
         <VideoWrapper>
           <Iframe

@@ -22,8 +22,10 @@ const OtherHome = () => {
       </Box>
       <Box
         position="absolute"
-        top={{ xs: 20, sm: 20, md: 140 }}
-        left={{ xs: 20, sm: 20, md: 180 }}
+        top={0}
+        left={0}
+        pt={{ xs: 20, sm: 20, md: 18 }}
+        px={{ xs: 5, sm: 5, md: 22 }}
       >
         <TextWithBackground variant="h5">
           Thanks for reaching the archive

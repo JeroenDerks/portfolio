@@ -15,7 +15,7 @@ export default ({ width, height }) => {
   };
 
   const setup = (p5, canvasParentRef) => {
-    const h = width > 900 ? height - 160 : height - 30;
+    const h = width > 900 ? height - 160 : height - 140;
     const w = canvasParentRef.clientWidth;
 
     p5.createCanvas(w, h).parent(canvasParentRef);
