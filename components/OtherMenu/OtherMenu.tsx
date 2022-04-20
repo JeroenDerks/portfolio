@@ -45,6 +45,12 @@ const projects = [
       { name: 'sofar sounds', slug: 'sofar-sounds' },
       { name: 'oersterk', slug: 'oersterk' },
       { name: 'den sorte skole', slug: 'den-sorte-skole' },
+      { name: 'laylor performance systems', slug: 'lps' },
+      { name: 'aboveground art supplies', slug: 'aboveground' },
+      { name: 'just water', slug: 'just-water' },
+      { name: "man's mind", slug: 'mans-mind' },
+      { name: 'fitting in', slug: 'fitting-in' },
+      { name: 'au2pilot', slug: 'au2pilot' },
     ],
   },
 ];
