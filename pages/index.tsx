@@ -2,7 +2,6 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 
 import Hero from 'components/HomeSections/Hero';
-import Talentefinder from 'components/HomeSections/Talentefinder';
 
 const About = dynamic(() => import('components/HomeSections/About'));
 const Bundeswehr = dynamic(() => import('components/HomeSections/Bundeswehr'));
@@ -22,6 +21,9 @@ const RebekkaBorum = dynamic(
 );
 const Reitzenstein = dynamic(
   () => import('components/HomeSections/Reitzenstein')
+);
+const Talentefinder = dynamic(
+  () => import('components/HomeSections/Talentefinder')
 );
 
 const Home = () => {
