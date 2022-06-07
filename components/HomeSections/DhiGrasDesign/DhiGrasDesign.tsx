@@ -36,7 +36,7 @@ const DhiGrasDevelopment = () => {
             During my time at DHI GRAS, I was responsible for defining a graphic
             style and increasing the organisation’s online presence.{' '}
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" paragraph>
             This required us to esteblish a online brand identity and a
             streamlined tone for communication. It resulted in a new DHI GRAS
             website developed in Wordpress with Elementor, and dozens of SoMe

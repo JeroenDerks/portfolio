@@ -42,7 +42,7 @@ const DhiGrasDevelopment = () => {
             improved the techstack to include the most modern frontend
             frameworks.
           </Typography>
-          <Typography variant="body1">
+          <Typography variant="body1" paragraph>
             It resulted in over 2 dozen viewers and new ways of sharing and
             promoting our work.
           </Typography>
