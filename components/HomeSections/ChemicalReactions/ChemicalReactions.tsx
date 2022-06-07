@@ -10,7 +10,6 @@ import {
 import { VisualSection } from 'components/Layout';
 import VimeoVideo from 'components/Video';
 import Image from 'components/Image';
-
 import nobel5 from 'public/images/nobel5.jpeg';
 
 const ChemicalReactions = () => {
