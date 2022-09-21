@@ -41,6 +41,11 @@ export default ({ width, height }) => {
     p5.textSize(12);
   };
 
+  const mousePressed = (p5) => {
+    click += 1;
+    fadeIn = true;
+  };
+
   const draw = (p5) => {
     if (fadeIn);
     else if (
@@ -123,5 +128,5 @@ export default ({ width, height }) => {
     }
   };
 
-  return <Sketch setup={setup} draw={draw} />;
+  return <Sketch setup={setup} draw={draw} mousePressed={mousePressed} />;
 };
