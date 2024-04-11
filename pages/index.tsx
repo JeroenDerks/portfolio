@@ -4,19 +4,12 @@ import Hero from 'components/HomeSections/Hero';
 const About = lazy(() => import('components/HomeSections/About'));
 const Bundeswehr = lazy(() => import('components/HomeSections/Bundeswehr'));
 const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
+const DhiDesign = lazy(() => import('components/HomeSections/DhiGrasDesign'));
+const DhiDev = lazy(() => import('components/HomeSections/DhiGrasDevelopment'));
 const Heysports = lazy(() => import('components/HomeSections/Heysports'));
 const RebekkaBorum = lazy(() => import('components/HomeSections/RebekkaBorum'));
 const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
-
-const ChemicalReactions = lazy(
-  () => import('components/HomeSections/ChemicalReactions')
-);
-const DhiGrasDevelopment = lazy(
-  () => import('components/HomeSections/DhiGrasDevelopment')
-);
-const DhiGrasDesign = lazy(
-  () => import('components/HomeSections/DhiGrasDesign')
-);
+const Spotten = lazy(() => import('components/HomeSections/Spotten'));
 const Talentefinder = lazy(
   () => import('components/HomeSections/Talentefinder')
 );
@@ -41,14 +34,14 @@ const Home = () => {
       <Hero scrollTo={scrollTo} />
       <Suspense fallback={<div>Loading...</div>}>
         <section>
+          <Spotten />
           <Talentefinder />
           <Heysports />
           <Bundeswehr />
-          <DhiGrasDevelopment />
-          <DhiGrasDesign />
+          <DhiDev />
+          <DhiDesign />
           <Darkweb />
           <Reitzenstein />
-          <ChemicalReactions />
           <RebekkaBorum />
           <About />
         </section>
