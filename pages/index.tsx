@@ -10,6 +10,9 @@ const Heysports = lazy(() => import('components/HomeSections/Heysports'));
 const RebekkaBorum = lazy(() => import('components/HomeSections/RebekkaBorum'));
 const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
 const Spotten = lazy(() => import('components/HomeSections/Spotten'));
+const KeesingDocumentChecker = lazy(
+  () => import('components/HomeSections/KeesingDocumentChecker')
+);
 const Talentefinder = lazy(
   () => import('components/HomeSections/Talentefinder')
 );
@@ -34,6 +37,7 @@ const Home = () => {
       <Hero scrollTo={scrollTo} />
       <Suspense fallback={<div>Loading...</div>}>
         <section>
+          <KeesingDocumentChecker />
           <Spotten />
           <Talentefinder />
           <Heysports />
