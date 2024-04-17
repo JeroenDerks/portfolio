@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@mui/system/styled';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -37,8 +37,21 @@ const TextWrapper = styled(Box)({
   top: 0,
 });
 
+const name = ['01000100', '01100101', '01110010', '01101011', '01110011'];
+
 const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
   const { width, height } = useWindowSize();
+  const [activeChar, setActiveChar] = useState<number>();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      console.log('increasing');
+      console.log(activeChar);
+      setActiveChar(activeChar ? activeChar + 1 : 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Background>
@@ -57,7 +70,12 @@ const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
         py={{ xs: 5, sm: 5, md: 10 }}
         px={{ xs: 2, sm: 5, md: 10, lg: 14 }}
       >
-        <Typography variant="h1">Digital Playgrounds</Typography>
+        <Typography variant="h1">
+          <span style={{ fontFamily: 'monospace' }}>
+            {name[activeChar]} () =&gt;
+          </span>{' '}
+          experiences
+        </Typography>
         <Typography variant="h2">
           Welcome to Jeroen's collection of web development, tech experiments
           and digital-physical interfaces

@@ -59,7 +59,7 @@ const KeesingDocumentChecker = () => {
             allow="fullscreen;autoplay;loop"
             loading="lazy"
             style={{
-              borderLeft: '4px solid white',
+              borderLeft: '5px solid white',
               borderTop: '2px solid white',
             }}
           />
