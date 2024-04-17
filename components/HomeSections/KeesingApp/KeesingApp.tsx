@@ -10,6 +10,7 @@ import {
 import { VisualSection } from 'components/Layout';
 import Image from 'components/Image';
 import keesingAppOverview from 'public/images/keesing_app_overview.jpg';
+import keesingAppGif from 'public/images/keesing_app_gif.gif';
 import Link from 'components/Link';
 import { Box, Grid } from '@mui/material';
 
@@ -68,7 +69,11 @@ const KeesingApp = () => {
 
       <VisualSection>
         <Image src={keesingAppOverview} alt="KeesignApp overview" />
-        <Image src={keesingAppOverview} alt="KeesignApp overview" />
+        <Image
+          src={keesingAppGif}
+          alt="KeesignApp tiling examples"
+          unoptimized={true}
+        />
       </VisualSection>
     </HomeSection>
   );
