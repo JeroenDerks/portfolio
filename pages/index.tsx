@@ -7,10 +7,10 @@ const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
 const DhiDesign = lazy(() => import('components/HomeSections/DhiGrasDesign'));
 const DhiDev = lazy(() => import('components/HomeSections/DhiGrasDevelopment'));
 const Heysports = lazy(() => import('components/HomeSections/Heysports'));
-const RebekkaBorum = lazy(() => import('components/HomeSections/RebekkaBorum'));
 const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
 const Spotten = lazy(() => import('components/HomeSections/Spotten'));
 const KeesingApp = lazy(() => import('components/HomeSections/KeesingApp'));
+const Zelf = lazy(() => import('components/HomeSections/Zelf'));
 const KeesingDocumentChecker = lazy(
   () => import('components/HomeSections/KeesingDocumentChecker')
 );
@@ -39,8 +39,9 @@ const Home = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <section>
           <KeesingApp />
-          <KeesingDocumentChecker />
           <Spotten />
+          <Zelf />
+          <KeesingDocumentChecker />
           <Talentefinder />
           <Heysports />
           <Bundeswehr />
@@ -48,7 +49,6 @@ const Home = () => {
           <DhiDesign />
           <Darkweb />
           <Reitzenstein />
-          <RebekkaBorum />
           <About />
         </section>
       </Suspense>

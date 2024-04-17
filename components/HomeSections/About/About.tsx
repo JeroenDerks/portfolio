@@ -14,8 +14,12 @@ import Image from 'components/Image';
 
 const experienceData = [
   {
+    title: 'Frontend developer/ Label A',
+    location: 'Amsterdam, NL/ 2022 - current',
+  },
+  {
     title: 'Frontend developer/ LAUDO',
-    location: 'Berlin, DE/ 2020 - current',
+    location: 'Berlin, DE/ 2020 - 2022',
   },
   {
     title: 'Frontend developer and designer/ DHI GRAS',

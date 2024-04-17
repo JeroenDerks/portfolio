@@ -12,7 +12,7 @@ import Image from 'components/Image';
 import keesingAppOverview from 'public/images/keesing_app_overview.jpg';
 import keesingAppGif from 'public/images/keesing_app_gif.gif';
 import Link from 'components/Link';
-import { Box, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 
 const KeesingApp = () => {
   return (
@@ -25,7 +25,7 @@ const KeesingApp = () => {
         </HeadingSection>
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            Expo, React Native
+            Expo, React Native, SQLite, i18n, styled components
           </Typography>
           <Typography variant="body1">app development</Typography>
         </InfoSection>
