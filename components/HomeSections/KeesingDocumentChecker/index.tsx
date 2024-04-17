@@ -50,6 +50,7 @@ const KeesingDocumentChecker = () => (
     </StaticSection>
 
     <VisualSection>
+      <Image src={dc_desktop} alt="DocumentChecker promo desktop" />
       <VideoWrapper>
         <Iframe
           src="https://www.youtube-nocookie.com/embed/IS1VuIyNWdI?si=x7EQbtHMrXN2H2ol&amp;controls=0&amp;start=16&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=IS1VuIyNWdI"
@@ -62,7 +63,6 @@ const KeesingDocumentChecker = () => (
           }}
         />
       </VideoWrapper>
-      <Image src={dc_desktop} alt="DocumentChecker promo desktop" />
     </VisualSection>
   </HomeSection>
 );
