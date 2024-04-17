@@ -24,9 +24,11 @@ const Zelf = () => {
         </HeadingSection>
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            React, AWS, Lambda, Contentful, Mollie
+            Full stack
           </Typography>
-          <Typography variant="body1">full stack development</Typography>
+          <Typography variant="body1">
+            React, AWS, Lambda, DynamoDb, Cognito, Contentful, GraphQL, Mollie
+          </Typography>
         </InfoSection>
 
         <TextSection>

@@ -29,19 +29,11 @@ const Bundeswehr = () => {
 
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            React, Mapbox, Wordpress CMS
+            Full stack
           </Typography>
-          {locked ? (
-            <PlaceholderText variant="body2">
-              ██ █████ <br />
-              ███ ███████
-            </PlaceholderText>
-          ) : (
-            <Typography variant="body1">
-              At Laudo <br />
-              For 3yourmind
-            </Typography>
-          )}
+          <Typography variant="body1">
+            NextJs, TypeScript, Mapbox, MUI, Wordpress CMS
+          </Typography>
         </InfoSection>
 
         <TextSection>

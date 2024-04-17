@@ -25,9 +25,11 @@ const KeesingDocumentChecker = () => {
         </HeadingSection>
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            NextJS, Mantine
+            Frontend
           </Typography>
-          <Typography variant="body1">frontend development</Typography>
+          <Typography variant="body1">
+            NextJS, TypeScript, ReactQuery, Mantine
+          </Typography>
         </InfoSection>
 
         <TextSection>

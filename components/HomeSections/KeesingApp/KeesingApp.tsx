@@ -25,9 +25,11 @@ const KeesingApp = () => {
         </HeadingSection>
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
+            Full stack
+          </Typography>
+          <Typography variant="body1">
             Expo, React Native, SQLite, i18n, styled components
           </Typography>
-          <Typography variant="body1">app development</Typography>
         </InfoSection>
 
         <TextSection>

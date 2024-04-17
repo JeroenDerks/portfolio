@@ -24,9 +24,11 @@ const Talentefinder = () => {
         </HeadingSection>
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            React, styled components, Redux, Storybook
+            Frontend
           </Typography>
-          <Typography variant="body1">frontend development</Typography>
+          <Typography variant="body1">
+            React, TypeScript, styled components, Redux, Storybook
+          </Typography>
         </InfoSection>
 
         <TextSection>

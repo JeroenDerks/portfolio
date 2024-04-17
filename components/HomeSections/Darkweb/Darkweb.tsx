@@ -25,11 +25,9 @@ const Darkweb = () => {
 
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            P5.js HTML CSS
+            Frontend
           </Typography>
-          <Typography variant="body1">
-            concept, interaction &amp; visual design, web development
-          </Typography>
+          <Typography variant="body1">P5.js HTML CSS</Typography>
         </InfoSection>
 
         <TextSection>

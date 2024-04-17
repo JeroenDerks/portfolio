@@ -10,6 +10,7 @@ export const projects = [
   {
     title: 'Installations',
     data: [
+      { name: 'chemical reactions', slug: 'chemical-reactions' },
       { name: 'snake skin', slug: 'snake-skin' },
       { name: 'konstruktor', slug: 'konstruktor' },
       { name: 'dynamic still', slug: 'dynamic-still' },

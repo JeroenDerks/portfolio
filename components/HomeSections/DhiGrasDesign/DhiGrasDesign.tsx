@@ -25,10 +25,12 @@ const DhiGrasDevelopment = () => {
 
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            Wordpress, Elementor, After Effects
+            Design, motion animation
           </Typography>
 
-          <Typography variant="body1">Design, motion animation</Typography>
+          <Typography variant="body1">
+            Wordpress, Elementor, After Effects
+          </Typography>
         </InfoSection>
 
         <TextSection>

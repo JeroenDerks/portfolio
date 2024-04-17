@@ -25,9 +25,11 @@ const Spotten = () => {
 
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            React Native, React
+            App & Frontend
           </Typography>
-          <Typography variant="body1">app and dashboard development</Typography>
+          <Typography variant="body1">
+            React Native, React, TypeScript, styled components,
+          </Typography>
         </InfoSection>
 
         <TextSection>

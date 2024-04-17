@@ -25,9 +25,11 @@ const DhiGrasDevelopment = () => {
 
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            React, Mapbox
+            Frontend
           </Typography>
-          <Typography variant="body1">Design, web development</Typography>
+          <Typography variant="body1">
+            React, TypeScript, MUI, Mapbox
+          </Typography>
         </InfoSection>
 
         <TextSection>

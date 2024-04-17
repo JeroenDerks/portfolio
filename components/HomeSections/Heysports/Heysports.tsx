@@ -24,9 +24,11 @@ const Heysports = () => {
         </HeadingSection>
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            React, NextJs, MUI, Strapi
+            Full stack
           </Typography>
-          <Typography variant="body1">Frontend development</Typography>
+          <Typography variant="body1">
+            NextJs, MUI, Strapi, Stripe, SendGrid, MailChimp
+          </Typography>
         </InfoSection>
 
         <TextSection>
