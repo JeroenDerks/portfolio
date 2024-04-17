@@ -41,14 +41,12 @@ const name = ['01000100', '01100101', '01110010', '01101011', '01110011'];
 
 const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
   const { width, height } = useWindowSize();
-  const [activeChar, setActiveChar] = useState<number>();
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log('increasing');
-      console.log(activeChar);
-      setActiveChar(activeChar ? activeChar + 1 : 1);
-    }, 1000);
+      setCounter((prevCounter) => prevCounter + 1);
+    }, 750);
 
     return () => clearInterval(interval);
   }, []);
@@ -72,8 +70,9 @@ const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
       >
         <Typography variant="h1">
           <span style={{ fontFamily: 'monospace' }}>
-            {name[activeChar]} () =&gt;
-          </span>{' '}
+            {name[counter % name.length]}
+          </span>
+          {'  '}
           experiences
         </Typography>
         <Typography variant="h2">
