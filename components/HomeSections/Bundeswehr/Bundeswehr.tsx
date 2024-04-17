@@ -32,7 +32,7 @@ const Bundeswehr = () => {
             Full stack
           </Typography>
           <Typography variant="body1">
-            NextJs, TypeScript, Mapbox, MUI, Wordpress CMS
+            NextJs, TS, Mapbox, MUI, Wordpress CMS
           </Typography>
         </InfoSection>
 

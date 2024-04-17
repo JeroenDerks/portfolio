@@ -24,11 +24,9 @@ const RebekkaBorum = () => {
         </HeadingSection>
         <InfoSection>
           <Typography variant="body1" gutterBottom fontWeight="bold">
-            React, Rellax
+            Frontend
           </Typography>
-          <Typography variant="body1">
-            concept, design and development
-          </Typography>
+          <Typography variant="body1">React, TS, Rellax</Typography>
         </InfoSection>
 
         <TextSection>

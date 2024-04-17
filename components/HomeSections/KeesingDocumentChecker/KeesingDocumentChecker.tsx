@@ -28,7 +28,7 @@ const KeesingDocumentChecker = () => {
             Frontend
           </Typography>
           <Typography variant="body1">
-            NextJS, TypeScript, ReactQuery, Mantine
+            NextJS, TS, ReactQuery, Mantine
           </Typography>
         </InfoSection>
 

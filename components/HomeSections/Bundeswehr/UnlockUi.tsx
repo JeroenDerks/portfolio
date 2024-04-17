@@ -23,7 +23,10 @@ const UnlockUi = ({
   locked: boolean;
 }) => {
   const handleChange = ({ target }) => {
-    if (target.value === process.env.NEXT_PUBLIC_UNLOCK_PASSWORD) {
+    if (
+      target?.value?.toLowerCase() ===
+      process.env.NEXT_PUBLIC_UNLOCK_PASSWORD?.toLowerCase()
+    ) {
       handleUnlock();
     }
   };

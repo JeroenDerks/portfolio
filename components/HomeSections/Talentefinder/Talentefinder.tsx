@@ -27,7 +27,7 @@ const Talentefinder = () => {
             Frontend
           </Typography>
           <Typography variant="body1">
-            React, TypeScript, styled components, Redux, Storybook
+            React, TS, styled components, Redux, Storybook
           </Typography>
         </InfoSection>
 

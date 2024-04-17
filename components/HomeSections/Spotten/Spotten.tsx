@@ -28,7 +28,7 @@ const Spotten = () => {
             App & Frontend
           </Typography>
           <Typography variant="body1">
-            React Native, React, TypeScript, styled components,
+            React Native, React, TS, styled components,
           </Typography>
         </InfoSection>
 
