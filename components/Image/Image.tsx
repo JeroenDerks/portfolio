@@ -8,8 +8,23 @@ declare type StaticImageData = {
   placeholder?: string;
 };
 
-const NextImage = ({ src, alt }: { src: StaticImageData; alt: string }) => (
-  <Image src={src} alt={alt} width="1080" height="608" placeholder="blur" />
+const NextImage = ({
+  src,
+  alt,
+  unoptimized,
+}: {
+  src: StaticImageData;
+  alt: string;
+  unoptimized?: boolean;
+}) => (
+  <Image
+    src={src}
+    alt={alt}
+    width="1080"
+    height="608"
+    placeholder={!unoptimized ? 'blur' : 'empty'}
+    unoptimized={unoptimized}
+  />
 );
 
 export default NextImage;

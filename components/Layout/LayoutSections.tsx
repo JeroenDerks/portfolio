@@ -63,7 +63,14 @@ export const GeneralSection = ({ children }) => (
 );
 
 const HomeSection = ({ children }) => (
-  <Box px={{ xs: 2, sm: 5, md: 10, lg: 14 }}>{children}</Box>
+  <Box
+    px={{ xs: 2, sm: 5, md: 10, lg: 14 }}
+    maxWidth={2100}
+    width={1}
+    component="section"
+  >
+    {children}
+  </Box>
 );
 
 export default HomeSection;

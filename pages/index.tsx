@@ -1,21 +1,19 @@
 import React, { Suspense, lazy } from 'react';
 import Hero from 'components/HomeSections/Hero';
+import { Box } from '@mui/material';
 
 const About = lazy(() => import('components/HomeSections/About'));
 const Bundeswehr = lazy(() => import('components/HomeSections/Bundeswehr'));
 const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
+const DhiDesign = lazy(() => import('components/HomeSections/DhiGrasDesign'));
+const DhiDev = lazy(() => import('components/HomeSections/DhiGrasDevelopment'));
 const Heysports = lazy(() => import('components/HomeSections/Heysports'));
-const RebekkaBorum = lazy(() => import('components/HomeSections/RebekkaBorum'));
 const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
-
-const ChemicalReactions = lazy(
-  () => import('components/HomeSections/ChemicalReactions')
-);
-const DhiGrasDevelopment = lazy(
-  () => import('components/HomeSections/DhiGrasDevelopment')
-);
-const DhiGrasDesign = lazy(
-  () => import('components/HomeSections/DhiGrasDesign')
+const Spotten = lazy(() => import('components/HomeSections/Spotten'));
+const KeesingApp = lazy(() => import('components/HomeSections/KeesingApp'));
+const Zelf = lazy(() => import('components/HomeSections/Zelf'));
+const KeesingDocumentChecker = lazy(
+  () => import('components/HomeSections/KeesingDocumentChecker')
 );
 const Talentefinder = lazy(
   () => import('components/HomeSections/Talentefinder')
@@ -40,18 +38,20 @@ const Home = () => {
     <>
       <Hero scrollTo={scrollTo} />
       <Suspense fallback={<div>Loading...</div>}>
-        <section>
+        <Box display="flex" flexDirection="column" alignItems="center">
+          <KeesingApp />
+          <Spotten />
+          <Zelf />
+          <KeesingDocumentChecker />
           <Talentefinder />
           <Heysports />
           <Bundeswehr />
-          <DhiGrasDevelopment />
-          <DhiGrasDesign />
+          <DhiDev />
+          <DhiDesign />
           <Darkweb />
           <Reitzenstein />
-          <ChemicalReactions />
-          <RebekkaBorum />
           <About />
-        </section>
+        </Box>
       </Suspense>
     </>
   );
