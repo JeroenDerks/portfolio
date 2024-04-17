@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Hero from 'components/HomeSections/Hero';
+import { Box } from '@mui/material';
 
 const About = lazy(() => import('components/HomeSections/About'));
 const Bundeswehr = lazy(() => import('components/HomeSections/Bundeswehr'));
@@ -37,7 +38,7 @@ const Home = () => {
     <>
       <Hero scrollTo={scrollTo} />
       <Suspense fallback={<div>Loading...</div>}>
-        <section>
+        <Box display="flex" flexDirection="column" alignItems="center">
           <KeesingApp />
           <Spotten />
           <Zelf />
@@ -50,7 +51,7 @@ const Home = () => {
           <Darkweb />
           <Reitzenstein />
           <About />
-        </section>
+        </Box>
       </Suspense>
     </>
   );
