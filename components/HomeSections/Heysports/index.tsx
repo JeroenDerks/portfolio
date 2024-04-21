@@ -26,7 +26,7 @@ const Heysports = () => (
           Full stack
         </Typography>
         <Typography variant="body1">
-          NextJs, MUI, Strapi, Stripe, SendGrid, MailChimp
+          NextJs, MUI, Strapi, Stripe, SendGrid, Netlify
         </Typography>
       </InfoSection>
 
