@@ -12,14 +12,14 @@ export default function App({ Component, pageProps }) {
         <meta name="title" content="Jeroen Derks portfolio" />
         <meta
           name="description"
-          content="Experienced Full-stack Developer with a knack for design and collaboration. Proficient in React, NextJS and TypeScript across app, frontend and backend development. Passionate about boosting quality of work and facilitating team growth. "
+          content="Experienced Full-stack Developer with a passion for design and collaboration. Proficient in React, NextJS and TypeScript across app, frontend and backend development. Passionate about boosting quality of work and facilitating team growth. "
         />
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Jeroen Derks portfolio" />
         <meta
           property="og:description"
-          content="Experienced Full-stack Developer with a knack for design and collaboration. Proficient in React, NextJS and TypeScript across app, frontend and backend development. Passionate about boosting quality of work and facilitating team growth. "
+          content="Experienced Full-stack Developer with a passion for design and collaboration. Proficient in React, NextJS and TypeScript across app, frontend and backend development. Passionate about boosting quality of work and facilitating team growth. "
         />
         <meta property="og:image" content="/public/thumbnail192.png" />
 
@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:title" content="Jeroen Derks portfolio" />
         <meta
           property="twitter:description"
-          content="Experienced Full-stack Developer with a knack for design and collaboration. Proficient in React, NextJS and TypeScript across app, frontend and backend development. Passionate about boosting quality of work and facilitating team growth. "
+          content="Experienced Full-stack Developer with a passion for design and collaboration. Proficient in React, NextJS and TypeScript across app, frontend and backend development. Passionate about boosting quality of work and facilitating team growth. "
         />
         <meta property="twitter:image" content="/public/thumbnail192.png" />
       </Head>

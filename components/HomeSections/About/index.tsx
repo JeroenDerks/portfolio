@@ -61,7 +61,7 @@ const About = () => (
               Jeroen Derks
             </Typography>
             <Typography variant="body1" fontWeight={400}>
-              Experienced Full-stack Developer with a knack for design and
+              Experienced Full-stack Developer with a passion for design and
               collaboration. Proficient in React, NextJS and TypeScript across
               app, frontend and backend development. Passionate about boosting
               quality of work and facilitating team growth. Let's build some
