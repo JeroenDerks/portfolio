@@ -7,9 +7,11 @@ const Bundeswehr = lazy(() => import('components/HomeSections/Bundeswehr'));
 const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
 const DhiDesign = lazy(() => import('components/HomeSections/DhiGrasDesign'));
 const DhiDev = lazy(() => import('components/HomeSections/DhiGrasDevelopment'));
+const FEXP = lazy(() => import('components/HomeSections/FEXP'));
 const Heysports = lazy(() => import('components/HomeSections/Heysports'));
 const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
 const Spotten = lazy(() => import('components/HomeSections/Spotten'));
+const ROVC = lazy(() => import('components/HomeSections/ROVC'));
 const KeesingApp = lazy(() => import('components/HomeSections/KeesingApp'));
 const Zelf = lazy(() => import('components/HomeSections/Zelf'));
 const KeesingDocumentChecker = lazy(
@@ -39,6 +41,9 @@ const Home = () => {
       <Hero scrollTo={scrollTo} />
       <Suspense fallback={<div>Loading...</div>}>
         <Box display="flex" flexDirection="column" alignItems="center">
+
+          <ROVC />
+          <FEXP />
           <KeesingApp />
           <Spotten />
           <Zelf />
@@ -48,8 +53,8 @@ const Home = () => {
           <Bundeswehr />
           <DhiDev />
           <DhiDesign />
-          <Darkweb />
-          <Reitzenstein />
+          {/* <Darkweb />
+          <Reitzenstein /> */}
           <About />
         </Box>
       </Suspense>

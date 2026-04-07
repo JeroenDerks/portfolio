@@ -1,12 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-
-declare type StaticImageData = {
-  src: string;
-  height: number;
-  width: number;
-  placeholder?: string;
-};
+import type { StaticImageData } from 'next/image';
 
 const NextImage = ({
   src,
@@ -16,15 +10,29 @@ const NextImage = ({
   src: StaticImageData;
   alt: string;
   unoptimized?: boolean;
-}) => (
-  <Image
-    src={src}
-    alt={alt}
-    width="1080"
-    height="608"
-    placeholder={!unoptimized ? 'blur' : 'empty'}
-    unoptimized={unoptimized}
-  />
-);
+}) => {
+  const aspectPaddingPercent = (src.height / src.width) * 100;
+
+  return (
+    <div
+      style={{
+        position: 'relative',
+        width: '100%',
+        height: 0,
+        paddingBottom: `${aspectPaddingPercent}%`,
+      }}
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="(min-width: 900px) 50vw, 100vw"
+        style={{ objectFit: 'cover' }}
+        placeholder={!unoptimized ? 'blur' : 'empty'}
+        unoptimized={unoptimized}
+      />
+    </div>
+  );
+};
 
 export default NextImage;
