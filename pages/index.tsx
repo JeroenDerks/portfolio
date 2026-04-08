@@ -8,6 +8,7 @@ const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
 const DhiDesign = lazy(() => import('components/HomeSections/DhiGrasDesign'));
 const DhiDev = lazy(() => import('components/HomeSections/DhiGrasDevelopment'));
 const FEXP = lazy(() => import('components/HomeSections/FEXP'));
+const Fugro = lazy(() => import('components/HomeSections/Fugro'));
 const Heysports = lazy(() => import('components/HomeSections/Heysports'));
 const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
 const Spotten = lazy(() => import('components/HomeSections/Spotten'));
@@ -41,7 +42,7 @@ const Home = () => {
       <Hero scrollTo={scrollTo} />
       <Suspense fallback={<div>Loading...</div>}>
         <Box display="flex" flexDirection="column" alignItems="center">
-
+          <Fugro />
           <ROVC />
           <FEXP />
           <KeesingApp />

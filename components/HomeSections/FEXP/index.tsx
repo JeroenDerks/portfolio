@@ -8,11 +8,7 @@ import {
     TextSection,
 } from 'components/Layout/LayoutSections';
 import { VisualSection } from 'components/Layout';
-import Image from 'components/Image';
-import rovcImg1 from 'public/images/rovc-1.webp';
-import rovcImg2 from 'public/images/rovc-3.webp';
-import Link from 'components/Link';
-import VimeoVideo, { Iframe, VideoWrapper } from 'components/Video';
+import { Iframe, VideoWrapper } from 'components/Video';
 
 const FEXP = () => (
     <HomeSection>
@@ -33,7 +29,7 @@ const FEXP = () => (
 
             <TextSection>
                 <Typography variant="body1" paragraph>
-                    Digitale evolutie is essentieel voor alle bedrijven binnen elke sector. Touchtribe hielp opleidingsinstituut ROVC, onderdeel van de Salta Group, bij het transformeren van hun digitale landschap.
+                    todo
                 </Typography>
 
             </TextSection>
