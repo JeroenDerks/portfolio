@@ -29,7 +29,18 @@ const FEXP = () => (
 
             <TextSection>
                 <Typography variant="body1" paragraph>
-                    todo
+                    I led the digital signage programme for Fugro's new headquarters in
+                    Leidschendam. Overseeing delivery end to end, aligning UX and visual design
+                    across every touchpoint, and coordinating two freelancers alongside 2 mobile
+                    and 2 frontend developers.
+                </Typography>
+                <Typography variant="body1" >
+                    The platform drives dozens of screens throughout
+                    the building, from a central LED globe with a live world map and day/night
+                    view to floor displays for news, projects, and colleague stories, all fed from
+                    a headless CMS. I also advised on an AR layer for visitors and staff. The
+                    stack combines fixed-resolution layouts, offline-first playback, live data, multi-screen video sync, and Electron in kiosk mode
+                    for stable 24/7 operation.
                 </Typography>
             </TextSection>
         </StaticSection>

@@ -3,14 +3,14 @@ import Hero from 'components/HomeSections/Hero';
 import { Box } from '@mui/material';
 
 const About = lazy(() => import('components/HomeSections/About'));
-const Bundeswehr = lazy(() => import('components/HomeSections/Bundeswehr'));
-const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
+// const Bundeswehr = lazy(() => import('components/HomeSections/Bundeswehr'));
+// const Darkweb = lazy(() => import('components/HomeSections/Darkweb'));
 const DhiDesign = lazy(() => import('components/HomeSections/DhiGrasDesign'));
 const DhiDev = lazy(() => import('components/HomeSections/DhiGrasDevelopment'));
 const FEXP = lazy(() => import('components/HomeSections/FEXP'));
 const Fugro = lazy(() => import('components/HomeSections/Fugro'));
 const Heysports = lazy(() => import('components/HomeSections/Heysports'));
-const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
+// const Reitzenstein = lazy(() => import('components/HomeSections/Reitzenstein'));
 const Spotten = lazy(() => import('components/HomeSections/Spotten'));
 const ROVC = lazy(() => import('components/HomeSections/ROVC'));
 const KeesingApp = lazy(() => import('components/HomeSections/KeesingApp'));
@@ -51,7 +51,7 @@ const Home = () => {
           <KeesingDocumentChecker />
           <Talentefinder />
           <Heysports />
-          <Bundeswehr />
+          {/* <Bundeswehr /> */}
           <DhiDev />
           <DhiDesign />
           {/* <Darkweb />
