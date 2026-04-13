@@ -15,8 +15,6 @@ import Link from 'components/Link';
 import VimeoVideo, { Iframe, VideoWrapper } from 'components/Video';
 import Grid from '@mui/material/Grid';
 
-const portraitVideoBox = { paddingBottom: '177.78%' } as const;
-
 const Fugro = () => (
     <HomeSection>
         <StaticSection>
@@ -30,13 +28,16 @@ const Fugro = () => (
                     Frontend
                 </Typography>
                 <Typography variant="body1">
-                    NextJS, TypeScript, Storyblok
+                    NextJS, TypeScript, Storyblok, GraphQL
                 </Typography>
             </InfoSection>
 
             <TextSection>
                 <Typography variant="body1" paragraph>
-                    todo
+                    Fugro is a Dutch multinational listed on the Dutch stock exchange, focused on geo-data and asset integrity. It provides geotechnical, hydrographic, and geoscience services to offshore energy, infrastructure, and renewables worldwide, helping clients deliver safe, sustainable projects—from offshore wind to subsea pipelines and coastal protection.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                    As Lead Developer, I own frontend technical direction and architecture: I guide the team, uphold code quality, and make scalable design choices. I run reviews, support people’s growth, explain technical ideas to non-technical stakeholders, and improve workflows and tooling.
                 </Typography>
                 <Link href="https://fugro.com/" variant="small" target="_blank">fugro.com</Link>
 
@@ -44,7 +45,7 @@ const Fugro = () => (
         </StaticSection>
 
         <VisualSection >
-            <VideoWrapper style={{ backgroundColor: '#c5cbd5' }}>
+            <VideoWrapper aspectRatio={547.8 / 365.2}>
                 <Iframe
                     src='https://player.vimeo.com/video/910457423?title=0&byline=0&portrait=0&autoplay=1&mute=1&loop=1&controls=0&autopause=0&playlist=910457423'
                     frameBorder="0"
@@ -55,7 +56,7 @@ const Fugro = () => (
             </VideoWrapper>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                    <VideoWrapper style={portraitVideoBox}>
+                    <VideoWrapper aspectRatio={316.25 / 412.667}>
                         <Iframe
                             src='https://player.vimeo.com/video/910457532?title=0&byline=0&portrait=0&autoplay=1&mute=1&loop=1&controls=0&autopause=0&playlist=910457532'
                             frameBorder="0"
@@ -65,7 +66,7 @@ const Fugro = () => (
                     </VideoWrapper>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <VideoWrapper style={portraitVideoBox}>
+                    <VideoWrapper aspectRatio={316.25 / 412.667}>
                         <Iframe
                             src='https://player.vimeo.com/video/910457445?title=0&byline=0&portrait=0&autoplay=1&mute=1&loop=1&controls=0&autopause=0&playlist=910457445'
                             frameBorder="0"

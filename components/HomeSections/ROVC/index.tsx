@@ -26,13 +26,16 @@ const ROVC = () => (
                     Full stack
                 </Typography>
                 <Typography variant="body1">
-                    NextJS, AWS, Lambda, KontentAI, Algolia
+                    NextJS, TypeScript, AWS, Lambda, KontentAI, Algolia
                 </Typography>
             </InfoSection>
 
             <TextSection>
                 <Typography variant="body1" paragraph>
-                    Digitale evolutie is essentieel voor alle bedrijven binnen elke sector. Touchtribe hielp opleidingsinstituut ROVC, onderdeel van de Salta Group, bij het transformeren van hun digitale landschap.
+                    ROVC is the Netherlands' main technical training institute: it connects professionals and organizations with courses and certifications for lifelong learning.
+                </Typography>
+                <Typography variant="body1" paragraph>
+                    As Frontend Developer, I maintain and imrprove this high-traffic platform with a modern composable stack using ISR for performance and SEO; Algolia for fast search, Tailwind CSS for styling, serverless microservices on AWS Lambda that sync product data between the ROVC API and CMS.
                 </Typography>
                 <Link href="https://rovc.nl/" variant="small" target="_blank">
                     rovc.nl

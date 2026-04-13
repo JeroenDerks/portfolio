@@ -31,12 +31,11 @@ const FEXP = () => (
                 <Typography variant="body1" paragraph>
                     todo
                 </Typography>
-
             </TextSection>
         </StaticSection>
 
         <VisualSection>
-            <VideoWrapper>
+            <VideoWrapper aspectRatio={649 / 365.2}>
                 <Iframe
                     src='https://player.vimeo.com/video/1153663973?title=0&byline=0&portrait=0&autoplay=1&mute=1&loop=1&controls=0&playlist=1153663973'
                     frameBorder="0"
