@@ -1,12 +1,26 @@
 import React from 'react';
 import Head from 'next/head';
+import { CacheProvider } from '@emotion/react';
+import type { EmotionCache } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from 'theme';
+import createEmotionCache from 'utils/createEmotionCache';
 import 'styles/style.css';
 
-export default function App({ Component, pageProps }) {
+const clientSideEmotionCache = createEmotionCache();
+
+export default function App({
+  Component,
+  pageProps,
+  emotionCache = clientSideEmotionCache,
+}: {
+  Component: React.ElementType;
+  pageProps: Record<string, unknown>;
+  emotionCache?: EmotionCache;
+}) {
   return (
-    <ThemeProvider theme={theme}>
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={theme}>
       <Head>
         <title>Jeroen Derks portfolio</title>
         <meta name="title" content="Jeroen Derks portfolio" />
@@ -32,6 +46,7 @@ export default function App({ Component, pageProps }) {
         <meta property="twitter:image" content="/public/thumbnail192.png" />
       </Head>
       <Component pageProps={pageProps} />
-    </ThemeProvider>
+      </ThemeProvider>
+    </CacheProvider>
   );
 }

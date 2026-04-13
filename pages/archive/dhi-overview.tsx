@@ -34,7 +34,7 @@ const DhiOverview = () => (
       {others.map(({ image, link, title, target }, i) => (
         <Grid item xs={12} sm={12} md={6} key={i}>
           <Typography variant="body1">{title}</Typography>
-          <Link href={link} passHref>
+          <Link href={link} passHref legacyBehavior>
             <a target={target}>
               <Image src={image} alt={title} />
             </a>
