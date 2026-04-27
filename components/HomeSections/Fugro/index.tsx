@@ -55,7 +55,7 @@ const Fugro = () => (
                 />
             </VideoWrapper>
             <Grid container spacing={2}>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} md={6} display={{ xs: 'none', md: 'block' }}>
                     <VideoWrapper aspectRatio={316.25 / 412.667}>
                         <Iframe
                             src='https://player.vimeo.com/video/910457532?title=0&byline=0&portrait=0&autoplay=1&mute=1&loop=1&controls=0&autopause=0&playlist=910457532'
