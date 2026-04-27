@@ -29,6 +29,7 @@ export const projects = [
       { name: 'information age', slug: 'information-age' },
       { name: 'aalborg surreal', slug: 'aalborg-surreal' },
       { name: 'rebekka borum', slug: 'rebekka-borum' },
+      { name: 'darkweb', slug: 'darkweb' },
     ],
   },
   {
