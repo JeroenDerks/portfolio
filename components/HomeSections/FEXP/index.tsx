@@ -9,6 +9,8 @@ import {
 } from 'components/Layout/LayoutSections';
 import { VisualSection } from 'components/Layout';
 import { Iframe, VideoWrapper } from 'components/Video';
+import fexpImg1 from 'public/images/fexp.gif';
+import Image from 'components/Image';
 
 const FEXP = () => (
     <HomeSection>
@@ -55,6 +57,8 @@ const FEXP = () => (
 
                 />
             </VideoWrapper>
+            <Image src={fexpImg1} alt="FEXP overview" unoptimized />
+
         </VisualSection>
     </HomeSection>
 );

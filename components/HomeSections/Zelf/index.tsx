@@ -35,14 +35,11 @@ const Zelf = () => (
           Zelf is the personal dashboard for entrepreneurs who are starting
           their self-employed journey.
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1" >
           Based on the user's requirements, Zelf offers tailored information
           about Business, Sales, Administration, Risks management, Accounting
           and Banking.
         </Typography>
-        <Link href="https://zelf.nl/" variant="small" target="_blank">
-          zelf.nl
-        </Link>
       </TextSection>
     </StaticSection>
 
