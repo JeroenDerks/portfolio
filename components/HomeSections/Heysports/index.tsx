@@ -37,15 +37,11 @@ const Heysports = () => (
           overview of the studio details and interesting articles for improving
           your lifestyle
         </Typography>
-        <Typography variant="body1" paragraph>
+        <Typography variant="body1">
           For this site I developed the frontend, created the component library,
           integrated the filtering functionality with map and appealed to the
           search engine gods.
         </Typography>
-
-        <Link href="https://heysports.io/" variant="small" target="_blank">
-          heysports.io
-        </Link>
       </TextSection>
     </StaticSection>
 

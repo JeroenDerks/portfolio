@@ -1,11 +1,16 @@
 import styled from '@mui/system/styled';
 
-export const VideoWrapper = styled('div')({
+export const VideoWrapper = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'aspectRatio',
+})<{ aspectRatio?: number }>(({ aspectRatio }) => ({
   position: 'relative',
   width: '100%',
   height: 0,
-  paddingBottom: '56.25%',
-});
+  paddingBottom:
+    aspectRatio !== undefined && aspectRatio > 0
+      ? `${(100 / aspectRatio).toFixed(4)}%`
+      : '56.25%',
+}));
 
 export const Iframe = styled('iframe')({
   position: 'absolute',

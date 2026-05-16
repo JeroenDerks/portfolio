@@ -14,29 +14,33 @@ import Image from 'components/Image';
 
 const experienceData = [
   {
-    title: 'Frontend developer / Label A',
-    location: 'Amsterdam, NL / 2022 - current',
+    title: 'Project Lead / Touchtribe',
+    location: 'Amsterdam, NL / 2024 - current',
   },
   {
-    title: 'Frontend developer / LAUDO',
+    title: 'Senior Frontend Developer / Label A',
+    location: 'Amsterdam, NL / 2022 - 2024',
+  },
+  {
+    title: 'Senior Frontend Developer / LAUDO',
     location: 'Berlin, DE / 2020 - 2022',
   },
   {
-    title: 'Frontend developer and designer / DHI GRAS',
+    title: 'Frontend Developer and Designer / DHI GRAS',
     location: 'Copenhagen, DK / 2018 - 2020',
   },
   {
-    title: 'Developer and interaction designer / YOKE',
+    title: 'Developer and Interaction Designer / YOKE',
     location: 'Copenhagen, DK / 2017',
   },
-  {
-    title: 'VR post production assistent / Makropol',
-    location: 'Copenhagen, DK / 2017',
-  },
-  {
-    title: 'Research assistant and co-author / RELATE AAU',
-    location: 'Aalborg DK/ 2017',
-  },
+  // {
+  //   title: 'VR post production assistent / Makropol',
+  //   location: 'Copenhagen, DK / 2017',
+  // },
+  // {
+  //   title: 'Research assistant and co-author / RELATE AAU',
+  //   location: 'Aalborg DK/ 2017',
+  // },
 ];
 
 const educationData = [
@@ -107,7 +111,7 @@ const About = () => (
                 {experienceData.map(({ title, location }) => (
                   <React.Fragment key={title}>
                     <Typography variant="body1">{title}</Typography>
-                    <Typography variant="body1" gutterBottom fontSize={11}>
+                    <Typography variant="body1" gutterBottom mb={1} >
                       {location}
                     </Typography>
                   </React.Fragment>
@@ -124,7 +128,7 @@ const About = () => (
                 {educationData.map(({ title, location }) => (
                   <React.Fragment key={title}>
                     <Typography variant="body1">{title}</Typography>
-                    <Typography variant="body1" gutterBottom fontSize={11}>
+                    <Typography variant="body1" gutterBottom mb={1} >
                       {location}
                     </Typography>
                   </React.Fragment>

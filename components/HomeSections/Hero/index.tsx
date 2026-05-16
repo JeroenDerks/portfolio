@@ -12,6 +12,7 @@ import mobileBg from 'public/images/mobile-bg.png';
 const Background = styled(Box)({
   height: '100vh',
   overflow: 'hidden',
+  position: 'relative',
 });
 
 const StyledButton = styled('button')({
@@ -42,6 +43,11 @@ const name = ['01000100', '01100101', '01110010', '01101011', '01110011'];
 const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
   const { width, height } = useWindowSize();
   const [counter, setCounter] = useState(0);
+  const [sketchMounted, setSketchMounted] = useState(false);
+
+  useEffect(() => {
+    setSketchMounted(true);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,16 +59,26 @@ const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
 
   return (
     <Background>
-      <Box width={1} display={{ sm: 'inline-block', md: 'none' }}>
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          display: { sm: 'block', md: 'none' },
+        }}
+      >
         <Image
           src={mobileBg}
-          layout="fill"
-          objectFit="cover"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
           alt="background graphic"
+          priority
         />
       </Box>
       <Box display={{ xs: 'none', sm: 'none', md: 'inline-block' }}>
-        <HeroSketch width={width} height={height} key={width + ':' + height} />
+        {sketchMounted && (
+          <HeroSketch width={width} height={height} key={`${width}:${height}`} />
+        )}
       </Box>
       <TextWrapper
         py={{ xs: 5, sm: 5, md: 10 }}

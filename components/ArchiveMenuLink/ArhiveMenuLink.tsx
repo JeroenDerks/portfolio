@@ -27,7 +27,7 @@ const ArchiveMenuLink = ({
   href: string;
 }) => {
   return (
-    <Link href={href} passHref>
+    <Link href={href} passHref legacyBehavior>
       <StyledLink>{children}</StyledLink>
     </Link>
   );
