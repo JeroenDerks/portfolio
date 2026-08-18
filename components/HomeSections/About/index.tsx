@@ -111,7 +111,7 @@ const About = () => (
                 {experienceData.map(({ title, location }) => (
                   <React.Fragment key={title}>
                     <Typography variant="body1">{title}</Typography>
-                    <Typography variant="body1" gutterBottom mb={1} >
+                    <Typography variant="body1" gutterBottom mb={1}>
                       {location}
                     </Typography>
                   </React.Fragment>
@@ -128,7 +128,7 @@ const About = () => (
                 {educationData.map(({ title, location }) => (
                   <React.Fragment key={title}>
                     <Typography variant="body1">{title}</Typography>
-                    <Typography variant="body1" gutterBottom mb={1} >
+                    <Typography variant="body1" gutterBottom mb={1}>
                       {location}
                     </Typography>
                   </React.Fragment>
@@ -138,7 +138,7 @@ const About = () => (
           </Grid>
           <Grid item xs={6} sm={6} md={10} lg={11} mt={2}>
             <StyledLink
-              href="/files/cv_jeroenderks_2024.pdf"
+              href="/files/cv_jeroenderks_2026.pdf"
               download
               rel="noopener noreferrer"
               target="_blank"
