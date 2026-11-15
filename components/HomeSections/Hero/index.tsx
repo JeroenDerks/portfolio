@@ -77,23 +77,21 @@ const Hero = ({ scrollTo }: { scrollTo: (v: string) => void }) => {
       </Box>
       <Box display={{ xs: 'none', sm: 'none', md: 'inline-block' }}>
         {sketchMounted && (
-          <HeroSketch width={width} height={height} key={`${width}:${height}`} />
+          <HeroSketch
+            width={width}
+            height={height}
+            key={`${width}:${height}`}
+          />
         )}
       </Box>
       <TextWrapper
         py={{ xs: 5, sm: 5, md: 10 }}
         px={{ xs: 2, sm: 5, md: 10, lg: 14 }}
       >
-        <Typography variant="h1">
-          <span style={{ fontFamily: 'monospace' }}>
-            {name[counter % name.length]}
-          </span>
-          {'  '}
-          experiences
-        </Typography>
+        <Typography variant="h1">Jeroen Derks</Typography>
         <Typography variant="h2">
-          Welcome to Jeroen's collection of web development, tech experiments
-          and digital-physical interfaces
+          Welcome to my portfolio. I'm a software developer and project lead
+          building web platforms and the teams behind them.
         </Typography>
       </TextWrapper>
 
