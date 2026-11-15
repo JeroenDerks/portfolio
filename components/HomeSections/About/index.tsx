@@ -138,7 +138,7 @@ const About = () => (
           </Grid>
           <Grid item xs={6} sm={6} md={10} lg={11} mt={2}>
             <StyledLink
-              href="/files/cv_jeroenderks_2026.pdf"
+              href="/files/cv_jeroenderks_2026_q4.pdf"
               download
               rel="noopener noreferrer"
               target="_blank"
