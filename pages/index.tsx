@@ -43,8 +43,8 @@ const Home = () => {
       <Hero scrollTo={scrollTo} />
       <Suspense fallback={<div>Loading...</div>}>
         <Box display="flex" flexDirection="column" alignItems="center">
-          <Joulz />
           <Fugro />
+          <Joulz />
           <ROVC />
           <FEXP />
           <KeesingApp />
